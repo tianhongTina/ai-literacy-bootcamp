@@ -33,6 +33,38 @@ AI 可以帮助产品设计的全流程：
 
 ### 1. 需求分析阶段
 
+**产品设计完整流程图**：
+
+```mermaid
+graph TD
+    A[需求分析] --> B[竞品分析]
+    A --> C[用户研究]
+    B --> D[功能设计]
+    C --> D
+    
+    D --> E[用户故事]
+    D --> F[交互流程]
+    
+    E --> G[原型设计]
+    F --> G
+    
+    G --> H[页面结构]
+    G --> I[界面文案]
+    
+    H --> J[PRD 文档]
+    I --> J
+    
+    J --> K[评审反馈]
+    K --> L{通过?}
+    L -->|否| M[优化调整]
+    M --> D
+    L -->|是| N[开发实现]
+    
+    style A fill:#e1f5ff
+    style N fill:#ccffcc
+    style K fill:#fff4e1
+```
+
 #### 竞品分析
 
 ```
@@ -61,6 +93,38 @@ AI 可以帮助产品设计的全流程：
 ```
 
 ### 2. 功能设计阶段
+
+**功能设计思维导图**：
+
+```mermaid
+graph LR
+    A[功能设计] --> B[用户故事<br/>User Story]
+    A --> C[用例设计<br/>Use Case]
+    A --> D[交互流程<br/>Flow]
+    A --> E[数据模型<br/>Data Model]
+    
+    B --> B1[角色定义]
+    B --> B2[需求描述]
+    B --> B3[验收标准]
+    
+    C --> C1[正常流程]
+    C --> C2[异常流程]
+    C --> C3[边界条件]
+    
+    D --> D1[页面跳转]
+    D --> D2[状态变化]
+    D --> D3[交互反馈]
+    
+    E --> E1[实体关系]
+    E --> E2[字段定义]
+    E --> E3[约束规则]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#e1ffe1
+    style D fill:#ffe1f5
+    style E fill:#f5e1ff
+```
 
 #### 用户故事
 

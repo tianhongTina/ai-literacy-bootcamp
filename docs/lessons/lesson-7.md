@@ -33,7 +33,59 @@
 
 ### 1. 数据安全与隐私
 
+**AI 使用安全框架**：
+
+```mermaid
+graph TB
+    A[AI 使用安全] --> B[数据安全]
+    A --> C[内容安全]
+    A --> D[合规安全]
+    A --> E[技术安全]
+    
+    B --> B1[数据分级]
+    B --> B2[脱敏处理]
+    B --> B3[访问控制]
+    
+    C --> C1[事实核查]
+    C --> C2[版权审查]
+    C --> C3[偏见检测]
+    
+    D --> D1[隐私保护]
+    D --> D2[法律合规]
+    D --> D3[伦理审查]
+    
+    E --> E1[工具选择]
+    E --> E2[权限管理]
+    E --> E3[审计日志]
+    
+    style A fill:#e1f5ff
+    style B fill:#ffcccc
+    style C fill:#fff4e1
+    style D fill:#e1ffe1
+    style E fill:#ffe1f5
+```
+
 #### 绝对不能输入 AI 的信息
+
+**数据安全红线清单**：
+
+```mermaid
+graph LR
+    A[数据类型] --> B[❌ 个人隐私]
+    A --> C[❌ 公司机密]
+    A --> D[❌ 他人敏感信息]
+    A --> E[❌ 法律敏感]
+    
+    B --> B1[身份证号<br/>银行卡号<br/>密码]
+    C --> C1[财务数据<br/>商业计划<br/>客户名单]
+    D --> D1[员工信息<br/>客户隐私<br/>合作伙伴机密]
+    E --> E1[合同原文<br/>法律文书<br/>诉讼材料]
+    
+    style B fill:#ffcccc
+    style C fill:#ffcccc
+    style D fill:#ffcccc
+    style E fill:#ffcccc
+```
 
 **红线清单**：
 
@@ -61,6 +113,35 @@
 ```
 
 #### 安全使用原则
+
+**数据安全决策流程**：
+
+```mermaid
+graph TD
+    A[准备使用 AI] --> B{数据包含敏感信息?}
+    
+    B -->|否| C[直接使用]
+    B -->|是| D{数据级别?}
+    
+    D -->|公开| C
+    D -->|内部| E{使用企业版?}
+    E -->|是| F[谨慎使用]
+    E -->|否| G[❌ 禁止使用]
+    
+    D -->|机密| G
+    D -->|隐私| H{可以脱敏?}
+    H -->|是| I[脱敏后使用]
+    H -->|否| G
+    
+    C --> J[正常工作]
+    F --> K[记录日志]
+    I --> L[验证脱敏效果]
+    L --> J
+    
+    style C fill:#ccffcc
+    style G fill:#ffcccc
+    style K fill:#fff4e1
+```
 
 **脱敏处理**：
 

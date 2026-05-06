@@ -65,6 +65,29 @@
 
 这一字之差，决定你未来 3 年的职业天花板。
 
+**思维模式对比图**：
+
+```mermaid
+graph LR
+    A[用户需求] --> B{思维模式}
+    B -->|工具思维| C[一次性输入]
+    C --> D[期待完美结果]
+    D --> E{满意?}
+    E -->|否| F[放弃/抱怨]
+    E -->|是| G[使用]
+    
+    B -->|协作思维| H[提供背景]
+    H --> I[初步输出]
+    I --> J[评估反馈]
+    J --> K[迭代优化]
+    K --> L{满意?}
+    L -->|否| J
+    L -->|是| M[高质量结果]
+    
+    style F fill:#ffcccc
+    style M fill:#ccffcc
+```
+
 在接下来的 2 小时里,我会带大家深入了解:
 - AI 到底是什么,为什么有时很聪明有时很笨
 - 它能做什么、不能做什么,边界在哪
@@ -247,6 +270,28 @@ print(df.head())
 
 所以 AI 本质上是在**续写**,不是在**查询**。它生成的内容"听起来像人类会说的话",但不保证事实正确。
 
+**AI 工作原理对比图**：
+
+```mermaid
+graph TB
+    subgraph 搜索引擎
+    A1[用户输入关键词] --> B1[检索索引库]
+    B1 --> C1[匹配相关网页]
+    C1 --> D1[返回链接列表]
+    D1 --> E1[用户点击查看]
+    end
+    
+    subgraph AI大模型
+    A2[用户输入问题] --> B2[理解上下文]
+    B2 --> C2[基于训练数据预测]
+    C2 --> D2[逐词生成回答]
+    D2 --> E2[直接返回文本]
+    end
+    
+    style B1 fill:#e1f5ff
+    style C2 fill:#fff4e1
+```
+
 **这一段的核心 Takeaway:**
 AI 不是搜索引擎,是语言预测器。不要问它"查询类"问题,要给它"生成类"任务。需要准确信息时,要么用搜索引擎,要么用联网版 AI 并核查来源。
 
@@ -428,6 +473,23 @@ AI 不是自动售货机,投币就出货。它是协作者,需要通过对话逐
 
 AI 眼里没有汉字、没有单词、没有句子。它把一切文字切成**"Token"**——你可以理解成"积木块"。
 
+**Token 处理流程**：
+
+```mermaid
+graph LR
+    A[原始文本<br/>人工智能] --> B[分词器<br/>Tokenizer]
+    B --> C[Token序列<br/>人工 智能]
+    C --> D[数字ID<br/>1234 5678]
+    D --> E[神经网络<br/>处理]
+    E --> F[输出ID<br/>9012 3456]
+    F --> G[解码器]
+    G --> H[生成文本<br/>很强大]
+    
+    style B fill:#e1f5ff
+    style E fill:#fff4e1
+    style G fill:#e1ffe1
+```
+
 我给大家看几个例子:
 
 **中文:**
@@ -515,6 +577,27 @@ Token 是 AI 的"货币单位",决定了成本和限制。中文比英文更"贵
 AI 的上下文窗口就是这个"10 分钟"。
 
 你可以把"上下文窗口"理解成 AI 的**工作桌面**——桌面多大,它一次能处理多少东西就有个上限。
+
+**上下文窗口示意图**：
+
+```mermaid
+graph TB
+    subgraph 上下文窗口_128K_Token
+    A[系统提示词<br/>5K Token] --> B[用户输入1<br/>10K Token]
+    B --> C[AI回复1<br/>15K Token]
+    C --> D[用户输入2<br/>8K Token]
+    D --> E[AI回复2<br/>12K Token]
+    E --> F[用户输入3<br/>5K Token]
+    F --> G[AI回复3<br/>10K Token]
+    G --> H[剩余空间<br/>63K Token]
+    end
+    
+    I[新输入] -.超出窗口.-> J[丢弃最早对话]
+    
+    style A fill:#e1f5ff
+    style H fill:#ccffcc
+    style J fill:#ffcccc
+```
 
 **主流模型的上下文窗口:**
 
@@ -687,6 +770,38 @@ AI 的知识有截止日期,不知道之后的事。需要最新信息时,用联
 第 2 节讲了"AI 怎么工作",这节讲"AI 能干什么、不能干什么"。这是你**每天做决策**时最需要的那张表。
 
 ### 3.1 AI 的 5 大"主场" vs 5 大"翻车区"
+
+**AI 能力边界矩阵图**：
+
+```mermaid
+graph TB
+    subgraph 主场区域_放心使用
+    A1[文本生成<br/>80分] 
+    A2[改写润色<br/>85分]
+    A3[总结提炼<br/>85分]
+    A4[翻译转写<br/>80分]
+    A5[头脑风暴<br/>70分]
+    end
+    
+    subgraph 翻车区域_必须核查
+    B1[实时信息<br/>❌过时编造]
+    B2[精确计算<br/>❌答案错漏]
+    B3[主观判断<br/>❌瞎蒙]
+    B4[保密内容<br/>❌泄露风险]
+    B5[专业决策<br/>❌责任事故]
+    end
+    
+    style A1 fill:#ccffcc
+    style A2 fill:#ccffcc
+    style A3 fill:#ccffcc
+    style A4 fill:#ccffcc
+    style A5 fill:#ccffcc
+    style B1 fill:#ffcccc
+    style B2 fill:#ffcccc
+    style B3 fill:#ffcccc
+    style B4 fill:#ffcccc
+    style B5 fill:#ffcccc
+```
 
 **✅ 主场（放心交给 AI）**:
 
@@ -864,6 +979,34 @@ AI 的知识有截止日期,不知道之后的事。需要最新信息时,用联
 
 ### 4.3 选型决策框架
 
+**AI 产品选型决策树**:
+
+```mermaid
+graph TD
+    A[开始选型] --> B{需要最新信息?}
+    B -->|是| C[Gemini/Kimi<br/>文心联网版]
+    B -->|否| D{处理长文档?}
+    
+    D -->|是<br/>50页+| E[Claude 200K<br/>Kimi 200K<br/>Gemini 1M]
+    D -->|否| F{主要用途?}
+    
+    F -->|写代码| G[ChatGPT GPT-4<br/>DeepSeek<br/>Claude]
+    F -->|中文创作| H{预算?}
+    F -->|数据分析| I[ChatGPT<br/>Code Interpreter]
+    
+    H -->|有预算| J[讯飞星火付费版<br/>ChatGPT Plus]
+    H -->|免费| K[Kimi<br/>文心一言<br/>通义千问]
+    
+    F -->|企业应用| L{部署方式?}
+    L -->|云端| M[讯飞星火企业版<br/>文心企业版]
+    L -->|私有部署| N[联系厂商<br/>定制方案]
+    
+    style C fill:#e1f5ff
+    style E fill:#fff4e1
+    style G fill:#e1ffe1
+    style K fill:#ccffcc
+```
+
 **快速决策表**:
 
 ```
@@ -934,6 +1077,27 @@ AI 的知识有截止日期,不知道之后的事。需要最新信息时,用联
 ### 5.2 高质量提示词的 4 个要素
 
 一个好的提示词应该包含:
+
+**提示词四要素框架**:
+
+```mermaid
+graph LR
+    A[高质量提示词] --> B[角色定位<br/>Who]
+    A --> C[任务描述<br/>What]
+    A --> D[目标说明<br/>Why]
+    A --> E[约束条件<br/>How]
+    
+    B --> B1[我是谁<br/>AI扮演谁]
+    C --> C1[做什么<br/>越具体越好]
+    D --> D1[为什么做<br/>给上下文]
+    E --> E1[格式/长度<br/>风格/禁忌]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#e1ffe1
+    style D fill:#ffe1f5
+    style E fill:#f5e1ff
+```
 
 **1. 角色定位 (Who)**
 告诉 AI 你是谁,或者让 AI 扮演什么角色。

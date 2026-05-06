@@ -33,6 +33,39 @@ AI 工具层出不穷，关键不是追逐最新工具，而是：
 
 ### 1. AI 工具分类
 
+**AI 工具全景图**：
+
+```mermaid
+graph TB
+    A[AI 工具生态] --> B[内容生成]
+    A --> C[创意设计]
+    A --> D[开发辅助]
+    A --> E[办公增效]
+    
+    B --> B1[文本生成<br/>ChatGPT/Claude]
+    B --> B2[翻译工具<br/>DeepL/彩云]
+    B --> B3[写作助手<br/>Jasper/Copy.ai]
+    
+    C --> C1[图像生成<br/>Midjourney/DALL-E]
+    C --> C2[视频生成<br/>Runway/Pika]
+    C --> C3[音频生成<br/>ElevenLabs/Suno]
+    C --> C4[设计工具<br/>Figma AI/Canva AI]
+    
+    D --> D1[代码补全<br/>Copilot/Cursor]
+    D --> D2[代码审查<br/>CodeRabbit]
+    D --> D3[测试生成<br/>Tabnine]
+    
+    E --> E1[文档协作<br/>Notion AI/飞书 AI]
+    E --> E2[数据分析<br/>Excel Copilot]
+    E --> E3[会议助手<br/>Otter.ai]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#e1ffe1
+    style D fill:#ffe1f5
+    style E fill:#f5e1ff
+```
+
 #### 按功能分类
 
 **文本生成类**：
@@ -63,39 +96,88 @@ AI 工具层出不穷，关键不是追逐最新工具，而是：
 
 ### 2. 工具选型框架
 
+**工具选型四维评估模型**：
+
+```mermaid
+graph TB
+    A[工具选型] --> B[功能匹配度<br/>40%]
+    A --> C[易用性<br/>30%]
+    A --> D[成本<br/>20%]
+    A --> E[生态<br/>10%]
+    
+    B --> B1[满足核心需求?]
+    B --> B2[有独特优势?]
+    B --> B3[功能完整度?]
+    
+    C --> C1[学习成本]
+    C --> C2[界面友好度]
+    C --> C3[文档质量]
+    
+    D --> D1[免费版够用?]
+    D --> D2[付费性价比]
+    D --> D3[隐藏成本]
+    
+    E --> E1[集成能力]
+    E --> E2[社区活跃度]
+    E --> E3[更新频率]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#e1ffe1
+    style D fill:#ffe1f5
+    style E fill:#f5e1ff
+```
+
 **四维评估法**：
 
 ```
-维度 1：功能匹配度
+维度 1：功能匹配度（40%）
 - 是否满足核心需求？
 - 是否有独特优势？
 
-维度 2：易用性
+维度 2：易用性（30%）
 - 学习成本高吗？
 - 界面友好吗？
 
-维度 3：成本
+维度 3：成本（20%）
 - 免费版够用吗？
 - 付费版性价比如何？
 
-维度 4：生态
+维度 4：生态（10%）
 - 是否支持集成？
 - 社区活跃吗？
 ```
 
-**决策树**：
+**工具选型决策树**：
 
-```
-需求：文本生成
-├─ 需要中文支持？
-│  ├─ 是 → 文心一言、通义千问、豆包
-│  └─ 否 → ChatGPT、Claude
-├─ 需要长文本处理？
-│  ├─ 是 → Claude（200K）
-│  └─ 否 → ChatGPT
-└─ 预算有限？
-   ├─ 是 → 免费工具（文心、豆包）
-   └─ 否 → 付费工具（ChatGPT Plus）
+```mermaid
+graph TD
+    A[开始选型] --> B{需求类型?}
+    
+    B -->|文本生成| C{中文支持?}
+    C -->|是| D[文心一言<br/>通义千问<br/>豆包]
+    C -->|否| E{长文本?}
+    E -->|是| F[Claude 200K]
+    E -->|否| G[ChatGPT]
+    
+    B -->|图像生成| H{预算?}
+    H -->|有预算| I[Midjourney<br/>专业质量]
+    H -->|免费| J[文心一格<br/>Stable Diffusion]
+    
+    B -->|代码辅助| K{IDE?}
+    K -->|VS Code| L[GitHub Copilot<br/>Cursor]
+    K -->|JetBrains| M[Tabnine<br/>Codeium]
+    
+    B -->|办公增效| N{平台?}
+    N -->|Notion| O[Notion AI]
+    N -->|飞书| P[飞书 AI]
+    N -->|Microsoft| Q[365 Copilot]
+    
+    style A fill:#e1f5ff
+    style D fill:#ccffcc
+    style F fill:#ccffcc
+    style I fill:#ccffcc
+    style L fill:#ccffcc
 ```
 
 ### 3. 工具组合使用
