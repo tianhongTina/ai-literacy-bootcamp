@@ -1,0 +1,14 @@
+{
+  "name": "ai-literacy-bootcamp",
+  "version": "1.0.0",
+  "description": "AI 素养训练营 - 面向非研发体系人员的 AI 能力提升培训课程",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
