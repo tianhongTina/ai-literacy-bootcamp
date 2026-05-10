@@ -124,9 +124,3 @@ After completing the training, participants will be able to:
 - Proactively share AI usage experience, fostering team-wide adoption
 - When encountering new scenarios, think "Can AI be used for this?"
 
-## Contact Us
-
-- **GitHub Repository**: [AICode-Nexus/ai-literacy-bootcamp](https://github.com/AICode-Nexus/ai-literacy-bootcamp)
-- **Course Inquiries**: [Submit an Issue](https://github.com/AICode-Nexus/ai-literacy-bootcamp/issues)
-- **Content Contributions**: Pull Requests welcome
-
