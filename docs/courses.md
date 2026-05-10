@@ -171,10 +171,3 @@ After completing all courses, you will be able to:
 - Understand AI ethics and social responsibility
 - Use AI responsibly
 
----
-
-## 📞 Need Help?
-
-- **Course Issues**: [Submit an Issue](https://github.com/AICode-Nexus/ai-literacy-bootcamp/issues)
-- **Content Contributions**: [Submit a Pull Request](https://github.com/AICode-Nexus/ai-literacy-bootcamp/pulls)
-- **Discussions**: [GitHub Discussions](https://github.com/AICode-Nexus/ai-literacy-bootcamp/discussions)

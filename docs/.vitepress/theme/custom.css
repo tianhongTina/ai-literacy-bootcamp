@@ -212,6 +212,52 @@
   }
 }
 
+/* ==================== 右侧目录默认收起 ==================== */
+.VPDocOutlineItem {
+  display: none;
+}
+
+.VPDocOutlineItem.open {
+  display: block;
+}
+
+/* ==================== Google 广告预留位置 ==================== */
+/* 文章顶部广告位 */
+.ad-container-top {
+  width: 100%;
+  min-height: 90px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+}
+
+/* 文章底部广告位 */
+.ad-container-bottom {
+  width: 100%;
+  min-height: 90px;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+}
+
+/* 侧边栏广告位 */
+.ad-container-sidebar {
+  width: 100%;
+  min-height: 250px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+}
+
 /* ==================== 打印样式 ==================== */
 @media print {
   .VPNav,
