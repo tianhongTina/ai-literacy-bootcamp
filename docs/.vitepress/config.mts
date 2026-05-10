@@ -63,8 +63,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Courses', link: '/courses' },
       { text: 'Full Outline', link: '/outline' },
-      { text: 'Tool List', link: '/tools' },
-      { text: 'GitHub', link: 'https://github.com/AICode-Nexus/ai-literacy-bootcamp' }
+      { text: 'Tool List', link: '/tools' }
     ],
 
     sidebar: [
@@ -108,10 +107,6 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/AICode-Nexus/ai-literacy-bootcamp' }
-    ],
-
     footer: {
       message: 'Licensed under CC BY-NC-SA 4.0',
       copyright: 'Copyright © 2026 AI Literacy Bootcamp'
@@ -124,12 +119,6 @@ export default defineConfig({
     outline: {
       level: [2, 3],
       label: 'Table of Contents'
-    },
-
-    // Edit link for GitHub
-    editLink: {
-      pattern: 'https://github.com/AICode-Nexus/ai-literacy-bootcamp/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
     }
   },
 
