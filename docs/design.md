@@ -1,81 +1,81 @@
-# AI 素养训练营 - 课程设计文档
+# AI Literacy Bootcamp - Course Design Document
 
-> 面向非研发体系人员的 AI 能力提升培训方案
+> AI capability enhancement training program for non-technical personnel
 
-## 培训目标
+## Training Objectives
 
-完成培训后，学员能够：
-1. 建立正确的 AI 协作心智模型
-2. 熟练使用主流 AI 工具完成日常工作任务
-3. 设计有效的提示词，获得高质量 AI 输出
-4. 识别 AI 的能力边界与风险，负责任地使用
+After completing the training, participants will be able to:
+1. Establish a correct mental model for AI collaboration
+2. Proficiently use mainstream AI tools to complete daily work tasks
+3. Design effective prompts to obtain high-quality AI outputs
+4. Recognize AI capabilities, limitations, and risks, and use AI responsibly
 
-## 受众分析
+## Audience Analysis
 
-| 岗位 | 核心痛点 | AI 赋能方向 |
-|------|----------|-------------|
-| 产品经理 | 需求文档耗时、竞品分析繁琐 | PRD 生成、用户故事、原型描述 |
-| 运营 | 内容生产量大、数据报告费时 | 文案批量生成、数据解读 |
-| 市场 | 创意枯竭、多渠道适配 | 营销文案、多格式转换 |
-| HR | 招聘 JD 撰写、培训材料制作 | 岗位描述、面试题库 |
-| 行政 | 会议纪要、通知公告 | 文档整理、格式规范 |
-| 销售 | 方案撰写、客户沟通 | 提案生成、话术优化 |
+| Role | Core Pain Points | AI Empowerment Directions |
+|------|------------------|---------------------------|
+| Product Manager | Time-consuming requirement documents, tedious competitive analysis | PRD generation, user stories, prototype descriptions |
+| Operations | High volume content production, time-consuming data reports | Batch copywriting, data interpretation |
+| Marketing | Creative burnout, multi-channel adaptation | Marketing copy, multi-format conversion |
+| HR | Writing job descriptions, creating training materials | Job descriptions, interview question banks |
+| Administration | Meeting minutes, announcements | Document organization, formatting standards |
+| Sales | Proposal writing, client communication | Proposal generation, script optimization |
 
-## 课程结构
+## Course Structure
 
-### 第 0 课：AI 认知重构（2小时）
-- AI 不是搜索引擎，也不是魔法
-- 从"用工具"到"与 AI 协作"的思维转变
-- 当前主流 AI 产品全景图
-- 实操：第一次与 AI 对话
+### Lesson 0: AI Cognitive Restructuring (2 hours)
+- AI is neither a search engine nor magic
+- Mindset shift from "using tools" to "collaborating with AI"
+- Overview of current mainstream AI products
+- Hands-on: Your first conversation with AI
 
-### 第 1 课：提示词工程（2小时）
-- 为什么同样的问题得到不同答案
-- CRISPE 提示词框架
-- 角色设定、上下文、约束条件
-- 实操：为自己的岗位设计 10 个常用提示词
+### Lesson 1: Prompt Engineering (2 hours)
+- Why the same question yields different answers
+- CRISPE prompt framework
+- Role setting, context, and constraints
+- Hands-on: Design 10 commonly used prompts for your role
 
-### 第 2 课：AI 写作助手（2小时）
-- 工作邮件、周报、汇报 PPT 大纲
-- 需求文档、会议纪要、活动方案
-- 多轮对话迭代优化
-- 实操：用 AI 完成一份真实工作文档
+### Lesson 2: AI Writing Assistant (2 hours)
+- Work emails, weekly reports, presentation outlines
+- Requirement documents, meeting minutes, event proposals
+- Multi-turn dialogue iteration and optimization
+- Hands-on: Complete a real work document using AI
 
-### 第 3 课：AI 数据分析（2小时）
-- 用自然语言描述数据需求
-- Excel/CSV 数据解读与可视化建议
-- 数据报告自动生成
-- 实操：分析一份真实业务数据
+### Lesson 3: AI Data Analysis (2 hours)
+- Describing data requirements in natural language
+- Excel/CSV data interpretation and visualization recommendations
+- Automated data report generation
+- Hands-on: Analyze a real business dataset
 
-### 第 4 课：AI 产品设计（2小时）
-- 用户需求挖掘与用户故事生成
-- 功能列表与优先级排序
-- 低保真原型描述与 AI 生成
-- 实操：为一个真实需求生成 PRD 草稿
+### Lesson 4: AI Product Design (2 hours)
+- User need discovery and user story generation
+- Feature lists and priority ranking
+- Low-fidelity prototype descriptions and AI generation
+- Hands-on: Generate a PRD draft for a real requirement
 
-### 第 5 课：AI 工作流自动化（2小时）
-- 什么是工作流自动化
-- Coze / Dify / n8n 零代码搭建
-- 常见自动化场景：定时报告、内容分发
-- 实操：搭建一个简单的自动化工作流
+### Lesson 5: AI Workflow Automation (2 hours)
+- What is workflow automation
+- Coze / Dify / n8n no-code development
+- Common automation scenarios: scheduled reports, content distribution
+- Hands-on: Build a simple automated workflow
 
-### 第 6 课：AI 工具生态（2小时）
-- 文本类：ChatGPT、Claude、讯飞星火
-- 图像类：Midjourney、即梦、通义万象
-- 视频类：Sora、可灵、即创
-- 办公类：WPS AI、飞书 AI、钉钉 AI
-- 选型原则：场景匹配 > 功能强大
+### Lesson 6: AI Tool Ecosystem (2 hours)
+- Text: ChatGPT, Claude, iFlytek Spark
+- Image: Midjourney, Jimeng, Tongyi Wanxiang
+- Video: Sora, Kling, Jimeng Creative
+- Office: WPS AI, Feishu AI, DingTalk AI
+- Selection principle: Scenario match > Feature power
 
-### 第 7 课：AI 协作与安全（2小时）
-- AI 幻觉：识别与验证
-- 数据安全：什么不能输入 AI
-- 版权与合规：AI 生成内容的使用边界
-- 组织 AI 治理基础
-- 实操：制定个人 AI 使用规范
+### Lesson 7: AI Collaboration and Security (2 hours)
+- AI hallucinations: Recognition and verification
+- Data security: What should not be input to AI
+- Copyright and compliance: Usage boundaries for AI-generated content
+- Fundamentals of organizational AI governance
+- Hands-on: Develop personal AI usage guidelines
 
-## 教学原则
+## Teaching Principles
 
-1. **场景驱动**：每个知识点从真实工作场景出发
-2. **即学即用**：每节课结束有可带走的模板或工具
-3. **动手为主**：每节课 40% 讲解 + 60% 实操
-4. **持续更新**：AI 工具迭代快，课程内容每季度复核
+1. **Scenario-Driven**: Each concept starts from real work scenarios
+2. **Learn and Apply**: Every lesson ends with take-away templates or tools
+3. **Hands-On Focus**: Each lesson is 40% instruction + 60% practice
+4. **Continuous Updates**: AI tools evolve rapidly; course content is reviewed quarterly

@@ -1,464 +1,464 @@
-# AI 工具清单
+# AI Tools List
 
-> **数据截止时间**：2026 年 5 月 6 日  
-> **工具总数**：85+ 个  
-> **覆盖场景**：14 大类  
-> **更新频率**：每季度更新一次
-
----
-
-## 快速导航
-
-**按场景查找：**
-[通用对话](#通用对话-ai) | [AI 搜索](#ai-搜索与知识管理) | [写作内容](#写作与内容创作) | [数据分析](#数据分析与可视化) | [图像生成](#图像生成与编辑) | [视频生成](#视频生成与编辑) | [音频播客](#音频与播客) | [PPT 演示](#ppt-与演示) | [工作流](#工作流自动化) | [AI 编程](#ai-编程辅助) | [会议协作](#会议与协作) | [翻译](#翻译与本地化) | [HR 招聘](#hr-与招聘) | [客服营销](#客服与营销)
-
-**按岗位推荐：**
-- **产品经理**：通用对话 AI、AI 搜索、数据分析、工作流自动化
-- **运营人员**：写作内容、数据分析、图像生成、视频生成、客服营销
-- **市场营销**：写作内容、图像生成、视频生成、PPT 演示、客服营销
-- **HR**：通用对话 AI、写作内容、HR 招聘、会议协作
-- **行政人员**：通用对话 AI、写作内容、PPT 演示、会议协作、翻译
-
-**按可用性筛选：**
-- **国内直连工具**：讯飞星火、文心一言、豆包、Kimi、通义千问、秘塔、即梦、可灵等
-- **需梯子工具**：ChatGPT、Claude、Gemini、Midjourney、Sora、Perplexity 等
+> **Data Cutoff Date**: May 6, 2026  
+> **Total Tools**: 85+  
+> **Coverage Scenarios**: 14 Categories  
+> **Update Frequency**: Quarterly
 
 ---
 
-## 如何选择合适的工具？
+## Quick Navigation
 
-### 1. 明确使用场景
-- **日常办公**：优先选择通用对话 AI（讯飞星火、ChatGPT）
-- **专业任务**：根据具体需求选择垂直工具（数据分析、图像生成等）
-- **团队协作**：选择支持多人协作的工具（飞书、Notion）
+**Find by Scenario:**
+[General Chat](#general-chat-ai) | [AI Search](#ai-search-and-knowledge-management) | [Writing & Content](#writing-and-content-creation) | [Data Analysis](#data-analysis-and-visualization) | [Image Generation](#image-generation-and-editing) | [Video Generation](#video-generation-and-editing) | [Audio & Podcast](#audio-and-podcast) | [PPT & Presentation](#ppt-and-presentation) | [Workflow](#workflow-automation) | [AI Programming](#ai-programming-assistance) | [Meeting & Collaboration](#meeting-and-collaboration) | [Translation](#translation-and-localization) | [HR & Recruitment](#hr-and-recruitment) | [Customer Service & Marketing](#customer-service-and-marketing)
 
-### 2. 考虑可用性
-- **国内用户**：优先选择国内直连工具，稳定性更好
-- **国际业务**：可以考虑国际主流工具，功能更丰富
+**Recommendations by Role:**
+- **Product Managers**: General Chat AI, AI Search, Data Analysis, Workflow Automation
+- **Operations**: Writing & Content, Data Analysis, Image Generation, Video Generation, Customer Service & Marketing
+- **Marketing**: Writing & Content, Image Generation, Video Generation, PPT & Presentation, Customer Service & Marketing
+- **HR**: General Chat AI, Writing & Content, HR & Recruitment, Meeting & Collaboration
+- **Administrative Staff**: General Chat AI, Writing & Content, PPT & Presentation, Meeting & Collaboration, Translation
 
-### 3. 评估成本
-- **个人使用**：优先选择免费或 Freemium 工具
-- **团队使用**：考虑订阅制工具，性价比更高
-- **企业部署**：选择支持私有化部署的工具
-
-### 4. 关注数据安全
-- **敏感数据**：选择支持私有化部署或本地运行的工具
-- **一般数据**：可以使用云端工具，注意查看隐私政策
+**Filter by Availability:**
+- **Direct Access in China**: iFlytek Spark, Wenxin Yiyan, Doubao, Kimi, Tongyi Qianwen, Meta, Jimeng, Kling, etc.
+- **Requires VPN**: ChatGPT, Claude, Gemini, Midjourney, Sora, Perplexity, etc.
 
 ---
 
-## 通用对话 AI
+## How to Choose the Right Tool?
 
-> 适用岗位：产品、运营、市场、HR、行政、销售 \| 全岗位通用基础工具
+### 1. Identify Your Use Case
+- **Daily Office Work**: Prioritize General Chat AI (iFlytek Spark, ChatGPT)
+- **Professional Tasks**: Choose specialized tools based on specific needs (Data Analysis, Image Generation, etc.)
+- **Team Collaboration**: Choose tools that support multi-person collaboration (Feishu, Notion)
 
-通用对话 AI 是所有 AI 工具的基础，掌握一两款通用对话 AI 就能解决 70% 的日常工作需求。
+### 2. Consider Availability
+- **Users in China**: Prioritize tools with direct access in China for better stability
+- **International Business**: Consider mainstream international tools with richer features
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [ChatGPT](https://chat.openai.com) | GPT-4o 多模态，代码解释器，GPTs 生态，o1 推理模型 | 8 亿周活用户（2025Q4 OpenAI 官方），全球第一 | 免费版 + Plus $20/月 + Pro $200/月 | 通用 \| 🪜 需梯子 \| Freemium |
-| [Claude](https://claude.ai) | 200K 上下文，Claude 4 系列，Artifacts 交互，Projects 项目 | 1890 万月活（2025 年末） | 免费版 + Pro $20/月 + Max $100/月 | 通用 \| 🪜 需梯子 \| Freemium |
-| [Gemini](https://gemini.google.com) | Google 生态集成，1M 上下文，Deep Research，多模态 | 4 亿月活（2025Q4 Google I/O） | 免费版 + Advanced $19.99/月 | 通用 \| 🪜 需梯子 \| Freemium |
-| [讯飞星火](https://xinghuo.xfyun.cn) | Spark X1 深度推理模型，中文优化，企业合规 | 1.3 亿用户（2025 讯飞官方） | 免费版 + Pro ¥36/月 | 通用 \| ✅ 国内直连 \| Freemium |
-| [豆包](https://www.doubao.com) | 字节出品，多角色智能体，完全免费，DeepSeek 集成 | 2 亿月活（2025Q4 QuestMobile），国内第一 | 完全免费 | 通用 \| ✅ 国内直连 \| 免费 |
-| [Kimi](https://kimi.moonshot.cn) | 200 万字超长上下文，K2 模型，联网搜索 | 3600 万月活（2025Q4） | 免费版 + 会员 ¥69/月 | 通用 \| ✅ 国内直连 \| Freemium |
-| [通义千问](https://tongyi.aliyun.com) | Qwen3 系列，阿里生态，开源模型领先，企业级 API | 1 亿用户（2025 阿里云栖大会） | 免费版 + Plus ¥50/月 | 通用 \| ✅ 国内直连 \| Freemium |
-| [文心一言](https://yiyan.baidu.com) | 文心 X1 深度思考，百度搜索增强，PPT 生成 | 3 亿用户（2025 百度世界大会） | 免费版 + 专业版 ¥59.9/月 | 通用 \| ✅ 国内直连 \| Freemium |
-| [DeepSeek](https://chat.deepseek.com) | R1 推理模型开源，性价比之王，API 成本极低 | 8000 万月活（2025Q4），开源社区第一 | 完全免费 | 通用 \| ✅ 国内直连 \| 免费 |
+### 3. Evaluate Cost
+- **Personal Use**: Prioritize free or freemium tools
+- **Team Use**: Consider subscription-based tools with better value
+- **Enterprise Deployment**: Choose tools that support private deployment
 
-**选择建议：**
-- **国内用户首选**：豆包（免费+生态）、Kimi（超长上下文）、DeepSeek（推理能力强）
-- **国际用户首选**：ChatGPT（生态最完善）、Claude（代码和长文档处理）
-- **企业用户**：讯飞星火（合规）、通义千问（API 生态）
+### 4. Pay Attention to Data Security
+- **Sensitive Data**: Choose tools that support private deployment or local operation
+- **General Data**: Cloud-based tools are acceptable, but review privacy policies
 
 ---
 
-## AI 搜索与知识管理
+## General Chat AI
 
-> 适用岗位：产品、运营、市场、研究、HR \| 快速获取信息和知识整理
+> Applicable Roles: Product, Operations, Marketing, HR, Admin, Sales | Universal foundational tool for all positions
 
-AI 搜索正在挑战传统搜索引擎，直接给答案、引用来源、无广告干扰。
+General Chat AI is the foundation of all AI tools. Mastering one or two general chat AI tools can solve 70% of daily work needs.
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [Perplexity](https://perplexity.ai) | 引用来源精准，Deep Research，Pro 搜索，Spaces 协作 | 1500 万月活（2025Q4），估值 90 亿美元 | 免费版 + Pro $20/月 | 产品/运营/市场 \| 🪜 需梯子 \| Freemium |
-| [秘塔 AI 搜索](https://metaso.cn) | 无广告，深度总结，多来源对比，学术模式 | 500 万月活（2025Q4），国产领先 | 完全免费 | 产品/运营/市场 \| ✅ 国内直连 \| 免费 |
-| [ima.copilot](https://ima.qq.com) | 腾讯出品，微信生态，个人知识库，智能笔记 | 1000 万用户（2025Q4） | 完全免费 | 全岗位 \| ✅ 国内直连 \| 免费 |
-| [天工 AI 搜索](https://tiangong.cn) | 昆仑万维出品，多模态搜索，深度回答 | 200 万日活（2025Q4） | 免费版 + Pro ¥39/月 | 产品/运营/市场 \| ✅ 国内直连 \| Freemium |
-| [360AI 搜索](https://so.com) | 360 生态，安全搜索，超级搜索 | 800 万日活（2025Q4） | 完全免费 | 产品/运营/市场 \| ✅ 国内直连 \| 免费 |
-| [NotebookLM](https://notebooklm.google.com) | Google 出品，上传文档转播客，音频概览，研究神器 | 爆款产品（2024 末起，2025 快速增长） | 免费版 + Plus $19.99/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [ChatGPT](https://chat.openai.com) | GPT-4o multimodal, code interpreter, GPTs ecosystem, o1 reasoning model | 800 million weekly active users (2025Q4 OpenAI official), #1 globally | Free + Plus $20/month + Pro $200/month | General | Requires VPN | Freemium |
+| [Claude](https://claude.ai) | 200K context, Claude 4 series, Artifacts interaction, Projects | 18.9 million MAU (end of 2025) | Free + Pro $20/month + Max $100/month | General | Requires VPN | Freemium |
+| [Gemini](https://gemini.google.com) | Google ecosystem integration, 1M context, Deep Research, multimodal | 400 million MAU (2025Q4 Google I/O) | Free + Advanced $19.99/month | General | Requires VPN | Freemium |
+| [iFlytek Spark](https://xinghuo.xfyun.cn) | Spark X1 deep reasoning model, Chinese optimization, enterprise compliance | 130 million users (2025 iFlytek official) | Free + Pro CNY 36/month | General | Direct Access in China | Freemium |
+| [Doubao](https://www.doubao.com) | By ByteDance, multi-role agents, completely free, DeepSeek integration | 200 million MAU (2025Q4 QuestMobile), #1 in China | Completely Free | General | Direct Access in China | Free |
+| [Kimi](https://kimi.moonshot.cn) | 2 million character ultra-long context, K2 model, web search | 36 million MAU (2025Q4) | Free + Member CNY 69/month | General | Direct Access in China | Freemium |
+| [Tongyi Qianwen](https://tongyi.aliyun.com) | Qwen3 series, Alibaba ecosystem, leading open-source models, enterprise API | 100 million users (2025 Alibaba Cloud Conference) | Free + Plus CNY 50/month | General | Direct Access in China | Freemium |
+| [Wenxin Yiyan](https://yiyan.baidu.com) | Wenxin X1 deep thinking, Baidu search enhancement, PPT generation | 300 million users (2025 Baidu World Conference) | Free + Pro CNY 59.9/month | General | Direct Access in China | Freemium |
+| [DeepSeek](https://chat.deepseek.com) | R1 reasoning model open-source, best value, extremely low API cost | 80 million MAU (2025Q4), #1 in open-source community | Completely Free | General | Direct Access in China | Free |
 
-**选择建议：**
-- **国内用户首选**：秘塔（深度研究）、ima.copilot（个人知识库）
-- **深度研究**：Perplexity Deep Research、NotebookLM
-- **学术场景**：秘塔学术模式、Perplexity
-
----
-
-## 写作与内容创作
-
-> 适用岗位：运营、市场、HR、行政 \| 公文、报告、营销文案、邮件
-
-写作类工具已经从"AI 辅助"进化到"AI 协作"，选对工具可以将写作效率提升 5-10 倍。
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [WPS AI](https://ai.wps.cn) | Office 生态，中文优化，公文模板，一键生成 | 5.8 亿月活（2025 金山办公财报） | 会员 ¥149/年 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [Notion AI](https://notion.so) | 知识库集成，协作写作，模板市场，Q&A 功能 | 1 亿用户（2025Q4） | $10/月（附加） | 运营/市场/产品 \| 🪜 需梯子 \| 订阅制 |
-| [飞书智能伙伴](https://feishu.cn) | 飞书深度集成，多维表格 AI，文档 AI，会议纪要 | 飞书用户超 1400 万企业 | 企业版包含 | 全岗位 \| ✅ 国内直连 \| 企业定价 |
-| [讯飞写作](https://huixie.xfyun.cn) | 中文写作专项，公文规范，多场景模板 | 500 万用户（2025Q4） | 免费版 + Pro ¥198/年 | 运营/市场/HR/行政 \| ✅ 国内直连 \| Freemium |
-| [秘塔写作猫](https://xiezuocat.com) | 中文纠错润色，全文改写，多场景模板 | 500 万用户（2025Q4） | 免费版 + Pro ¥99/年 | 运营/市场/HR/行政 \| ✅ 国内直连 \| Freemium |
-| [Grammarly](https://grammarly.com) | 英文写作，语法检查，AI 重写，企业协作 | 3500 万日活（2025Q4） | 免费版 + Premium $12/月 | 运营/市场 \| 🪜 需梯子 \| Freemium |
-| [Jasper](https://jasper.ai) | 营销文案专项，品牌语调，SEO 优化，团队协作 | 10 万付费用户（2025Q4） | Creator $49/月起 | 市场 \| 🪜 需梯子 \| 订阅制 |
-
-**选择建议：**
-- **日常办公**：WPS AI（Office 生态）、飞书智能伙伴（协作）
-- **公文写作**：讯飞写作（规范强）、秘塔写作猫（润色）
-- **营销文案**：Jasper（专业）、豆包（免费）
-- **英文写作**：Grammarly（语法）、Claude（创作）
+**Selection Recommendations:**
+- **Top Choice for Users in China**: Doubao (free + ecosystem), Kimi (ultra-long context), DeepSeek (strong reasoning)
+- **Top Choice for International Users**: ChatGPT (most complete ecosystem), Claude (code and long document processing)
+- **Enterprise Users**: iFlytek Spark (compliance), Tongyi Qianwen (API ecosystem)
 
 ---
 
-## 数据分析与可视化
+## AI Search and Knowledge Management
 
-> 适用岗位：产品、运营、市场 \| 数据报告、业务分析、可视化
+> Applicable Roles: Product, Operations, Marketing, Research, HR | Quick information access and knowledge organization
 
-非研发人员也能做数据分析了，AI 工具让数据分析门槛降低 80%。
+AI search is challenging traditional search engines by providing direct answers, cited sources, and ad-free experiences.
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [ChatGPT 数据分析](https://chat.openai.com) | 上传 Excel/CSV，自动分析，生成可视化图表 | 集成在 ChatGPT Plus | Plus $20/月 | 产品/运营/市场 \| 🪜 需梯子 \| 订阅制 |
-| [Claude Artifacts](https://claude.ai) | 交互式图表，数据可视化，代码生成，React 组件 | 集成在 Claude Pro | Pro $20/月 | 产品/运营/市场 \| 🪜 需梯子 \| 订阅制 |
-| [讯飞星火数据分析](https://xinghuo.xfyun.cn) | 中文界面，业务数据解读，自动报告生成 | 集成在讯飞星火 | Pro ¥36/月 | 产品/运营/市场 \| ✅ 国内直连 \| 订阅制 |
-| [帆软 FineBI](https://finebi.com) | 企业级 BI 领导者，自助分析，AI 问数 | 25000+ 企业用户（2025 IDC 中国 BI 市场第一） | 企业定价 | 产品/运营/市场 \| ✅ 国内直连 \| 企业定价 |
-| [观远数据](https://guandata.com) | 智能分析，Copilot BI，场景化 AI 洞察 | 5000+ 企业客户 | 企业定价 | 产品/运营/市场 \| ✅ 国内直连 \| 企业定价 |
-| [神策分析](https://sensorsdata.cn) | 用户行为分析，埋点管理，智能归因 | 2500+ 企业客户 | 企业定价 | 产品/运营 \| ✅ 国内直连 \| 企业定价 |
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Perplexity](https://perplexity.ai) | Precise source citations, Deep Research, Pro search, Spaces collaboration | 15 million MAU (2025Q4), $9 billion valuation | Free + Pro $20/month | Product/Operations/Marketing | Requires VPN | Freemium |
+| [Meta AI Search](https://metaso.cn) | Ad-free, deep summaries, multi-source comparison, academic mode | 5 million MAU (2025Q4), leading Chinese tool | Completely Free | Product/Operations/Marketing | Direct Access in China | Free |
+| [ima.copilot](https://ima.qq.com) | By Tencent, WeChat ecosystem, personal knowledge base, smart notes | 10 million users (2025Q4) | Completely Free | All Roles | Direct Access in China | Free |
+| [Tiangong AI Search](https://tiangong.cn) | By Kunlun Tech, multimodal search, deep answers | 2 million DAU (2025Q4) | Free + Pro CNY 39/month | Product/Operations/Marketing | Direct Access in China | Freemium |
+| [360AI Search](https://so.com) | 360 ecosystem, safe search, super search | 8 million DAU (2025Q4) | Completely Free | Product/Operations/Marketing | Direct Access in China | Free |
+| [NotebookLM](https://notebooklm.google.com) | By Google, upload documents to podcast, audio overview, research tool | Hit product (late 2024, rapid growth in 2025) | Free + Plus $19.99/month | All Roles | Requires VPN | Freemium |
 
-**选择建议：**
-- **个人/小团队**：ChatGPT 数据分析、Claude Artifacts（快速分析）
-- **企业 BI**：帆软 FineBI（市场领导者）
-- **用户行为**：神策分析（专业埋点）
-
----
-
-## 图像生成与编辑
-
-> 适用岗位：市场、运营、产品 \| 营销配图、电商图、品牌视觉
-
-2025-2026 年图像生成进入"真实感+可控性"阶段，国内工具在中文场景和电商领域表现亮眼。
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [Midjourney](https://midjourney.com) | 艺术感最强，V7 模型，风格控制，ARs 引擎 | 2000 万订阅用户（2025Q4） | Basic $10/月起 | 市场/设计 \| 🪜 需梯子 \| 订阅制 |
-| [即梦 AI](https://jimeng.jianying.com) | 字节出品，图 3.0 模型，中文理解强，电商场景 | 1.5 亿月活（2025Q4），国内第一 | 免费 + VIP ¥69/月 | 市场/运营 \| ✅ 国内直连 \| Freemium |
-| [通义万相](https://tongyi.aliyun.com/wanxiang) | 阿里出品，Wan 2.1 开源，电商图专项 | 集成在通义千问 | 免费版 + Plus | 市场/运营/电商 \| ✅ 国内直连 \| Freemium |
-| [DALL-E 3](https://openai.com/dall-e-3) | OpenAI 出品，集成 ChatGPT，文字理解精准 | 集成在 ChatGPT | Plus $20/月 | 市场/运营 \| 🪜 需梯子 \| 订阅制 |
-| [Stable Diffusion](https://stability.ai) | 开源之王，SD 3.5 + Flux，本地部署，定制化 | 开源生态超 1000 万用户 | 免费（开源）+ SaaS | 设计/技术 \| ✅ 可本地部署 \| 免费 |
-| [文心一格](https://yige.baidu.com) | 百度出品，中文场景，风格丰富 | 1000 万用户（2025Q4） | 免费版 + 会员 ¥49/月 | 市场/运营 \| ✅ 国内直连 \| Freemium |
-| [可图](https://klingai.com) | 快手出品，Kolors 2.0，人像生成领先 | 500 万月活（2025Q4） | 免费版 + 会员 ¥66/月 | 市场/运营 \| ✅ 国内直连 \| Freemium |
-| [Ideogram](https://ideogram.ai) | 文字渲染最强，海报设计，Logo 生成 | 300 万月活（2025Q4） | 免费版 + Plus $8/月 | 市场/设计 \| 🪜 需梯子 \| Freemium |
-
-**选择建议：**
-- **国内营销配图**：即梦 AI（综合最强）、通义万相（电商）
-- **艺术创作**：Midjourney（艺术感）、Flux（真实感）
-- **文字海报**：Ideogram（文字渲染）
-- **本地部署**：Stable Diffusion（开源）
+**Selection Recommendations:**
+- **Top Choice for Users in China**: Meta (deep research), ima.copilot (personal knowledge base)
+- **Deep Research**: Perplexity Deep Research, NotebookLM
+- **Academic Scenarios**: Meta academic mode, Perplexity
 
 ---
 
-## 视频生成与编辑
+## Writing and Content Creation
 
-> 适用岗位：市场、运营、内容创作 \| 营销视频、产品演示、短视频
+> Applicable Roles: Operations, Marketing, HR, Admin | Official documents, reports, marketing copy, emails
 
-2025 年是 AI 视频生成爆发的一年，国产可灵稳居全球第一梯队。
+Writing tools have evolved from "AI-assisted" to "AI-collaborative." Choosing the right tool can boost writing efficiency by 5-10x.
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [可灵 AI](https://klingai.com) | 快手出品，Kling 2.0，10 秒 1080p，运动连贯 | 全球 2200 万用户（2025Q4），国产第一 | 免费版 + VIP ¥66/月起 | 市场/运营 \| ✅ 国内直连 \| Freemium |
-| [Sora](https://openai.com/sora) | OpenAI 出品，Sora 2，20 秒 1080p，物理真实 | 集成在 ChatGPT Plus/Pro | Plus $20/月起 | 市场/运营 \| 🪜 需梯子 \| 订阅制 |
-| [Veo 3](https://deepmind.google/veo) | Google DeepMind 出品，8 秒 4K，音画同步生成 | 集成在 Gemini Advanced | Advanced $19.99/月 | 市场/运营 \| 🪜 需梯子 \| 订阅制 |
-| [Runway](https://runwayml.com) | Gen-4 模型，电影级别，视频编辑一体化 | 专业创作者首选 | 免费版 + Standard $12/月起 | 市场/影视 \| 🪜 需梯子 \| Freemium |
-| [即梦视频](https://jimeng.jianying.com) | 字节出品，Seedance 1.0，与剪映集成 | 集成在即梦 AI | 免费版 + VIP ¥69/月 | 市场/运营 \| ✅ 国内直连 \| Freemium |
-| [PixVerse](https://pixverse.ai) | 爱诗科技出品，V4.5，高性价比，角色一致性 | 1500 万用户（2025Q4） | 免费版 + 订阅 $10/月起 | 市场/运营 \| ✅ 国内直连 \| Freemium |
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [WPS AI](https://ai.wps.cn) | Office ecosystem, Chinese optimization, official document templates, one-click generation | 580 million MAU (2025 Kingsoft Office financial report) | Member CNY 149/year | All Roles | Direct Access in China | Freemium |
+| [Notion AI](https://notion.so) | Knowledge base integration, collaborative writing, template marketplace, Q&A feature | 100 million users (2025Q4) | $10/month (add-on) | Operations/Marketing/Product | Requires VPN | Subscription |
+| [Feishu Smart Partner](https://feishu.cn) | Deep Feishu integration, multi-dimensional table AI, document AI, meeting notes | Feishu has 14+ million enterprise users | Included in Enterprise | All Roles | Direct Access in China | Enterprise Pricing |
+| [iFlytek Writing](https://huixie.xfyun.cn) | Chinese writing specialized, official document standards, multi-scenario templates | 5 million users (2025Q4) | Free + Pro CNY 198/year | Operations/Marketing/HR/Admin | Direct Access in China | Freemium |
+| [Meta Writing Cat](https://xiezuocat.com) | Chinese proofreading and polishing, full-text rewriting, multi-scenario templates | 5 million users (2025Q4) | Free + Pro CNY 99/year | Operations/Marketing/HR/Admin | Direct Access in China | Freemium |
+| [Grammarly](https://grammarly.com) | English writing, grammar checking, AI rewriting, enterprise collaboration | 35 million DAU (2025Q4) | Free + Premium $12/month | Operations/Marketing | Requires VPN | Freemium |
+| [Jasper](https://jasper.ai) | Marketing copy specialized, brand voice, SEO optimization, team collaboration | 100K paid users (2025Q4) | Creator from $49/month | Marketing | Requires VPN | Subscription |
 
-**选择建议：**
-- **国内商用**：可灵（全球领先）、即梦（剪映集成）
-- **国际最强**：Sora 2（物理真实）、Veo 3（音画同步）
-- **专业制作**：Runway（电影级）、PixVerse（角色一致）
-
----
-
-## 音频与播客
-
-> 适用岗位：市场、运营、内容创作、培训 \| 配音、播客、音频内容
-
-AI 音频工具已经可以以假乱真，NotebookLM 的播客功能成为年度现象级产品。
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [NotebookLM](https://notebooklm.google.com) | Google 出品，文档转播客，音频概览，研究神器 | 2025 年度爆款 | 免费版 + Plus $19.99/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [ElevenLabs](https://elevenlabs.io) | 语音合成标杆，克隆音色，多语言，API 丰富 | 3000 万用户（2025Q4），估值 33 亿 | 免费版 + Starter $5/月起 | 市场/内容 \| 🪜 需梯子 \| Freemium |
-| [讯飞配音](https://peiyin.xfyun.cn) | 中文配音专项，200+ 发音人，多场景模板 | 1000 万用户（2025Q4） | 免费额度 + 按字符付费 | 市场/运营/培训 \| ✅ 国内直连 \| 按量付费 |
-| [剪映配音](https://www.capcut.cn) | 字节出品，剪映集成，真人声音克隆，完全免费 | 剪映用户 3 亿+ | 完全免费 | 市场/运营 \| ✅ 国内直连 \| 免费 |
-| [Descript](https://descript.com) | 音视频编辑，转录即编辑，AI 消音 | 专业播客首选 | 免费版 + Creator $24/月 | 内容/播客 \| 🪜 需梯子 \| Freemium |
-
-**选择建议：**
-- **播客制作**：NotebookLM（概览）、Descript（专业编辑）
-- **国内配音**：讯飞配音（专业）、剪映配音（免费）
-- **音色克隆**：ElevenLabs（质量最高）
+**Selection Recommendations:**
+- **Daily Office Work**: WPS AI (Office ecosystem), Feishu Smart Partner (collaboration)
+- **Official Document Writing**: iFlytek Writing (strong standards), Meta Writing Cat (polishing)
+- **Marketing Copy**: Jasper (professional), Doubao (free)
+- **English Writing**: Grammarly (grammar), Claude (creative)
 
 ---
 
-## PPT 与演示
+## Data Analysis and Visualization
 
-> 适用岗位：产品、运营、市场、HR、销售 \| 工作汇报、提案、培训
+> Applicable Roles: Product, Operations, Marketing | Data reports, business analysis, visualization
 
-告别手动排版，AI 让做 PPT 从 2 小时缩短到 5 分钟。
+Non-developers can now do data analysis too. AI tools have lowered the barrier to data analysis by 80%.
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [Gamma](https://gamma.app) | 全球领先，自动排版，响应式设计，导出灵活 | 5000 万用户（2025Q4） | 免费版 + Plus $10/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [讯飞智文](https://zhiwen.xfyun.cn) | 中文 PPT 专项，一键生成，模板丰富 | 集成在讯飞生态 | 免费版 + Pro ¥99/年 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [WPS AI PPT](https://ai.wps.cn) | WPS 生态，一键生成，中文优化 | 集成在 WPS 会员 | 会员 ¥149/年 | 全岗位 \| ✅ 国内直连 \| 订阅制 |
-| [AiPPT](https://aippt.cn) | 国内专业 PPT AI，素材库大，美化强 | 500 万用户（2025Q4） | 免费版 + 会员 ¥99/月 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [Beautiful.ai](https://beautiful.ai) | 设计感强，自动调整，企业协作 | 企业级首选 | Pro $12/月起 | 全岗位 \| 🪜 需梯子 \| 订阅制 |
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [ChatGPT Data Analysis](https://chat.openai.com) | Upload Excel/CSV, automatic analysis, generate visual charts | Integrated in ChatGPT Plus | Plus $20/month | Product/Operations/Marketing | Requires VPN | Subscription |
+| [Claude Artifacts](https://claude.ai) | Interactive charts, data visualization, code generation, React components | Integrated in Claude Pro | Pro $20/month | Product/Operations/Marketing | Requires VPN | Subscription |
+| [iFlytek Spark Data Analysis](https://xinghuo.xfyun.cn) | Chinese interface, business data interpretation, automatic report generation | Integrated in iFlytek Spark | Pro CNY 36/month | Product/Operations/Marketing | Direct Access in China | Subscription |
+| [FanRuan FineBI](https://finebi.com) | Enterprise BI leader, self-service analysis, AI data query | 25,000+ enterprise users (2025 IDC #1 in China BI market) | Enterprise Pricing | Product/Operations/Marketing | Direct Access in China | Enterprise Pricing |
+| [Guandata](https://guandata.com) | Intelligent analysis, Copilot BI, scenario-based AI insights | 5,000+ enterprise customers | Enterprise Pricing | Product/Operations/Marketing | Direct Access in China | Enterprise Pricing |
+| [Sensors Analytics](https://sensorsdata.cn) | User behavior analysis, event tracking management, intelligent attribution | 2,500+ enterprise customers | Enterprise Pricing | Product/Operations | Direct Access in China | Enterprise Pricing |
 
-**选择建议：**
-- **国内首选**：讯飞智文（免费强）、AiPPT（素材多）
-- **国际最佳**：Gamma（全球领先）、Beautiful.ai（企业）
-- **Office 用户**：WPS AI PPT（生态集成）
-
----
-
-## 工作流自动化
-
-> 适用岗位：全岗位 \| 让重复工作自动化，效率提升 10 倍
-
-AI Agent 平台是 2025 年最大的风口，零代码构建智能工作流。
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [扣子](https://coze.cn) | 字节国内版，零代码 Bot 搭建，飞书/抖音生态 | 1000 万用户（2025Q4），国内第一 | 免费版 + Pro | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [Coze](https://coze.com) | 字节国际版，海外用户，多平台发布 | 500 万用户（2025Q4） | 免费版 + Premium $9/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [Dify](https://dify.ai) | 开源领先，LLMOps 平台，企业私有部署 | GitHub 80K+ star | 免费（开源）+ 云版 | 企业/技术 \| ✅ 可私有化 \| Freemium |
-| [飞书多维表格](https://feishu.cn) | 飞书生态，表格+AI，字段级 AI 能力 | 飞书 1400 万企业 | 企业版包含 | 全岗位 \| ✅ 国内直连 \| 企业定价 |
-| [n8n](https://n8n.io) | 开源工作流，500+ 集成，AI Agent 支持 | GitHub 65K+ star | 免费（自托管）+ 云 €20/月 | 技术/企业 \| ✅ 可私有化 \| Freemium |
-| [Make](https://make.com) | 可视化自动化，1800+ 应用，高级场景 | 30 万付费用户（2025Q4） | 免费版 + Core $10.59/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [Zapier](https://zapier.com) | 集成最多（7000+），AI Actions，企业级 | 250 万用户（2025Q4） | 免费版 + Professional $29/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-
-**选择建议：**
-- **国内用户**：扣子（字节生态）、飞书多维表格（协作）
-- **企业私有化**：Dify（开源领先）、n8n（工作流）
-- **国际集成**：Zapier（集成最多）、Make（性价比）
+**Selection Recommendations:**
+- **Individual/Small Teams**: ChatGPT Data Analysis, Claude Artifacts (quick analysis)
+- **Enterprise BI**: FanRuan FineBI (market leader)
+- **User Behavior**: Sensors Analytics (professional tracking)
 
 ---
 
-## AI 编程辅助
+## Image Generation and Editing
 
-> 适用岗位：产品、运营（需基础能力）\| 虽面向研发，但非研发也能用来做简单自动化
+> Applicable Roles: Marketing, Operations, Product | Marketing images, e-commerce images, brand visuals
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [Cursor](https://cursor.sh) | AI IDE 标杆，Agent 模式，代码补全精准 | 2025 年独角兽，ARR 超 1 亿美元 | 免费版 + Pro $20/月 | 技术/产品 \| 🪜 需梯子 \| Freemium |
-| [Claude Code](https://claude.ai/code) | Anthropic 出品，终端原生，Agent SDK | 2025 年爆款，开发者首选 | 包含在 Claude 订阅 | 技术 \| 🪜 需梯子 \| 订阅制 |
-| [GitHub Copilot](https://github.com/copilot) | GitHub 官方，VS Code 集成，Agent 模式 | 2000 万付费用户（2025Q4） | 免费版 + Pro $10/月 | 技术 \| 🪜 需梯子 \| Freemium |
-| [通义灵码](https://tongyi.aliyun.com/lingma) | 阿里出品，中文注释强，国内 IDE 集成 | 1000 万用户（2025Q4），国内第一 | 完全免费（个人） | 技术/产品 \| ✅ 国内直连 \| 免费 |
-| [豆包 MarsCode](https://www.marscode.cn) | 字节出品，云端 IDE，免费强大 | 500 万用户（2025Q4） | 完全免费 | 技术/产品 \| ✅ 国内直连 \| 免费 |
-| [Codeium / Windsurf](https://windsurf.com) | 免费替代 Copilot，Cascade Agent | 300 万用户（2025Q4） | 免费版 + Pro $15/月 | 技术 \| 🪜 需梯子 \| Freemium |
+In 2025-2026, image generation has entered the "realism + controllability" phase. Chinese tools excel in Chinese scenarios and e-commerce.
 
-**选择建议：**
-- **国内用户**：通义灵码（免费）、豆包 MarsCode（云端）
-- **专业开发**：Cursor（AI IDE）、Claude Code（终端）
-- **VS Code 用户**：GitHub Copilot（生态）
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Midjourney](https://midjourney.com) | Strongest artistic sense, V7 model, style control, ARs engine | 20 million subscribers (2025Q4) | Basic from $10/month | Marketing/Design | Requires VPN | Subscription |
+| [Jimeng AI](https://jimeng.jianying.com) | By ByteDance, Image 3.0 model, strong Chinese understanding, e-commerce | 150 million MAU (2025Q4), #1 in China | Free + VIP CNY 69/month | Marketing/Operations | Direct Access in China | Freemium |
+| [Tongyi Wanxiang](https://tongyi.aliyun.com/wanxiang) | By Alibaba, Wan 2.1 open-source, e-commerce image specialized | Integrated in Tongyi Qianwen | Free + Plus | Marketing/Operations/E-commerce | Direct Access in China | Freemium |
+| [DALL-E 3](https://openai.com/dall-e-3) | By OpenAI, integrated with ChatGPT, precise text understanding | Integrated in ChatGPT | Plus $20/month | Marketing/Operations | Requires VPN | Subscription |
+| [Stable Diffusion](https://stability.ai) | Open-source king, SD 3.5 + Flux, local deployment, customization | Open-source ecosystem 10M+ users | Free (open-source) + SaaS | Design/Tech | Local Deployment Possible | Free |
+| [Wenxin Yige](https://yige.baidu.com) | By Baidu, Chinese scenarios, rich styles | 10 million users (2025Q4) | Free + Member CNY 49/month | Marketing/Operations | Direct Access in China | Freemium |
+| [Ketu](https://klingai.com) | By Kuaishou, Kolors 2.0, leading portrait generation | 5 million MAU (2025Q4) | Free + Member CNY 66/month | Marketing/Operations | Direct Access in China | Freemium |
+| [Ideogram](https://ideogram.ai) | Strongest text rendering, poster design, logo generation | 3 million MAU (2025Q4) | Free + Plus $8/month | Marketing/Design | Requires VPN | Freemium |
 
----
-
-## 会议与协作
-
-> 适用岗位：全岗位 \| 会议纪要、实时转写、多语种翻译
-
-告别手动记录，AI 让会议效率提升 3 倍。
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [飞书妙记](https://feishu.cn) | 飞书生态，实时转写，智能纪要，多语种 | 飞书 1400 万企业 | 企业版包含 | 全岗位 \| ✅ 国内直连 \| 企业定价 |
-| [讯飞听见](https://www.iflyrec.com) | 讯飞出品，转写准确率 98%，中文最强 | 5000 万用户（2025Q4） | 免费额度 + 会员 ¥199/年 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [腾讯会议 AI](https://meeting.tencent.com) | 腾讯会议 AI 助手，智能纪要，待办提取 | 3 亿用户（2025Q4） | 会员 ¥28/月 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [Otter.ai](https://otter.ai) | 国际会议转写，AI Chat，Zoom 集成 | 1500 万用户（2025Q4） | 免费版 + Pro $16.99/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [Fireflies.ai](https://fireflies.ai) | 企业级会议 AI，CRM 集成，对话智能分析 | 50 万企业用户（2025Q4） | 免费版 + Pro $18/月 | 全岗位 \| 🪜 需梯子 \| Freemium |
-
-**选择建议：**
-- **飞书用户**：飞书妙记（深度集成）
-- **国内通用**：讯飞听见（准确率高）、腾讯会议 AI
-- **国际团队**：Otter.ai、Fireflies.ai
+**Selection Recommendations:**
+- **Marketing Images in China**: Jimeng AI (overall strongest), Tongyi Wanxiang (e-commerce)
+- **Artistic Creation**: Midjourney (artistic), Flux (realistic)
+- **Text Posters**: Ideogram (text rendering)
+- **Local Deployment**: Stable Diffusion (open-source)
 
 ---
 
-## 翻译与本地化
+## Video Generation and Editing
 
-> 适用岗位：市场、运营、HR、国际业务 \| 文档翻译、多语种内容
+> Applicable Roles: Marketing, Operations, Content Creation | Marketing videos, product demos, short videos
 
-LLM 时代翻译已经不只是"字对字"，而是"理解+表达"。
+2025 was the year of AI video generation explosion. China's Kling firmly sits in the global first tier.
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [DeepL](https://deepl.com) | 翻译质量标杆，文档翻译，Pro 写作辅助 | 10 亿月活查询（2025Q4） | 免费版 + Pro $8.74/月起 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [ChatGPT/Claude](https://chat.openai.com) | LLM 翻译，上下文理解，专业术语准确 | 见通用对话章节 | 见通用对话章节 | 全岗位 \| 🪜 需梯子 \| Freemium |
-| [彩云小译](https://caiyunapp.com) | 浏览器插件，实时翻译，双语对照 | 3000 万用户（2025Q4） | 免费版 + 会员 ¥58/年 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [沉浸式翻译](https://immersivetranslate.com) | 开源插件，双语对照，LLM 翻译支持 | GitHub 30K+ star | 免费版 + Pro $9/月 | 全岗位 \| ✅ 国内直连 \| Freemium |
-| [有道翻译](https://fanyi.youdao.com) | 网易出品，多模态翻译，学术翻译 | 3 亿用户（2025Q4） | 免费版 + VIP ¥148/年 | 全岗位 \| ✅ 国内直连 \| Freemium |
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Kling AI](https://klingai.com) | By Kuaishou, Kling 2.0, 10-second 1080p, smooth motion | 22 million users globally (2025Q4), #1 in China | Free + VIP from CNY 66/month | Marketing/Operations | Direct Access in China | Freemium |
+| [Sora](https://openai.com/sora) | By OpenAI, Sora 2, 20-second 1080p, physical realism | Integrated in ChatGPT Plus/Pro | Plus from $20/month | Marketing/Operations | Requires VPN | Subscription |
+| [Veo 3](https://deepmind.google/veo) | By Google DeepMind, 8-second 4K, audio-video sync generation | Integrated in Gemini Advanced | Advanced $19.99/month | Marketing/Operations | Requires VPN | Subscription |
+| [Runway](https://runwayml.com) | Gen-4 model, cinema-grade, integrated video editing | First choice for professional creators | Free + Standard from $12/month | Marketing/Film | Requires VPN | Freemium |
+| [Jimeng Video](https://jimeng.jianying.com) | By ByteDance, Seedance 1.0, integrated with Jianying | Integrated in Jimeng AI | Free + VIP CNY 69/month | Marketing/Operations | Direct Access in China | Freemium |
+| [PixVerse](https://pixverse.ai) | By Aishi Tech, V4.5, high value, character consistency | 15 million users (2025Q4) | Free + Subscription from $10/month | Marketing/Operations | Direct Access in China | Freemium |
 
-**选择建议：**
-- **专业文档**：DeepL（质量）、Claude（长文）
-- **浏览器使用**：沉浸式翻译（免费强）、彩云小译
-- **学术场景**：有道翻译、Claude
-
----
-
-## HR 与招聘
-
-> 适用岗位：HR、招聘 \| 简历筛选、面试辅助、员工培训
-
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [Moka AI](https://mokahr.com) | 国内招聘管理系统标杆，AI 面试官，智能筛选 | 5000+ 企业客户 | 企业定价 | HR \| ✅ 国内直连 \| 企业定价 |
-| [BOSS 直聘 AI](https://zhipin.com) | AI 招聘助手，智能匹配，职位画像 | 5000 万月活（2025Q4） | 免费 + 企业版 | HR \| ✅ 国内直连 \| Freemium |
-| [北森 AI HR](https://www.beisen.com) | 一体化 HR SaaS，AI 人才评估，人才盘点 | 7000+ 企业客户 | 企业定价 | HR \| ✅ 国内直连 \| 企业定价 |
-| [HireVue](https://hirevue.com) | 国际 AI 面试领导者，视频面试评估 | 700+ 大型企业 | 企业定价 | HR \| 🪜 需梯子 \| 企业定价 |
-| [LinkedIn Recruiter AI](https://linkedin.com) | 领英 AI 推荐，简历筛选，AI 消息撰写 | 10 亿用户（2025Q4） | Recruiter $170/月起 | HR \| 🪜 需梯子 \| 订阅制 |
-
-**选择建议：**
-- **国内中大型企业**：Moka AI、北森 AI HR
-- **招聘入口**：BOSS 直聘 AI（C 端流量大）
-- **国际化招聘**：LinkedIn Recruiter、HireVue
+**Selection Recommendations:**
+- **Commercial Use in China**: Kling (globally leading), Jimeng (Jianying integration)
+- **International Best**: Sora 2 (physical realism), Veo 3 (audio-video sync)
+- **Professional Production**: Runway (cinema-grade), PixVerse (character consistency)
 
 ---
 
-## 客服与营销
+## Audio and Podcast
 
-> 适用岗位：市场、运营、销售、客服 \| 智能客服、营销自动化
+> Applicable Roles: Marketing, Operations, Content Creation, Training | Voiceover, podcasts, audio content
 
-| 工具 | 核心特点 | 市场数据 | 定价 | 标签 |
-|------|---------|---------|------|------|
-| [智齿科技](https://sobot.com) | 国内智能客服领导者，AI 客服机器人 | 15 万企业客户 | 企业定价 | 客服/运营 \| ✅ 国内直连 \| 企业定价 |
-| [网易七鱼](https://qiyukf.com) | 网易出品，全渠道客服，AI 智能问答 | 10 万企业客户 | 企业定价 | 客服/运营 \| ✅ 国内直连 \| 企业定价 |
-| [Intercom](https://intercom.com) | 国际领先，Fin AI Agent，对话式营销 | 2.5 万企业客户（2025Q4） | Essential $29/月起 | 客服/市场 \| 🪜 需梯子 \| 订阅制 |
-| [HubSpot AI](https://hubspot.com) | 营销自动化龙头，Breeze AI，全流程营销 | 25 万客户（2025Q4） | 免费版 + Starter $20/月 | 市场/销售 \| 🪜 需梯子 \| Freemium |
-| [容联云 AI 客服](https://yuntongxun.com) | 国内 CC 云通讯领导者，大模型客服 | 10 万企业客户 | 企业定价 | 客服/运营 \| ✅ 国内直连 \| 企业定价 |
+AI audio tools have become indistinguishable from real audio. NotebookLM's podcast feature became a phenomenal product of the year.
 
-**选择建议：**
-- **国内客服**：智齿科技（市场领导）、网易七鱼（全渠道）
-- **国际营销**：Intercom（对话）、HubSpot（全流程）
-- **电话客服**：容联云（CC 云）
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [NotebookLM](https://notebooklm.google.com) | By Google, document to podcast, audio overview, research tool | 2025 hit product | Free + Plus $19.99/month | All Roles | Requires VPN | Freemium |
+| [ElevenLabs](https://elevenlabs.io) | Voice synthesis benchmark, voice cloning, multi-language, rich API | 30 million users (2025Q4), $3.3B valuation | Free + Starter from $5/month | Marketing/Content | Requires VPN | Freemium |
+| [iFlytek Voiceover](https://peiyin.xfyun.cn) | Chinese voiceover specialized, 200+ voice artists, multi-scenario templates | 10 million users (2025Q4) | Free quota + pay per character | Marketing/Operations/Training | Direct Access in China | Pay-per-use |
+| [Jianying Voiceover](https://www.capcut.cn) | By ByteDance, Jianying integration, real voice cloning, completely free | Jianying users 300M+ | Completely Free | Marketing/Operations | Direct Access in China | Free |
+| [Descript](https://descript.com) | Audio/video editing, edit by transcript, AI noise removal | First choice for professional podcasts | Free + Creator $24/month | Content/Podcast | Requires VPN | Freemium |
 
----
-
-## 2025-2026 AI 工具发展趋势
-
-### 趋势 1：多模态成为标配
-
-- **现状**：GPT-4o、Gemini 2.5、Claude 4 全部原生支持文本+图像+音频+视频
-- **影响**：单一模态工具被加速淘汰，用户期望"一个工具搞定所有"
-- **建议**：优先选择多模态工具，减少工具切换成本
-
-### 趋势 2：推理模型崛起
-
-- **代表**：OpenAI o1/o3、DeepSeek R1、Claude 4 Extended Thinking、讯飞星火 X1
-- **影响**：复杂推理任务（数学、代码、研究）能力跨越式提升
-- **建议**：处理复杂问题时使用推理模型，简单对话用普通模型（更快更便宜）
-
-### 趋势 3：国产工具快速崛起
-
-- **数据**：2025 年中国大模型日调用量达 10 万亿 token（工信部）
-- **代表**：豆包（2 亿月活）、DeepSeek（开源冠军）、Kimi（长上下文）、通义（开源生态）
-- **优势**：中文优化、价格优势、国内直连、合规性
-
-### 趋势 4：AI Agent 平台爆发
-
-- **现状**：扣子、Dify、Coze 月活破千万，零代码构建 Agent
-- **影响**：非技术人员也能构建自动化工作流，效率提升 10 倍+
-- **建议**：学习 Agent 搭建是 2026 年最值得投资的技能
-
-### 趋势 5：视频生成进入实用阶段
-
-- **里程碑**：可灵 2.0、Sora 2、Veo 3 支持 1080p-4K 视频生成
-- **应用**：营销视频、产品演示、教育内容制作成本降低 90%
-- **限制**：长视频生成仍需人工剪辑和审核
-
-### 趋势 6：企业级 AI 工具成熟
-
-- **特点**：私有化部署、权限管理、审计日志、数据隔离
-- **代表**：飞书智能伙伴、钉钉 AI、企业微信 AI、Dify 企业版
-- **数据**：2026 年中国大中型企业 AI 应用渗透率达 65%（IDC）
-
-### 趋势 7：AI 搜索重塑信息获取
-
-- **数据**：Perplexity 月活 1500 万、秘塔月活 500 万，持续高速增长
-- **影响**：Google/百度加速 AI 化转型，传统搜索流量下降
-- **建议**：培养"AI 搜索优先"的信息获取习惯
-
-### 趋势 8：定价两极分化
-
-- **平民化**：国产工具普遍免费或低价（豆包免费、DeepSeek 极低 API）
-- **高端化**：ChatGPT Pro $200/月、Claude Max $100/月 瞄准重度用户
-- **影响**：用户选择更灵活，按需付费成为主流
+**Selection Recommendations:**
+- **Podcast Production**: NotebookLM (overview), Descript (professional editing)
+- **Voiceover in China**: iFlytek Voiceover (professional), Jianying Voiceover (free)
+- **Voice Cloning**: ElevenLabs (highest quality)
 
 ---
 
-## 工具选型建议矩阵
+## PPT and Presentation
 
-按场景快速查找最适合的工具：
+> Applicable Roles: Product, Operations, Marketing, HR, Sales | Work reports, proposals, training
 
-| 场景 | 国内首选 | 国际首选 | 开源/本地 | 企业方案 |
-|------|---------|---------|----------|---------|
-| 通用对话 | 豆包 / Kimi | ChatGPT / Claude | Ollama / DeepSeek | 飞书智能伙伴 |
-| AI 搜索 | 秘塔 / ima | Perplexity | - | NotebookLM |
-| 写作内容 | WPS AI | Notion AI | - | 飞书文档 AI |
-| 数据分析 | 讯飞星火 | ChatGPT 数据分析 | - | 帆软 FineBI |
-| 图像生成 | 即梦 AI | Midjourney | Stable Diffusion | 通义万相 |
-| 视频生成 | 可灵 AI | Sora / Veo 3 | - | Runway |
-| 音频配音 | 讯飞配音 | ElevenLabs | - | NotebookLM |
-| PPT 演示 | 讯飞智文 | Gamma | - | WPS AI |
-| 工作流 | 扣子 | Coze / Zapier | Dify / n8n | 飞书多维表格 |
-| AI 编程 | 通义灵码 | Cursor / Copilot | Codeium | Claude Code |
-| 会议协作 | 飞书妙记 | Otter.ai | - | 讯飞听见 |
-| 翻译 | 沉浸式翻译 | DeepL | - | Claude |
-| HR 招聘 | Moka AI | LinkedIn Recruiter | - | 北森 AI |
-| 客服营销 | 智齿 / 七鱼 | Intercom / HubSpot | - | 容联云 |
+Say goodbye to manual formatting. AI reduces PPT creation from 2 hours to 5 minutes.
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Gamma](https://gamma.app) | Global leader, auto-formatting, responsive design, flexible export | 50 million users (2025Q4) | Free + Plus $10/month | All Roles | Requires VPN | Freemium |
+| [iFlytek Zhiwen](https://zhiwen.xfyun.cn) | Chinese PPT specialized, one-click generation, rich templates | Integrated in iFlytek ecosystem | Free + Pro CNY 99/year | All Roles | Direct Access in China | Freemium |
+| [WPS AI PPT](https://ai.wps.cn) | WPS ecosystem, one-click generation, Chinese optimization | Integrated in WPS membership | Member CNY 149/year | All Roles | Direct Access in China | Subscription |
+| [AiPPT](https://aippt.cn) | Professional Chinese PPT AI, large asset library, strong beautification | 5 million users (2025Q4) | Free + Member CNY 99/month | All Roles | Direct Access in China | Freemium |
+| [Beautiful.ai](https://beautiful.ai) | Strong design, auto-adjustment, enterprise collaboration | Enterprise first choice | Pro from $12/month | All Roles | Requires VPN | Subscription |
+
+**Selection Recommendations:**
+- **Top Choice in China**: iFlytek Zhiwen (strong free tier), AiPPT (many assets)
+- **International Best**: Gamma (global leader), Beautiful.ai (enterprise)
+- **Office Users**: WPS AI PPT (ecosystem integration)
 
 ---
 
-## 数据来源与更新机制
+## Workflow Automation
 
-### 数据来源
-1. **用户/市场数据**：公司财报、QuestMobile、艾瑞咨询、IDC、Gartner（2025Q4）
-2. **行业报告**：工信部、信通院、中国信通院（2025 中国 AI 大模型发展报告）
-3. **定价信息**：各工具官网公开信息（截至 2026 年 5 月）
-4. **功能对比**：实际测试 + 官方文档 + 社区评测
+> Applicable Roles: All Roles | Automate repetitive work, 10x efficiency boost
 
-### 数据更新策略
-- **季度更新**：每季度全面更新主要数据
-- **重大事件**：工具重大更新或新工具发布时及时补充
-- **用户反馈**：根据学员反馈调整推荐优先级
+AI Agent platforms are the biggest trend in 2025. Build intelligent workflows with zero code.
 
-> ⚠️ **注意**：AI 工具市场变化极快，部分数据可能在你看到时已经过时。建议通过工具官网获取最新信息。
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Kouzi](https://coze.cn) | ByteDance China version, zero-code Bot building, Feishu/Douyin ecosystem | 10 million users (2025Q4), #1 in China | Free + Pro | All Roles | Direct Access in China | Freemium |
+| [Coze](https://coze.com) | ByteDance international version, overseas users, multi-platform publishing | 5 million users (2025Q4) | Free + Premium $9/month | All Roles | Requires VPN | Freemium |
+| [Dify](https://dify.ai) | Open-source leader, LLMOps platform, enterprise private deployment | GitHub 80K+ stars | Free (open-source) + Cloud | Enterprise/Tech | Private Deployment Possible | Freemium |
+| [Feishu Multi-dimensional Table](https://feishu.cn) | Feishu ecosystem, table + AI, field-level AI capabilities | Feishu 14M enterprises | Included in Enterprise | All Roles | Direct Access in China | Enterprise Pricing |
+| [n8n](https://n8n.io) | Open-source workflow, 500+ integrations, AI Agent support | GitHub 65K+ stars | Free (self-hosted) + Cloud EUR 20/month | Tech/Enterprise | Private Deployment Possible | Freemium |
+| [Make](https://make.com) | Visual automation, 1800+ apps, advanced scenarios | 300K paid users (2025Q4) | Free + Core $10.59/month | All Roles | Requires VPN | Freemium |
+| [Zapier](https://zapier.com) | Most integrations (7000+), AI Actions, enterprise-grade | 2.5 million users (2025Q4) | Free + Professional $29/month | All Roles | Requires VPN | Freemium |
+
+**Selection Recommendations:**
+- **Users in China**: Kouzi (ByteDance ecosystem), Feishu Multi-dimensional Table (collaboration)
+- **Enterprise Private Deployment**: Dify (open-source leader), n8n (workflow)
+- **International Integration**: Zapier (most integrations), Make (best value)
 
 ---
 
-## 更新日志
+## AI Programming Assistance
 
-### 2026-05-06（当前版本）
-- 🎉 全面升级工具清单，新增 65+ 个工具
-- 📊 添加市场数据、定价信息、多维度标签系统
-- 🔍 新增快速导航、岗位推荐、可用性筛选
-- 📈 添加 2025-2026 AI 工具 8 大趋势分析
-- 🎯 新增工具选型建议矩阵，按场景快速查找
-- 🆕 新增 DeepSeek、ima.copilot、Veo 3、Moka AI 等 2025 爆款工具
+> Applicable Roles: Product, Operations (requires basic skills) | While oriented toward developers, non-developers can use for simple automation
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Cursor](https://cursor.sh) | AI IDE benchmark, Agent mode, precise code completion | 2025 unicorn, ARR over $100M | Free + Pro $20/month | Tech/Product | Requires VPN | Freemium |
+| [Claude Code](https://claude.ai/code) | By Anthropic, terminal-native, Agent SDK | 2025 hit, developer first choice | Included in Claude subscription | Tech | Requires VPN | Subscription |
+| [GitHub Copilot](https://github.com/copilot) | Official GitHub, VS Code integration, Agent mode | 20 million paid users (2025Q4) | Free + Pro $10/month | Tech | Requires VPN | Freemium |
+| [Tongyi Lingma](https://tongyi.aliyun.com/lingma) | By Alibaba, strong Chinese comments, domestic IDE integration | 10 million users (2025Q4), #1 in China | Completely Free (personal) | Tech/Product | Direct Access in China | Free |
+| [Doubao MarsCode](https://www.marscode.cn) | By ByteDance, cloud IDE, free and powerful | 5 million users (2025Q4) | Completely Free | Tech/Product | Direct Access in China | Free |
+| [Codeium / Windsurf](https://windsurf.com) | Free alternative to Copilot, Cascade Agent | 3 million users (2025Q4) | Free + Pro $15/month | Tech | Requires VPN | Freemium |
+
+**Selection Recommendations:**
+- **Users in China**: Tongyi Lingma (free), Doubao MarsCode (cloud)
+- **Professional Development**: Cursor (AI IDE), Claude Code (terminal)
+- **VS Code Users**: GitHub Copilot (ecosystem)
+
+---
+
+## Meeting and Collaboration
+
+> Applicable Roles: All Roles | Meeting notes, real-time transcription, multi-language translation
+
+Say goodbye to manual note-taking. AI boosts meeting efficiency by 3x.
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Feishu Miaoji](https://feishu.cn) | Feishu ecosystem, real-time transcription, smart notes, multi-language | Feishu 14M enterprises | Included in Enterprise | All Roles | Direct Access in China | Enterprise Pricing |
+| [iFlytek Hearing](https://www.iflyrec.com) | By iFlytek, 98% transcription accuracy, strongest Chinese | 50 million users (2025Q4) | Free quota + Member CNY 199/year | All Roles | Direct Access in China | Freemium |
+| [Tencent Meeting AI](https://meeting.tencent.com) | Tencent Meeting AI assistant, smart notes, action item extraction | 300 million users (2025Q4) | Member CNY 28/month | All Roles | Direct Access in China | Freemium |
+| [Otter.ai](https://otter.ai) | International meeting transcription, AI Chat, Zoom integration | 15 million users (2025Q4) | Free + Pro $16.99/month | All Roles | Requires VPN | Freemium |
+| [Fireflies.ai](https://fireflies.ai) | Enterprise meeting AI, CRM integration, conversation intelligence | 500K enterprise users (2025Q4) | Free + Pro $18/month | All Roles | Requires VPN | Freemium |
+
+**Selection Recommendations:**
+- **Feishu Users**: Feishu Miaoji (deep integration)
+- **General Use in China**: iFlytek Hearing (high accuracy), Tencent Meeting AI
+- **International Teams**: Otter.ai, Fireflies.ai
+
+---
+
+## Translation and Localization
+
+> Applicable Roles: Marketing, Operations, HR, International Business | Document translation, multi-language content
+
+In the LLM era, translation has evolved from "word-for-word" to "understanding + expression."
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [DeepL](https://deepl.com) | Translation quality benchmark, document translation, Pro writing assistance | 1 billion monthly queries (2025Q4) | Free + Pro from $8.74/month | All Roles | Requires VPN | Freemium |
+| [ChatGPT/Claude](https://chat.openai.com) | LLM translation, context understanding, accurate terminology | See General Chat section | See General Chat section | All Roles | Requires VPN | Freemium |
+| [Caiyun Xiaoyi](https://caiyunapp.com) | Browser plugin, real-time translation, bilingual comparison | 30 million users (2025Q4) | Free + Member CNY 58/year | All Roles | Direct Access in China | Freemium |
+| [Immersive Translate](https://immersivetranslate.com) | Open-source plugin, bilingual comparison, LLM translation support | GitHub 30K+ stars | Free + Pro $9/month | All Roles | Direct Access in China | Freemium |
+| [Youdao Translation](https://fanyi.youdao.com) | By NetEase, multimodal translation, academic translation | 300 million users (2025Q4) | Free + VIP CNY 148/year | All Roles | Direct Access in China | Freemium |
+
+**Selection Recommendations:**
+- **Professional Documents**: DeepL (quality), Claude (long documents)
+- **Browser Use**: Immersive Translate (strong free tier), Caiyun Xiaoyi
+- **Academic Scenarios**: Youdao Translation, Claude
+
+---
+
+## HR and Recruitment
+
+> Applicable Roles: HR, Recruitment | Resume screening, interview assistance, employee training
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Moka AI](https://mokahr.com) | Domestic recruitment management system benchmark, AI interviewer, smart screening | 5,000+ enterprise customers | Enterprise Pricing | HR | Direct Access in China | Enterprise Pricing |
+| [BOSS Zhipin AI](https://zhipin.com) | AI recruitment assistant, smart matching, job profiling | 50 million MAU (2025Q4) | Free + Enterprise | HR | Direct Access in China | Freemium |
+| [Beisen AI HR](https://www.beisen.com) | Integrated HR SaaS, AI talent assessment, talent review | 7,000+ enterprise customers | Enterprise Pricing | HR | Direct Access in China | Enterprise Pricing |
+| [HireVue](https://hirevue.com) | International AI interview leader, video interview assessment | 700+ large enterprises | Enterprise Pricing | HR | Requires VPN | Enterprise Pricing |
+| [LinkedIn Recruiter AI](https://linkedin.com) | LinkedIn AI recommendations, resume screening, AI message writing | 1 billion users (2025Q4) | Recruiter from $170/month | HR | Requires VPN | Subscription |
+
+**Selection Recommendations:**
+- **Medium to Large Enterprises in China**: Moka AI, Beisen AI HR
+- **Recruitment Portal**: BOSS Zhipin AI (large C-end traffic)
+- **International Recruitment**: LinkedIn Recruiter, HireVue
+
+---
+
+## Customer Service and Marketing
+
+> Applicable Roles: Marketing, Operations, Sales, Customer Service | Intelligent customer service, marketing automation
+
+| Tool | Core Features | Market Data | Pricing | Tags |
+|------|--------------|-------------|---------|------|
+| [Sobot](https://sobot.com) | Domestic intelligent customer service leader, AI customer service bot | 150K enterprise customers | Enterprise Pricing | Customer Service/Operations | Direct Access in China | Enterprise Pricing |
+| [NetEase Qiyu](https://qiyukf.com) | By NetEase, omnichannel customer service, AI intelligent Q&A | 100K enterprise customers | Enterprise Pricing | Customer Service/Operations | Direct Access in China | Enterprise Pricing |
+| [Intercom](https://intercom.com) | International leader, Fin AI Agent, conversational marketing | 25K enterprise customers (2025Q4) | Essential from $29/month | Customer Service/Marketing | Requires VPN | Subscription |
+| [HubSpot AI](https://hubspot.com) | Marketing automation leader, Breeze AI, full-funnel marketing | 250K customers (2025Q4) | Free + Starter $20/month | Marketing/Sales | Requires VPN | Freemium |
+| [Ronglian Cloud AI Customer Service](https://yuntongxun.com) | Domestic CC cloud communications leader, LLM customer service | 100K enterprise customers | Enterprise Pricing | Customer Service/Operations | Direct Access in China | Enterprise Pricing |
+
+**Selection Recommendations:**
+- **Customer Service in China**: Sobot (market leader), NetEase Qiyu (omnichannel)
+- **International Marketing**: Intercom (conversational), HubSpot (full-funnel)
+- **Phone Customer Service**: Ronglian Cloud (CC cloud)
+
+---
+
+## AI Tools Development Trends 2025-2026
+
+### Trend 1: Multimodal Becomes Standard
+
+- **Current Status**: GPT-4o, Gemini 2.5, Claude 4 all natively support text + image + audio + video
+- **Impact**: Single-modality tools are being phased out faster; users expect "one tool for everything"
+- **Recommendation**: Prioritize multimodal tools to reduce tool-switching costs
+
+### Trend 2: Rise of Reasoning Models
+
+- **Representatives**: OpenAI o1/o3, DeepSeek R1, Claude 4 Extended Thinking, iFlytek Spark X1
+- **Impact**: Leap in capability for complex reasoning tasks (math, code, research)
+- **Recommendation**: Use reasoning models for complex problems, regular models for simple conversations (faster and cheaper)
+
+### Trend 3: Rapid Rise of Chinese Tools
+
+- **Data**: 2025 China LLM daily API calls reached 10 trillion tokens (Ministry of Industry and Information Technology)
+- **Representatives**: Doubao (200M MAU), DeepSeek (open-source champion), Kimi (long context), Tongyi (open-source ecosystem)
+- **Advantages**: Chinese optimization, price advantage, direct access in China, compliance
+
+### Trend 4: AI Agent Platform Explosion
+
+- **Current Status**: Kouzi, Dify, Coze MAU exceeded 10 million, zero-code Agent building
+- **Impact**: Non-technical personnel can build automated workflows, 10x+ efficiency improvement
+- **Recommendation**: Learning Agent building is the most worthwhile skill investment for 2026
+
+### Trend 5: Video Generation Enters Practical Stage
+
+- **Milestones**: Kling 2.0, Sora 2, Veo 3 support 1080p-4K video generation
+- **Applications**: Marketing videos, product demos, educational content production costs reduced by 90%
+- **Limitations**: Long video generation still requires manual editing and review
+
+### Trend 6: Enterprise AI Tools Mature
+
+- **Features**: Private deployment, permission management, audit logs, data isolation
+- **Representatives**: Feishu Smart Partner, DingTalk AI, WeCom AI, Dify Enterprise
+- **Data**: 2026 China mid-to-large enterprise AI adoption rate reached 65% (IDC)
+
+### Trend 7: AI Search Reshapes Information Access
+
+- **Data**: Perplexity MAU 15 million, Meta MAU 5 million, continuing rapid growth
+- **Impact**: Google/Baidu accelerating AI transformation, traditional search traffic declining
+- **Recommendation**: Cultivate "AI search first" information access habits
+
+### Trend 8: Pricing Polarization
+
+- **Democratization**: Chinese tools generally free or low-priced (Doubao free, DeepSeek extremely low API)
+- **Premium**: ChatGPT Pro $200/month, Claude Max $100/month targeting heavy users
+- **Impact**: More flexible user choices, pay-per-use becoming mainstream
+
+---
+
+## Tool Selection Recommendation Matrix
+
+Quickly find the most suitable tool by scenario:
+
+| Scenario | Top Choice in China | Top Choice International | Open-source/Local | Enterprise Solution |
+|----------|---------------------|-------------------------|-------------------|---------------------|
+| General Chat | Doubao / Kimi | ChatGPT / Claude | Ollama / DeepSeek | Feishu Smart Partner |
+| AI Search | Meta / ima | Perplexity | - | NotebookLM |
+| Writing Content | WPS AI | Notion AI | - | Feishu Document AI |
+| Data Analysis | iFlytek Spark | ChatGPT Data Analysis | - | FanRuan FineBI |
+| Image Generation | Jimeng AI | Midjourney | Stable Diffusion | Tongyi Wanxiang |
+| Video Generation | Kling AI | Sora / Veo 3 | - | Runway |
+| Audio Voiceover | iFlytek Voiceover | ElevenLabs | - | NotebookLM |
+| PPT Presentation | iFlytek Zhiwen | Gamma | - | WPS AI |
+| Workflow | Kouzi | Coze / Zapier | Dify / n8n | Feishu Multi-dimensional Table |
+| AI Programming | Tongyi Lingma | Cursor / Copilot | Codeium | Claude Code |
+| Meeting Collaboration | Feishu Miaoji | Otter.ai | - | iFlytek Hearing |
+| Translation | Immersive Translate | DeepL | - | Claude |
+| HR Recruitment | Moka AI | LinkedIn Recruiter | - | Beisen AI |
+| Customer Service Marketing | Sobot / Qiyu | Intercom / HubSpot | - | Ronglian Cloud |
+
+---
+
+## Data Sources and Update Mechanism
+
+### Data Sources
+1. **User/Market Data**: Company financial reports, QuestMobile, iResearch, IDC, Gartner (2025Q4)
+2. **Industry Reports**: Ministry of Industry and Information Technology, China Academy of Information and Communications Technology (2025 China AI LLM Development Report)
+3. **Pricing Information**: Official website public information of each tool (as of May 2026)
+4. **Feature Comparison**: Actual testing + official documentation + community reviews
+
+### Data Update Strategy
+- **Quarterly Update**: Comprehensive update of major data each quarter
+- **Major Events**: Timely supplementation when tools have major updates or new tools launch
+- **User Feedback**: Adjust recommendation priority based on learner feedback
+
+> **Note**: The AI tools market changes extremely fast. Some data may be outdated by the time you read this. We recommend checking tool official websites for the latest information.
+
+---
+
+## Changelog
+
+### 2026-05-06 (Current Version)
+- Comprehensive upgrade of tools list, added 65+ tools
+- Added market data, pricing information, multi-dimensional tag system
+- Added quick navigation, role recommendations, availability filtering
+- Added 2025-2026 AI Tools 8 Major Trends Analysis
+- Added Tool Selection Recommendation Matrix for quick scenario-based lookup
+- Added 2025 hit tools: DeepSeek, ima.copilot, Veo 3, Moka AI, etc.
 
 ### 2026-02-15
-- 初始版本，包含 20+ 个基础工具
+- Initial version, including 20+ basic tools
 
 ---
 
-> 💡 **使用提示**：本清单按场景分类组织，建议从[如何选择合适的工具](#如何选择合适的工具)开始阅读，找到你的岗位和场景后，再查看对应分类的详细推荐。
+> **Usage Tip**: This list is organized by scenario categories. We recommend starting from [How to Choose the Right Tool](#how-to-choose-the-right-tool), finding your role and scenario, then viewing detailed recommendations for the corresponding category.
 
 

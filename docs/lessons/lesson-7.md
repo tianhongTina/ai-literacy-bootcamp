@@ -1,62 +1,62 @@
-# 第 7 课：AI 协作与安全 - 负责任地使用 AI
+# Lesson 7: AI Collaboration and Security - Using AI Responsibly
 
-> **课程时长**: 2小时 | **难度**: 进阶 | **风格**: 实用指南
-
----
-
-## 📋 本课概览
-
-### 🎯 核心观点
-
-使用 AI 不仅要追求效率，更要注重：
-- 数据安全和隐私保护
-- 内容真实性和版权
-- 团队协作规范
-- 伦理和社会责任
-
-### 📚 你将学到
-
-- AI 使用的安全红线
-- 如何识别和避免 AI 风险
-- 团队 AI 协作最佳实践
-- AI 伦理和合规要求
-
-### 🎁 你将带走
-
-- AI 使用安全检查清单
-- 团队 AI 使用规范模板
-- 风险识别和应对指南
+> **Duration**: 2 hours | **Level**: Advanced | **Style**: Practical Guide
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. 数据安全与隐私
+### 🎯 Core Concepts
 
-**AI 使用安全框架**：
+Using AI is not just about efficiency, but also about:
+- Data security and privacy protection
+- Content authenticity and copyright
+- Team collaboration standards
+- Ethics and social responsibility
+
+### 📚 You Will Learn
+
+- Security boundaries for AI usage
+- How to identify and avoid AI risks
+- Best practices for team AI collaboration
+- AI ethics and compliance requirements
+
+### 🎁 You Will Take Away
+
+- AI usage security checklist
+- Team AI usage policy template
+- Risk identification and response guide
+
+---
+
+## 📖 Lesson Content
+
+### 1. Data Security and Privacy
+
+**AI Usage Security Framework**:
 
 ```mermaid
 graph TB
-    A[AI 使用安全] --> B[数据安全]
-    A --> C[内容安全]
-    A --> D[合规安全]
-    A --> E[技术安全]
+    A[AI Usage Security] --> B[Data Security]
+    A --> C[Content Security]
+    A --> D[Compliance Security]
+    A --> E[Technical Security]
     
-    B --> B1[数据分级]
-    B --> B2[脱敏处理]
-    B --> B3[访问控制]
+    B --> B1[Data Classification]
+    B --> B2[Data Anonymization]
+    B --> B3[Access Control]
     
-    C --> C1[事实核查]
-    C --> C2[版权审查]
-    C --> C3[偏见检测]
+    C --> C1[Fact Checking]
+    C --> C2[Copyright Review]
+    C --> C3[Bias Detection]
     
-    D --> D1[隐私保护]
-    D --> D2[法律合规]
-    D --> D3[伦理审查]
+    D --> D1[Privacy Protection]
+    D --> D2[Legal Compliance]
+    D --> D3[Ethics Review]
     
-    E --> E1[工具选择]
-    E --> E2[权限管理]
-    E --> E3[审计日志]
+    E --> E1[Tool Selection]
+    E --> E2[Permission Management]
+    E --> E3[Audit Logs]
     
     style A fill:#e1f5ff
     style B fill:#ffcccc
@@ -65,21 +65,21 @@ graph TB
     style E fill:#ffe1f5
 ```
 
-#### 绝对不能输入 AI 的信息
+#### Information That Must Never Be Input to AI
 
-**数据安全红线清单**：
+**Data Security Red Line Checklist**:
 
 ```mermaid
 graph LR
-    A[数据类型] --> B[❌ 个人隐私]
-    A --> C[❌ 公司机密]
-    A --> D[❌ 他人敏感信息]
-    A --> E[❌ 法律敏感]
+    A[Data Type] --> B[❌ Personal Privacy]
+    A --> C[❌ Company Confidential]
+    A --> D[❌ Others' Sensitive Info]
+    A --> E[❌ Legal Sensitivity]
     
-    B --> B1[身份证号<br/>银行卡号<br/>密码]
-    C --> C1[财务数据<br/>商业计划<br/>客户名单]
-    D --> D1[员工信息<br/>客户隐私<br/>合作伙伴机密]
-    E --> E1[合同原文<br/>法律文书<br/>诉讼材料]
+    B --> B1[ID Number<br/>Bank Card Number<br/>Password]
+    C --> C1[Financial Data<br/>Business Plans<br/>Customer Lists]
+    D --> D1[Employee Info<br/>Customer Privacy<br/>Partner Confidential]
+    E --> E1[Contract Text<br/>Legal Documents<br/>Litigation Materials]
     
     style B fill:#ffcccc
     style C fill:#ffcccc
@@ -87,55 +87,55 @@ graph LR
     style E fill:#ffcccc
 ```
 
-**红线清单**：
+**Red Line Checklist**:
 
 ```
-❌ 个人隐私信息
-- 身份证号、护照号
-- 银行卡号、密码
-- 家庭住址、电话号码
+❌ Personal Privacy Information
+- ID card number, passport number
+- Bank card number, password
+- Home address, phone number
 
-❌ 公司机密信息
-- 未公开的财务数据
-- 商业计划和战略
-- 客户名单和联系方式
-- 源代码（除非使用企业版）
+❌ Company Confidential Information
+- Unpublished financial data
+- Business plans and strategies
+- Customer lists and contact information
+- Source code (unless using enterprise version)
 
-❌ 他人敏感信息
-- 员工个人信息
-- 客户隐私数据
-- 合作伙伴机密
+❌ Others' Sensitive Information
+- Employee personal information
+- Customer privacy data
+- Partner confidential information
 
-❌ 法律敏感信息
-- 合同原文
-- 法律文书
-- 诉讼材料
+❌ Legal Sensitive Information
+- Contract text
+- Legal documents
+- Litigation materials
 ```
 
-#### 安全使用原则
+#### Security Usage Principles
 
-**数据安全决策流程**：
+**Data Security Decision Flow**:
 
 ```mermaid
 graph TD
-    A[准备使用 AI] --> B{数据包含敏感信息?}
+    A[Preparing to Use AI] --> B{Data Contains Sensitive Info?}
     
-    B -->|否| C[直接使用]
-    B -->|是| D{数据级别?}
+    B -->|No| C[Use Directly]
+    B -->|Yes| D{Data Level?}
     
-    D -->|公开| C
-    D -->|内部| E{使用企业版?}
-    E -->|是| F[谨慎使用]
-    E -->|否| G[❌ 禁止使用]
+    D -->|Public| C
+    D -->|Internal| E{Using Enterprise Version?}
+    E -->|Yes| F[Use with Caution]
+    E -->|No| G[❌ Prohibited]
     
-    D -->|机密| G
-    D -->|隐私| H{可以脱敏?}
-    H -->|是| I[脱敏后使用]
-    H -->|否| G
+    D -->|Confidential| G
+    D -->|Privacy| H{Can Be Anonymized?}
+    H -->|Yes| I[Use After Anonymization]
+    H -->|No| G
     
-    C --> J[正常工作]
-    F --> K[记录日志]
-    I --> L[验证脱敏效果]
+    C --> J[Normal Operation]
+    F --> K[Log Records]
+    I --> L[Verify Anonymization Effect]
     L --> J
     
     style C fill:#ccffcc
@@ -143,280 +143,280 @@ graph TD
     style K fill:#fff4e1
 ```
 
-**脱敏处理**：
+**Data Anonymization**:
 
 ```
-❌ 错误示例：
-"帮我分析张三（身份证：110101199001011234）的信用情况"
+❌ Wrong Example:
+"Help me analyze Zhang San's (ID: 110101199001011234) credit situation"
 
-✅ 正确示例：
-"帮我分析一个用户（年龄 30 岁，月收入 2 万）的信用情况"
+✅ Correct Example:
+"Help me analyze a user's (age 30, monthly income 20k) credit situation"
 ```
 
-**数据分级**：
+**Data Classification**:
 
-| 级别 | 数据类型 | 是否可用 AI | 注意事项 |
+| Level | Data Type | AI Usable | Notes |
 |------|----------|-------------|----------|
-| 公开 | 已发布的内容 | ✅ 可以 | 无限制 |
-| 内部 | 团队文档 | ⚠️ 谨慎 | 使用企业版 |
-| 机密 | 商业机密 | ❌ 禁止 | 绝对不可 |
-| 隐私 | 个人信息 | ❌ 禁止 | 必须脱敏 |
+| Public | Published content | ✅ Yes | No restrictions |
+| Internal | Team documents | ⚠️ With caution | Use enterprise version |
+| Confidential | Trade secrets | ❌ Prohibited | Absolutely not |
+| Privacy | Personal information | ❌ Prohibited | Must anonymize |
 
-### 2. 内容真实性与版权
+### 2. Content Authenticity and Copyright
 
-#### AI 生成内容的风险
+#### Risks of AI-Generated Content
 
-**事实性错误**：
-
-```
-AI 可能：
-- 编造不存在的数据
-- 引用虚假的来源
-- 混淆时间和因果关系
-- 给出过时的信息
-```
-
-**检查方法**：
+**Factual Errors**:
 
 ```
-✅ 核实所有数据来源
-✅ 交叉验证关键信息
-✅ 查证引用和案例
-✅ 确认时效性
+AI may:
+- Fabricate non-existent data
+- Cite fake sources
+- Confuse timelines and causality
+- Provide outdated information
 ```
 
-#### 版权问题
-
-**AI 生成内容的版权归属**：
+**Verification Methods**:
 
 ```
-目前法律尚不明确，建议：
-- 不要直接声称 AI 生成内容的版权
-- 对 AI 生成内容进行实质性修改
-- 在商业使用前咨询法务
-- 标注"AI 辅助创作"
+✅ Verify all data sources
+✅ Cross-validate key information
+✅ Verify citations and cases
+✅ Confirm timeliness
 ```
 
-**使用 AI 时的版权风险**：
+#### Copyright Issues
+
+**Copyright Ownership of AI-Generated Content**:
 
 ```
-❌ 让 AI 模仿特定作者风格（可能侵权）
-❌ 让 AI 续写受版权保护的作品
-❌ 用 AI 生成与知名品牌相似的内容
+Current law is unclear, recommendations:
+- Do not directly claim copyright on AI-generated content
+- Make substantial modifications to AI-generated content
+- Consult legal department before commercial use
+- Label as "AI-assisted creation"
 ```
 
-### 3. 团队协作规范
+**Copyright Risks When Using AI**:
 
-#### 制定团队 AI 使用规范
+```
+❌ Having AI imitate a specific author's style (may infringe)
+❌ Having AI continue copyrighted works
+❌ Using AI to generate content similar to well-known brands
+```
 
-**规范模板**：
+### 3. Team Collaboration Standards
+
+#### Establishing Team AI Usage Guidelines
+
+**Policy Template**:
 
 ```markdown
-# 团队 AI 使用规范
+# Team AI Usage Policy
 
-## 1. 适用范围
-- 适用于所有使用 AI 工具的场景
-- 包括但不限于：ChatGPT、Claude、文心一言等
+## 1. Scope
+- Applies to all scenarios using AI tools
+- Including but not limited to: ChatGPT, Claude, Ernie Bot, etc.
 
-## 2. 安全红线
-- 禁止输入客户隐私信息
-- 禁止输入公司商业机密
-- 禁止输入未公开的财务数据
+## 2. Security Red Lines
+- Prohibited from inputting customer privacy information
+- Prohibited from inputting company trade secrets
+- Prohibited from inputting unpublished financial data
 
-## 3. 使用场景
-允许使用：
-- 文档撰写辅助
-- 数据分析（脱敏后）
-- 代码辅助（非核心代码）
+## 3. Usage Scenarios
+Allowed:
+- Document writing assistance
+- Data analysis (after anonymization)
+- Code assistance (non-core code)
 
-需要审批：
-- 对外内容生成
-- 涉及客户的分析
+Requires approval:
+- External content generation
+- Analysis involving customers
 
-## 4. 质量把控
-- AI 生成内容必须人工审核
-- 关键数据必须交叉验证
-- 对外内容需要二次确认
+## 4. Quality Control
+- AI-generated content must be manually reviewed
+- Key data must be cross-validated
+- External content requires secondary confirmation
 
-## 5. 工具选择
-推荐工具：
-- 企业版 ChatGPT（已购买）
-- 飞书 AI（内部文档）
+## 5. Tool Selection
+Recommended tools:
+- Enterprise ChatGPT (purchased)
+- Feishu AI (internal documents)
 
-禁止工具：
-- 未经审批的第三方工具
+Prohibited tools:
+- Unapproved third-party tools
 ```
 
-#### 知识共享机制
+#### Knowledge Sharing Mechanism
 
-**建立团队提示词库**：
-
-```
-1. 创建共享文档（Notion/飞书）
-2. 按场景分类整理提示词
-3. 标注适用岗位和场景
-4. 定期更新和优化
-5. 鼓励团队成员贡献
-```
-
-### 4. AI 伦理与社会责任
-
-#### 避免偏见和歧视
-
-**AI 可能存在的偏见**：
+**Building a Team Prompt Library**:
 
 ```
-- 性别偏见（如：程序员默认为男性）
-- 种族偏见
-- 年龄偏见
-- 地域偏见
+1. Create a shared document (Notion/Feishu)
+2. Organize prompts by scenario
+3. Label applicable positions and scenarios
+4. Regularly update and optimize
+5. Encourage team member contributions
 ```
 
-**如何避免**：
+### 4. AI Ethics and Social Responsibility
+
+#### Avoiding Bias and Discrimination
+
+**Potential AI Biases**:
 
 ```
-✅ 使用中性语言
-✅ 明确要求 AI 避免刻板印象
-✅ 人工审核敏感内容
-✅ 多样化测试场景
+- Gender bias (e.g., programmer assumed to be male)
+- Racial bias
+- Age bias
+- Regional bias
 ```
 
-#### 负责任的 AI 使用
-
-**原则**：
+**How to Avoid**:
 
 ```
-1. 透明性
-   - 明确告知内容由 AI 辅助生成
-   - 不隐瞒 AI 的使用
+✅ Use neutral language
+✅ Explicitly ask AI to avoid stereotypes
+✅ Manually review sensitive content
+✅ Test diverse scenarios
+```
 
-2. 可控性
-   - 保持人类的最终决策权
-   - 不盲目依赖 AI 输出
+#### Responsible AI Usage
 
-3. 公平性
-   - 确保 AI 不歧视任何群体
-   - 关注弱势群体的权益
+**Principles**:
 
-4. 可追溯性
-   - 记录 AI 使用过程
-   - 保留关键决策依据
+```
+1. Transparency
+   - Clearly state content is AI-assisted
+   - Do not hide AI usage
+
+2. Controllability
+   - Maintain human final decision authority
+   - Do not blindly rely on AI output
+
+3. Fairness
+   - Ensure AI does not discriminate against any group
+   - Pay attention to the interests of vulnerable groups
+
+4. Traceability
+   - Record AI usage process
+   - Preserve key decision basis
 ```
 
 ---
 
-## 💡 岗位专属安全指南
+## 💡 Role-Specific Security Guidelines
 
-### 产品经理
+### Product Manager
 
-**安全要点**：
-- ❌ 不要输入未公开的产品规划
-- ❌ 不要输入真实的用户数据
-- ✅ 使用虚拟数据进行分析
-- ✅ PRD 发布前人工审核
+**Security Points**:
+- ❌ Do not input unpublished product plans
+- ❌ Do not input real user data
+- ✅ Use dummy data for analysis
+- ✅ Manually review PRD before release
 
-### 运营
+### Operations
 
-**安全要点**：
-- ❌ 不要输入真实的用户画像
-- ❌ 不要输入未公开的活动数据
-- ✅ 对外内容必须二次确认
-- ✅ 数据分析使用脱敏数据
+**Security Points**:
+- ❌ Do not input real user profiles
+- ❌ Do not input unpublished campaign data
+- ✅ External content must be double-checked
+- ✅ Use anonymized data for analysis
 
 ### HR
 
-**安全要点**：
-- ❌ 不要输入候选人简历原文
-- ❌ 不要输入员工个人信息
-- ✅ 使用匿名化数据
-- ✅ 招聘 JD 发布前人工审核
+**Security Points**:
+- ❌ Do not input candidate resume text
+- ❌ Do not input employee personal information
+- ✅ Use anonymized data
+- ✅ Manually review job postings before release
 
 ---
 
-## 🎯 实战练习
+## 🎯 Practical Exercises
 
-### 练习 1：风险识别
+### Exercise 1: Risk Identification
 
-判断以下场景是否安全：
+Determine whether the following scenarios are safe:
 
 ```
-场景 1：用 AI 分析公司去年的销售数据
-场景 2：让 AI 帮忙写一封给客户的邮件（包含客户姓名）
-场景 3：用 AI 生成一篇公众号文章
-场景 4：让 AI 分析竞品的公开财报
+Scenario 1: Using AI to analyze the company's sales data from last year
+Scenario 2: Having AI help write an email to a customer (including customer name)
+Scenario 3: Using AI to generate a WeChat public account article
+Scenario 4: Having AI analyze a competitor's public financial report
 ```
 
-### 练习 2：制定团队规范
+### Exercise 2: Establishing Team Guidelines
 
-为你的团队制定一份 AI 使用规范，包含：
-1. 安全红线
-2. 适用场景
-3. 质量把控流程
-
----
-
-## ⚠️ 常见风险案例
-
-### 案例 1：数据泄露
-
-**事件**：某公司员工将客户名单输入 ChatGPT 进行分析，导致数据泄露风险。
-
-**教训**：
-- 使用脱敏数据
-- 使用企业版工具
-- 建立审批流程
-
-### 案例 2：版权纠纷
-
-**事件**：某公司使用 AI 生成的图片用于商业宣传，被指侵权。
-
-**教训**：
-- 商业使用前咨询法务
-- 对 AI 生成内容进行修改
-- 购买商业授权
-
-### 案例 3：事实性错误
-
-**事件**：某媒体直接发布 AI 生成的新闻，包含多处事实错误。
-
-**教训**：
-- 所有事实必须核实
-- 建立审核流程
-- 保留人工把关环节
+Create an AI usage policy for your team, including:
+1. Security red lines
+2. Applicable scenarios
+3. Quality control processes
 
 ---
 
-## 📚 延伸阅读
+## ⚠️ Common Risk Cases
 
-- [AI 伦理指南](https://example.com)
-- [数据安全最佳实践](https://example.com)
-- [AI 版权法律解读](https://example.com)
+### Case 1: Data Breach
+
+**Incident**: An employee at a company input a customer list into ChatGPT for analysis, creating a data breach risk.
+
+**Lessons**:
+- Use anonymized data
+- Use enterprise version tools
+- Establish approval processes
+
+### Case 2: Copyright Dispute
+
+**Incident**: A company used AI-generated images for commercial promotion and was accused of infringement.
+
+**Lessons**:
+- Consult legal department before commercial use
+- Modify AI-generated content
+- Purchase commercial license
+
+### Case 3: Factual Errors
+
+**Incident**: A media outlet directly published AI-generated news containing multiple factual errors.
+
+**Lessons**:
+- All facts must be verified
+- Establish review processes
+- Maintain human oversight
 
 ---
 
-## ❓ 常见问题
+## 📚 Further Reading
 
-**Q: 使用企业版 AI 工具就安全了吗？**
-
-A: 企业版提供更好的数据保护，但仍需遵守安全规范。机密信息依然不应输入。
-
-**Q: AI 生成的内容可以直接对外发布吗？**
-
-A: 不建议。必须经过人工审核，确保事实准确、无版权问题、符合品牌调性。
-
-**Q: 如何判断信息是否可以输入 AI？**
-
-A: 问自己：这个信息如果被公开，会有什么后果？如果后果严重，就不要输入。
+- [AI Ethics Guidelines](https://example.com)
+- [Data Security Best Practices](https://example.com)
+- [AI Copyright Legal Interpretation](https://example.com)
 
 ---
 
-## 🎓 课程总结
+## ❓ Frequently Asked Questions
 
-通过本课程，你应该：
+**Q: Is it safe to use enterprise AI tools?**
 
-✅ 建立了 AI 使用的安全意识
-✅ 掌握了数据脱敏的方法
-✅ 了解了版权和伦理问题
-✅ 能够制定团队使用规范
+A: Enterprise versions provide better data protection, but security guidelines must still be followed. Confidential information should still not be entered.
 
-**记住**：AI 是工具，责任在人。负责任地使用 AI，才能长期受益。
+**Q: Can AI-generated content be published directly?**
+
+A: Not recommended. It must go through manual review to ensure factual accuracy, no copyright issues, and alignment with brand voice.
+
+**Q: How to determine if information can be input to AI?**
+
+A: Ask yourself: What would be the consequences if this information were made public? If the consequences are serious, do not enter it.
+
+---
+
+## 🎓 Lesson Summary
+
+Through this lesson, you should:
+
+✅ Have established security awareness for AI usage
+✅ Have mastered data anonymization methods
+✅ Have understood copyright and ethics issues
+✅ Be able to establish team usage guidelines
+
+**Remember**: AI is a tool, responsibility lies with humans. Only by using AI responsibly can you benefit long-term.

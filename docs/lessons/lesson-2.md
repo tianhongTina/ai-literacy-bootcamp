@@ -1,101 +1,101 @@
-# 第 2 课：AI 写作助手 - 10 倍提升内容生产效率
+# Lesson 2: AI Writing Assistant - 10x Your Content Production Efficiency
 
-> **课程时长**: 2小时 | **难度**: 入门 | **风格**: 场景化实操
-
----
-
-## 📋 本课概览
-
-### 🎯 核心观点
-
-AI 不是替代你写作，而是帮你：
-- 突破空白页焦虑
-- 快速生成初稿
-- 多角度扩展思路
-- 批量生成变体
-
-### 📚 你将学到
-
-- 6 种常见文档的 AI 写作流程
-- 如何让 AI 模仿你的写作风格
-- 内容质量把控的 3 个检查点
-- 多格式内容快速转换
-
-### 🎁 你将带走
-
-- 6 类文档的写作模板
-- AI 写作质量检查清单
-- 内容改写提示词库
+> **Duration**: 2 hours | **Difficulty**: Beginner | **Style**: Scenario-based Practice
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. AI 写作的正确姿势
+### 🎯 Core Insight
 
-**AI 写作完整工作流**：
+AI doesn't replace your writing—it helps you:
+- Overcome blank page anxiety
+- Quickly generate first drafts
+- Expand ideas from multiple angles
+- Generate variations in bulk
+
+### 📚 What You Will Learn
+
+- AI writing workflows for 6 common document types
+- How to make AI mimic your writing style
+- 3 quality control checkpoints for content
+- Fast multi-format content conversion
+
+### 🎁 What You Will Take Away
+
+- Writing templates for 6 document categories
+- AI writing quality checklist
+- Content rewriting prompt library
+
+---
+
+## 📖 Course Content
+
+### 1. The Right Approach to AI Writing
+
+**Complete AI Writing Workflow**:
 
 ```mermaid
 graph TD
-    A[明确写作目标] --> B[收集素材资料]
-    B --> C[构建提示词]
-    C --> D[AI 生成初稿]
-    D --> E{质量评估}
+    A[Define Writing Goal] --> B[Collect Materials]
+    B --> C[Construct Prompt]
+    C --> D[AI Generates Draft]
+    D --> E{Quality Assessment}
     
-    E -->|不满意| F{问题类型?}
-    F -->|内容太泛| G[补充具体信息]
-    F -->|风格不对| H[调整语气要求]
-    F -->|结构混乱| I[明确大纲结构]
-    F -->|事实错误| J[核查并修正]
+    E -->|Unsatisfied| F{Problem Type?}
+    F -->|Too Generic| G[Add Specific Information]
+    F -->|Wrong Style| H[Adjust Tone Requirements]
+    F -->|Disorganized Structure| I[Clarify Outline Structure]
+    F -->|Factual Errors| J[Verify and Correct]
     
     G --> C
     H --> C
     I --> C
     J --> C
     
-    E -->|满意| K[人工润色]
-    K --> L[事实核查]
-    L --> M[最终定稿]
+    E -->|Satisfied| K[Human Polish]
+    K --> L[Fact Check]
+    L --> M[Final Draft]
     
     style A fill:#e1f5ff
     style M fill:#ccffcc
     style L fill:#fff4e1
 ```
 
-**三步法**：
+**Three-Step Method**:
 
 ```
-第一步：明确目标 → 写给谁看？达成什么目的？
-第二步：提供素材 → 给 AI 足够的上下文
-第三步：迭代优化 → 不满意就追问、调整
+Step 1: Define Goal → Who is the audience? What is the purpose?
+Step 2: Provide Materials → Give AI enough context
+Step 3: Iterate and Optimize → If unsatisfied, follow up and adjust
 ```
 
-### 2. 常见文档类型
+### 2. Common Document Types
 
-**文档类型分类图**：
+**Document Type Classification Diagram**:
 
 ```mermaid
 graph TB
-    A[AI 写作场景] --> B[商务沟通类]
-    A --> C[内部协作类]
-    A --> D[对外宣传类]
-    A --> E[专业文档类]
+    A[AI Writing Scenarios] --> B[Business Communication]
+    A --> C[Internal Collaboration]
+    A --> D[External Marketing]
+    A --> E[Professional Documents]
     
-    B --> B1[工作邮件]
-    B --> B2[客户提案]
-    B --> B3[商务函件]
+    B --> B1[Work Emails]
+    B --> B2[Client Proposals]
+    B --> B3[Business Correspondence]
     
-    C --> C1[会议纪要]
-    C --> C2[工作周报]
-    C --> C3[项目文档]
+    C --> C1[Meeting Minutes]
+    C --> C2[Weekly Reports]
+    C --> C3[Project Documentation]
     
-    D --> D1[营销文案]
-    D --> D2[新闻稿]
-    D --> D3[社交媒体]
+    D --> D1[Marketing Copy]
+    D --> D2[Press Releases]
+    D --> D3[Social Media]
     
-    E --> E1[产品 PRD]
-    E --> E2[技术文档]
-    E --> E3[分析报告]
+    E --> E1[Product PRD]
+    E --> E2[Technical Documentation]
+    E --> E3[Analysis Reports]
     
     style A fill:#e1f5ff
     style B fill:#fff4e1
@@ -104,227 +104,227 @@ graph TB
     style E fill:#f5e1ff
 ```
 
-#### 类型 1：工作邮件
+#### Type 1: Work Emails
 
-**场景**：向客户发送项目进度更新
-
-```
-请帮我写一封项目进度邮件：
-
-收件人：客户方项目经理
-背景：我们的项目进入第二阶段
-要传达的信息：
-1. 第一阶段已完成，交付物已发送
-2. 第二阶段将于下周启动
-3. 需要客户提供 XX 资料
-
-语气：专业、友好
-```
-
-#### 类型 2：会议纪要
-
-**场景**：整理会议录音/笔记
+**Scenario**: Sending project progress updates to clients
 
 ```
-这是一场产品评审会的会议记录：
-[粘贴会议笔记或录音转文字]
+Please help me write a project progress email:
 
-请整理成规范的会议纪要，包含：
-1. 会议基本信息（时间、参与人、主题）
-2. 讨论要点（分条列出）
-3. 决策事项（明确标注）
-4. 待办事项（责任人 + 截止时间）
+Recipient: Client Project Manager
+Background: Our project has entered the second phase
+Information to convey:
+1. Phase 1 is complete, deliverables have been sent
+2. Phase 2 will start next week
+3. We need the client to provide XX materials
+
+Tone: Professional, friendly
 ```
 
-#### 类型 3：产品文档
+#### Type 2: Meeting Minutes
 
-**场景**：PRD（产品需求文档）
-
-```
-我需要写一份 PRD，功能是 [功能描述]
-
-背景：
-- 用户痛点：[具体痛点]
-- 业务目标：[目标]
-- 使用场景：[场景]
-
-请按以下结构输出：
-1. 需求背景
-2. 用户故事
-3. 功能描述
-4. 交互流程
-5. 验收标准
-```
-
-### 3. 风格迁移技巧
-
-**让 AI 模仿你的风格**：
+**Scenario**: Organizing meeting recordings/notes
 
 ```
-这是我之前写的 3 篇文章：
-[文章1]
-[文章2]
-[文章3]
+This is a record from a product review meeting:
+[Paste meeting notes or transcription]
 
-请分析我的写作风格特点，然后用相同风格写一篇关于 [主题] 的文章。
+Please organize into formal meeting minutes, including:
+1. Meeting basics (time, participants, topic)
+2. Discussion points (listed item by item)
+3. Decisions made (clearly marked)
+4. Action items (responsible person + deadline)
 ```
 
-### 4. 内容改写
+#### Type 3: Product Documentation
 
-**内容改写策略图**：
+**Scenario**: PRD (Product Requirements Document)
+
+```
+I need to write a PRD for [feature description]
+
+Background:
+- User pain point: [specific pain point]
+- Business goal: [goal]
+- Use case: [scenario]
+
+Please output in the following structure:
+1. Requirement Background
+2. User Stories
+3. Feature Description
+4. Interaction Flow
+5. Acceptance Criteria
+```
+
+### 3. Style Transfer Techniques
+
+**Making AI Mimic Your Style**:
+
+```
+Here are 3 articles I wrote before:
+[Article 1]
+[Article 2]
+[Article 3]
+
+Please analyze my writing style characteristics, then write an article about [topic] in the same style.
+```
+
+### 4. Content Rewriting
+
+**Content Rewriting Strategy Diagram**:
 
 ```mermaid
 graph LR
-    A[原始内容] --> B{改写目标}
+    A[Original Content] --> B{Rewriting Goal}
     
-    B -->|风格转换| C[正式 ↔ 口语]
-    B -->|长度调整| D[扩写 ↔ 缩写]
-    B -->|受众适配| E[专业 ↔ 通俗]
-    B -->|格式转换| F[段落 ↔ 列表]
+    B -->|Style Conversion| C[Formal ↔ Casual]
+    B -->|Length Adjustment| D[Expand ↔ Condense]
+    B -->|Audience Adaptation| E[Professional ↔ Accessible]
+    B -->|Format Conversion| F[Paragraphs ↔ Lists]
     
-    C --> G[多版本输出]
+    C --> G[Multiple Versions Output]
     D --> G
     E --> G
     F --> G
     
-    G --> H[版本对比]
-    H --> I[选择最佳]
+    G --> H[Version Comparison]
+    H --> I[Select Best]
     
     style A fill:#e1f5ff
     style I fill:#ccffcc
 ```
 
-**场景**：同一内容，多种表达
+**Scenario**: Same content, multiple expressions
 
 ```
-请将以下内容改写成 3 个版本：
-[原始内容]
+Please rewrite the following content into 3 versions:
+[Original content]
 
-版本1：正式、专业（用于对外报告）
-版本2：轻松、口语化（用于内部分享）
-版本3：精简、要点式（用于 PPT）
+Version 1: Formal, professional (for external reports)
+Version 2: Relaxed, conversational (for internal sharing)
+Version 3: Concise, bullet points (for PPT)
 ```
 
 ---
 
-## 💡 岗位专属案例
+## 💡 Role-Specific Examples
 
-### 产品经理
+### Product Manager
 
-**需求文档快速生成**
-
-```
-我需要为 [功能名称] 写需求文档
-
-用户调研发现：
-- [发现1]
-- [发现2]
-
-竞品分析：
-- [竞品做法]
-
-请帮我生成：
-1. 需求背景（为什么做）
-2. 目标用户（给谁用）
-3. 核心功能（做什么）
-4. 优先级排序（先做什么）
-```
-
-### 运营
-
-**活动方案撰写**
+**Rapid Requirements Document Generation**
 
 ```
-我要策划一个 [活动类型] 活动
+I need to write a requirements document for [feature name]
 
-目标：[具体目标，如 "新增 1000 个注册用户"]
-预算：[预算范围]
-时间：[活动周期]
+User research findings:
+- [Finding 1]
+- [Finding 2]
 
-请帮我生成活动方案，包含：
-1. 活动主题和 slogan
-2. 活动机制设计
-3. 推广渠道和排期
-4. 效果预估
+Competitive analysis:
+- [Competitor approach]
+
+Please help me generate:
+1. Requirement Background (why)
+2. Target Users (who)
+3. Core Features (what)
+4. Priority Ranking (what first)
+```
+
+### Operations
+
+**Campaign Planning**
+
+```
+I'm planning a [campaign type] campaign
+
+Goal: [specific goal, e.g., "acquire 1000 new registered users"]
+Budget: [budget range]
+Timeline: [campaign duration]
+
+Please help me generate a campaign plan, including:
+1. Campaign theme and slogan
+2. Campaign mechanism design
+3. Promotion channels and schedule
+4. Expected results
 ```
 
 ### HR
 
-**招聘 JD 撰写**
+**Job Description Writing**
 
 ```
-我需要招聘一名 [岗位名称]
+I need to hire a [position title]
 
-岗位要求：
-- 工作年限：[X年]
-- 核心技能：[技能列表]
-- 工作内容：[主要职责]
+Requirements:
+- Years of experience: [X years]
+- Core skills: [skill list]
+- Responsibilities: [main duties]
 
-公司信息：
-- 行业：[行业]
-- 规模：[人数]
-- 福利：[福利亮点]
+Company information:
+- Industry: [industry]
+- Size: [number of employees]
+- Benefits: [benefit highlights]
 
-请生成一份吸引人的招聘 JD，突出 [公司优势]
+Please generate an attractive job description, highlighting [company advantages]
 ```
 
 ---
 
-## 🎯 实战练习
+## 🎯 Hands-on Practice
 
-### 练习 1：写作流程实操
+### Exercise 1: Writing Workflow Practice
 
-选择一个你需要写的文档，用 AI 辅助完成，记录：
-1. 你的初始提示词
-2. AI 的第一版输出
-3. 你的修改意见
-4. 最终版本
+Choose a document you need to write, complete it with AI assistance, and record:
+1. Your initial prompt
+2. AI's first output
+3. Your feedback and revisions
+4. Final version
 
-### 练习 2：批量内容生成
+### Exercise 2: Batch Content Generation
 
-用 AI 生成 10 条社交媒体文案，要求：
-- 同一主题
-- 不同角度
-- 不同长度（短/中/长）
-
----
-
-## ⚠️ 质量把控要点
-
-### 检查点 1：事实准确性
-
-- ❌ AI 可能编造数据、引用不存在的来源
-- ✅ 所有数据、案例、引用都要人工核实
-
-### 检查点 2：逻辑连贯性
-
-- ❌ AI 可能前后矛盾、论证不严密
-- ✅ 检查论点是否支撑结论、逻辑链是否完整
-
-### 检查点 3：风格一致性
-
-- ❌ AI 可能在同一文档中风格跳跃
-- ✅ 确保语气、用词、格式统一
+Use AI to generate 10 social media posts, requiring:
+- Same topic
+- Different angles
+- Different lengths (short/medium/long)
 
 ---
 
-## 📚 延伸阅读
+## ⚠️ Quality Control Points
 
-- [如何用 AI 提升写作效率](https://example.com)
-- [AI 写作的 10 个最佳实践](https://example.com)
+### Checkpoint 1: Factual Accuracy
+
+- ❌ AI may fabricate data and cite non-existent sources
+- ✅ All data, cases, and citations must be manually verified
+
+### Checkpoint 2: Logical Coherence
+
+- ❌ AI may have contradictions and weak arguments
+- ✅ Check if arguments support conclusions and if the logic chain is complete
+
+### Checkpoint 3: Style Consistency
+
+- ❌ AI may have inconsistent style within the same document
+- ✅ Ensure tone, word choice, and formatting are unified
 
 ---
 
-## ❓ 常见问题
+## 📚 Further Reading
 
-**Q: AI 生成的内容可以直接用吗？**
+- [How to Improve Writing Efficiency with AI](https://example.com)
+- [10 Best Practices for AI Writing](https://example.com)
 
-A: 不建议。AI 是"助手"不是"替代"。生成的内容需要人工审核、修改、补充。
+---
 
-**Q: 如何避免 AI 生成的内容千篇一律？**
+## ❓ FAQ
 
-A: 提供具体的上下文、案例、数据，让 AI 基于真实信息创作。
+**Q: Can I use AI-generated content directly?**
 
-**Q: AI 写作会被检测出来吗？**
+A: Not recommended. AI is an "assistant," not a "replacement." Generated content needs manual review, editing, and supplementation.
 
-A: 经过人工修改和补充的内容，通常不会被检测为 AI 生成。关键是加入你的思考和独特见解。
+**Q: How can I avoid AI-generated content being generic?**
+
+A: Provide specific context, examples, and data to let AI create based on real information.
+
+**Q: Will AI writing be detected?**
+
+A: Content that has been manually edited and supplemented is usually not detected as AI-generated. The key is to add your own thinking and unique insights.

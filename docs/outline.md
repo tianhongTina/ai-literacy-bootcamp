@@ -1,683 +1,683 @@
-# AI 素养训练营 · 完整课程大纲
+# AI Literacy Bootcamp · Complete Course Outline
 
-> **总课时**：8 节课 × 2 小时 = 16 小时
-> **交付形式**：线下集中培训 + 线上回放 + 实操练习库
-> **评估方式**：每课一个可带走的产出 + 结课项目
-
----
-
-## 🎬 课程整体 Hook
-
-"**30 年前，不会用 Office 的人被淘汰。10 年前，不会用智能手机的人被淘汰。今天，不会用 AI 的人正在被淘汰。**
-
-但这一次，被淘汰的不是岗位，是个人。因为 AI 不会取代你，但**会用 AI 的同事，会**。
-
-这不是危言耸听。当你的同事用 30 分钟做完了你一天的工作，当老板看到的是产出不是苦劳，你就会明白——**AI 素养是 2026 年最重要的通用能力**。"
+> **Total Hours**: 8 sessions × 2 hours = 16 hours
+> **Delivery Format**: In-person intensive training + online replays + hands-on practice library
+> **Assessment Method**: One take-home deliverable per session + final project
 
 ---
 
-## 📚 课程结构总览
+## 🎬 Course Hook
+
+"**30 years ago, people who couldn't use Office were left behind. 10 years ago, people who couldn't use smartphones were left behind. Today, people who can't use AI are being left behind.**
+
+But this time, it's not jobs that are being eliminated—it's individuals. Because AI won't replace you, but **your colleague who can use AI will**.
+
+This isn't fear-mongering. When your colleague completes in 30 minutes what takes you a full day, when your boss sees output not effort, you'll understand—**AI literacy is the most important universal skill in 2026**."
+
+---
+
+## 📚 Course Structure Overview
 
 ```
-阶段一：认知与基础（第 0-1 课）
-├─ 第 0 课：AI 认知重构         → 建立心智模型
-└─ 第 1 课：提示词工程          → 掌握核心方法
+Phase 1: Cognition & Foundations (Sessions 0-1)
+├─ Session 0: AI Cognitive Restructuring    → Build mental models
+└─ Session 1: Prompt Engineering            → Master core methods
 
-阶段二：场景化应用（第 2-4 课）
-├─ 第 2 课：AI 写作助手         → 文档/文案生产
-├─ 第 3 课：AI 数据分析         → 不写代码做分析
-└─ 第 4 课：AI 产品设计         → 从需求到原型
+Phase 2: Scenario-based Applications (Sessions 2-4)
+├─ Session 2: AI Writing Assistant          → Document/Copy Production
+├─ Session 3: AI Data Analysis              → Analysis Without Coding
+└─ Session 4: AI Product Design             → From Requirements to Prototype
 
-阶段三：进阶与生态（第 5-6 课）
-├─ 第 5 课：AI 工作流自动化     → 让重复工作消失
-└─ 第 6 课：AI 工具生态         → 选型与组合
+Phase 3: Advanced & Ecosystem (Sessions 5-6)
+├─ Session 5: AI Workflow Automation        → Make Repetitive Work Disappear
+└─ Session 6: AI Tool Ecosystem             → Selection & Combination
 
-阶段四：安全与治理（第 7 课）
-└─ 第 7 课：AI 协作与安全       → 负责任地使用
+Phase 4: Security & Governance (Session 7)
+└─ Session 7: AI Collaboration & Security   → Responsible Usage
 ```
 
 ---
 
-## 第 0 课：AI 认知重构 - 从工具到协作者
+## Session 0: AI Cognitive Restructuring - From Tool to Collaborator
 
 ### Hook
-一个产品经理花 2 小时让 AI 写 PRD，结果 AI 给了个"万能模板"。她发朋友圈吐槽："AI 就这？" 评论区另一位产品经理晒出同一个需求的对话记录——他用 AI 15 分钟写完，还多了 3 个他没想到的功能点。**差别在哪？**
+A product manager spent 2 hours getting AI to write a PRD, and the AI gave her a "universal template." She posted on social media complaining: "Is this all AI can do?" In the comments, another product manager shared their conversation log for the same requirement—they finished in 15 minutes with AI and even added 3 features they hadn't thought of. **What's the difference?**
 
-### 教学目标
-- 打破对 AI 的 3 个常见误解
-- 建立"AI 是协作者，不是工具"的心智模型
-- 理解大模型的本质：为什么它有时很聪明，有时很笨
+### Learning Objectives
+- Break down 3 common misconceptions about AI
+- Build the mental model that "AI is a collaborator, not a tool"
+- Understand the essence of large language models: why they're sometimes brilliant, sometimes foolish
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：三个常见误解（20 分钟）**
-- 误解 1：AI 是万能的 → 真相：能力边界清晰
-- 误解 2：AI 是搜索引擎 → 真相：是语言预测器
-- 误解 3：AI 一次就能给完美答案 → 真相：对话迭代才是正道
+**Section 1: Three Common Misconceptions (20 minutes)**
+- Misconception 1: AI is omnipotent → Truth: Clear capability boundaries
+- Misconception 2: AI is a search engine → Truth: It's a language predictor
+- Misconception 3: AI can give perfect answers in one go → Truth: Iterative dialogue is the way
 
-**Section 2：大模型到底是什么（25 分钟）· 深度杠杆：机制**
-- 类比：世界上最强的"词语接龙选手"
-- Token 是什么：AI 看到的不是汉字，是数字
-- 上下文窗口：AI 的"短期记忆"
-- 训练数据：AI 为什么有"知识截止日期"
+**Section 2: What Exactly Are Large Language Models (25 minutes) · Deep Leverage: Mechanism**
+- Analogy: The world's most powerful "word continuation contestant"
+- What are Tokens: AI doesn't see Chinese characters, it sees numbers
+- Context Window: AI's "short-term memory"
+- Training Data: Why AI has a "knowledge cutoff date"
 
-**Section 3：AI 的能力边界（25 分钟）· 深度杠杆：失败模式**
-- 擅长：文本生成、改写、总结、翻译、头脑风暴
-- 不擅长：实时信息、精确计算、主观判断、保密内容
-- **幻觉现象**：AI 会编造看起来很合理但是假的内容
-- 真实案例：律师引用 AI 编造的判例被法院罚款
+**Section 3: AI Capability Boundaries (25 minutes) · Deep Leverage: Failure Modes**
+- Strengths: Text generation, rewriting, summarization, translation, brainstorming
+- Weaknesses: Real-time information, precise calculations, subjective judgments, confidential content
+- **Hallucination Phenomenon**: AI fabricates content that looks plausible but is false
+- Real Case: Lawyer fined by court for citing AI-fabricated case law
 
-**Section 4：国内外主流产品全景（20 分钟）· 深度杠杆：决策清单**
-- 国内：讯飞星火、文心一言、通义千问、豆包、Kimi、DeepSeek
-- 国外：ChatGPT、Claude、Gemini
-- 企业级：星火企业版、通义千问企业版
-- **选型矩阵**：按场景（中文/长文档/合规/免费）推荐
+**Section 4: Domestic and International Product Landscape (20 minutes) · Deep Leverage: Decision Checklist**
+- Domestic: iFlytek Spark, ERNIE Bot, Tongyi Qianwen, Doubao, Kimi, DeepSeek
+- International: ChatGPT, Claude, Gemini
+- Enterprise: Spark Enterprise Edition, Tongyi Qianwen Enterprise Edition
+- **Selection Matrix**: Recommendations by scenario (Chinese/long documents/compliance/free)
 
-**Section 5：第一次高质量对话（20 分钟）· 实操**
-- 现场演示：从"写个邮件"到"具体怎么写"
-- 学员动手：选一个真实任务，与 AI 对话 3 轮以上
-- 分享 + 点评
+**Section 5: Your First Quality Conversation (20 minutes) · Hands-on**
+- Live Demo: From "write an email" to "specifically how to write it"
+- Student Practice: Pick a real task, have 3+ rounds of dialogue with AI
+- Sharing + Feedback
 
-### 深度保证
-- ✅ 机制：Token、上下文、训练数据
-- ✅ 失败模式：幻觉、知识截止日期
-- ✅ 决策清单：国内外产品选型矩阵
+### Depth Guarantee
+- ✅ Mechanism: Tokens, context, training data
+- ✅ Failure Modes: Hallucination, knowledge cutoff date
+- ✅ Decision Checklist: Domestic and international product selection matrix
 
-### 可带走的产出
-- 《AI 工具选型对照表》（PDF）
-- 《第一次对话记录模板》
+### Take-home Deliverable
+- "AI Tool Selection Comparison Chart" (PDF)
+- "First Conversation Record Template"
 
-### 实操练习
-"用 AI 完成本周你最讨厌的 1 个工作"（下节课分享）
+### Hands-on Exercise
+"Use AI to complete 1 task you hate most this week" (share next session)
 
 ---
 
-## 第 1 课：提示词工程 - 让 AI 听懂你的话
+## Session 1: Prompt Engineering - Making AI Understand You
 
 ### Hook
-同样是问"帮我写周报"，有人得到 3 段废话，有人得到老板直接转发给 CEO 的报告。**提示词就是你和 AI 之间的接口**——接口设计得好，AI 才能好好干活。
+Asking "help me write a weekly report," some get 3 paragraphs of fluff, others get a report the boss forwards directly to the CEO. **Prompts are the interface between you and AI**—design the interface well, and AI can do its job properly.
 
-### 教学目标
-- 掌握 CRISPE 提示词框架
-- 为自己的岗位设计 10 个可复用提示词模板
-- 学会多轮对话迭代优化
+### Learning Objectives
+- Master the CRISPE prompt framework
+- Design 10 reusable prompt templates for your role
+- Learn multi-turn dialogue iteration and optimization
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：为什么同样的问题得到不同答案（15 分钟）· 深度杠杆：机制**
-- 模型的随机性：temperature 参数的影响
-- 上下文的重要性：AI 不知道你的工作背景
-- 角色设定的力量：一个角色设定改变输出风格
+**Section 1: Why the Same Question Gets Different Answers (15 minutes) · Deep Leverage: Mechanism**
+- Model randomness: the impact of temperature parameter
+- Importance of context: AI doesn't know your work background
+- Power of role setting: one role setting changes output style
 
-**Section 2：CRISPE 框架系统解析（30 分钟）· 深度杠杆：实现细节**
+**Section 2: CRISPE Framework Systematic Analysis (30 minutes) · Deep Leverage: Implementation Details**
 
-| 字母 | 含义 | 例子 |
-|------|------|------|
-| **C**apacity & Role | 角色定义 | "你是一位资深 HR 经理" |
-| **I**nsight | 上下文洞察 | "我们是一家 50 人的初创公司" |
-| **S**tatement | 核心指令 | "帮我写一份运营总监的 JD" |
-| **P**ersonality | 风格语气 | "专业但有吸引力" |
-| **E**xperiment | 迭代实验 | "给我 3 个版本" |
+| Letter | Meaning | Example |
+|--------|---------|---------|
+| **C**apacity & Role | Role Definition | "You are a senior HR manager" |
+| **I**nsight | Context Insight | "We are a 50-person startup" |
+| **S**tatement | Core Instruction | "Help me write a JD for Operations Director" |
+| **P**ersonality | Style & Tone | "Professional but attractive" |
+| **E**xperiment | Iteration Experiment | "Give me 3 versions" |
 
-- **对比演示**：无框架 vs 有框架的输出对比
-- **通用模板**：CRISPE 一页纸参考卡
+- **Comparative Demo**: Output comparison without framework vs with framework
+- **Universal Template**: CRISPE one-page reference card
 
-**Section 3：高级技巧（30 分钟）· 深度杠杆：权衡**
-- **少样本学习**（Few-shot）：给 AI 看几个例子，它会模仿
-- **思维链**（Chain of Thought）：让 AI 分步骤思考
-- **角色扮演**：让 AI 站在用户/老板/客户的视角
-- **负面约束**：告诉 AI "不要做什么"比"做什么"更重要
-- **权衡**：长提示词 vs 短提示词，精确 vs 灵活
+**Section 3: Advanced Techniques (30 minutes) · Deep Leverage: Trade-offs**
+- **Few-shot Learning**: Show AI a few examples, it will imitate
+- **Chain of Thought**: Have AI think step-by-step
+- **Role Playing**: Have AI stand in the perspective of user/boss/client
+- **Negative Constraints**: Telling AI "what not to do" is more important than "what to do"
+- **Trade-off**: Long prompts vs short prompts, precise vs flexible
 
-**Section 4：按岗位定制提示词库（25 分钟）· 实操**
+**Section 4: Customizing Prompt Library by Role (25 minutes) · Hands-on**
 
-岗位示例（现场演示 + 学员动手）：
+Role Examples (live demo + student practice):
 
 ```
-【产品经理·需求文档】
-你是一位有 10 年经验的 B 端产品经理，熟悉 SaaS 产品设计。
-请为以下需求生成 PRD 大纲：[需求描述]
-要求：
-1. 包含背景、目标用户、核心场景、功能列表、优先级
-2. 用表格呈现功能清单，标注 P0/P1/P2
-3. 指出 3 个潜在风险
+[Product Manager · Requirements Document]
+You are a B2B product manager with 10 years of experience, familiar with SaaS product design.
+Please generate a PRD outline for the following requirement: [requirement description]
+Requirements:
+1. Include background, target users, core scenarios, feature list, priorities
+2. Present feature list in a table, mark P0/P1/P2
+3. Identify 3 potential risks
 ```
 
 ```
-【运营·公众号文案】
-你是一位百万粉丝公众号主编，擅长写教育行业干货文章。
-主题：[主题]
-要求：
-1. 标题必须有冲突感或数字
-2. 开头 100 字内钩住读者
-3. 正文不少于 1500 字，3 个小标题
-4. 结尾引导互动
-风格：有温度、不油腻、有干货
+[Operations · Official Account Copy]
+You are a million-follower official account editor, skilled at writing practical articles in the education industry.
+Topic: [topic]
+Requirements:
+1. Title must have conflict or numbers
+2. Hook readers within the first 100 words
+3. Body at least 1500 words, 3 subheadings
+4. End with a call for interaction
+Style: Warm, not cheesy, practical
 ```
 
-（额外 6 个模板：市场、HR、行政、财务、销售、客服）
+(6 additional templates: Marketing, HR, Admin, Finance, Sales, Customer Service)
 
-**Section 5：迭代优化方法论（20 分钟）· 深度杠杆：失败模式**
-- 为什么第一次输出往往不满意
-- **5 种优化指令**："更具体"、"换个角度"、"加入案例"、"更精简"、"换风格"
-- 何时该重开对话（上下文污染）
-- 何时该换模型（当前模型能力不足）
+**Section 5: Iteration Optimization Methodology (20 minutes) · Deep Leverage: Failure Modes**
+- Why the first output is often unsatisfactory
+- **5 Optimization Commands**: "More specific", "Different angle", "Add examples", "More concise", "Change style"
+- When to start a new conversation (context pollution)
+- When to switch models (current model capability insufficient)
 
-### 深度保证
-- ✅ 机制：temperature、上下文窗口如何影响输出
-- ✅ 实现细节：CRISPE 框架完整拆解
-- ✅ 权衡：长 vs 短提示词、精确 vs 灵活
-- ✅ 失败模式：上下文污染、模型能力边界
+### Depth Guarantee
+- ✅ Mechanism: How temperature and context window affect output
+- ✅ Implementation Details: Complete CRISPE framework breakdown
+- ✅ Trade-offs: Long vs short prompts, precise vs flexible
+- ✅ Failure Modes: Context pollution, model capability boundaries
 
-### 可带走的产出
-- **《岗位提示词模板库 v1.0》**（8 个岗位 × 每个岗位 5 个高频场景 = 40 个模板）
-- CRISPE 一页纸参考卡
+### Take-home Deliverable
+- **"Role Prompt Template Library v1.0"** (8 roles × 5 high-frequency scenarios each = 40 templates)
+- CRISPE one-page reference card
 
-### 实操练习
-为自己岗位最常做的 3 个任务各设计 1 个提示词，下课后在真实工作中使用，下节课展示 before/after。
+### Hands-on Exercise
+Design 1 prompt for each of the 3 most common tasks in your role, use them in real work after class, show before/after next session.
 
 ---
 
-## 第 2 课：AI 写作助手 - 文档、文案、报告一把通
+## Session 2: AI Writing Assistant - Documents, Copy, Reports All-in-One
 
 ### Hook
-一位行政专员每周要写 5 种报告：周报、会议纪要、通知、总结、请示。用 AI 之前她加班到 8 点，用 AI 之后 4 点下班。**她只学了一招：把"写作"拆成"构思 + 填充 + 润色"三个阶段，让 AI 干填充和润色。**
+An admin specialist writes 5 types of reports weekly: weekly reports, meeting minutes, notices, summaries, requests. Before using AI, she worked overtime until 8 PM; after using AI, she leaves at 4 PM. **She only learned one trick: break "writing" into "ideation + filling + polishing" three stages, let AI do filling and polishing.**
 
-### 教学目标
-- 掌握 AI 辅助写作的三阶段工作法
-- 学会用 AI 处理长文档（总结、提取、翻译）
-- 能用 AI 完成所在岗位的核心写作任务
+### Learning Objectives
+- Master the three-stage workflow for AI-assisted writing
+- Learn to use AI for long documents (summarization, extraction, translation)
+- Be able to use AI to complete core writing tasks in your role
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：写作工作流的三阶段（20 分钟）· 深度杠杆：实现细节**
-- 构思（人）：确定目标、受众、核心观点
-- 填充（AI）：展开段落、提供案例、生成数据
-- 润色（人 + AI）：调整语气、修正事实、最终定稿
-- **关键点**：人决定"说什么"，AI 负责"怎么说"
+**Section 1: Three Stages of Writing Workflow (20 minutes) · Deep Leverage: Implementation Details**
+- Ideation (Human): Determine goals, audience, core points
+- Filling (AI): Expand paragraphs, provide examples, generate data
+- Polishing (Human + AI): Adjust tone, correct facts, finalize
+- **Key Point**: Humans decide "what to say," AI handles "how to say it"
 
-**Section 2：短文本场景（30 分钟）· 深度杠杆：真实案例**
+**Section 2: Short Text Scenarios (30 minutes) · Deep Leverage: Real Cases**
 
-现场实操 5 个场景：
-1. **工作邮件**：给客户的道歉信（含补偿方案）
-2. **周报**：从流水账到结构化汇报
-3. **会议通知**：冷冰冰的通知 → 有温度的邀请
-4. **社群公告**：活动预热、规则说明
-5. **述职 PPT 大纲**：年度述职 5 页 PPT 的核心要点
+Hands-on practice for 5 scenarios:
+1. **Work Email**: Apology letter to client (including compensation plan)
+2. **Weekly Report**: From stream of consciousness to structured reporting
+3. **Meeting Notice**: Cold notification → Warm invitation
+4. **Community Announcement**: Event warm-up, rule explanation
+5. **Presentation Outline**: Core points for a 5-slide annual review deck
 
-每个场景展示：**烂提示词 → 差结果** vs **好提示词 → 好结果**
+Each scenario demonstrates: **Bad prompt → Poor result** vs **Good prompt → Good result**
 
-**Section 3：长文档处理（25 分钟）· 深度杠杆：机制 + 失败模式**
-- **上下文窗口**的限制：为什么 100 页 PDF 不能直接扔给 AI
-- **分段策略**：长文档拆分的三种方法
-- **Claude/Kimi 的长上下文**优势
-- **失败模式**：上下文太长导致 AI "忘记"开头的指令
-- 实操：上传一份 30 页报告，让 AI 生成 5 页摘要
+**Section 3: Long Document Processing (25 minutes) · Deep Leverage: Mechanism + Failure Modes**
+- **Context Window** limitations: Why you can't just throw a 100-page PDF at AI
+- **Segmentation Strategy**: Three methods for splitting long documents
+- **Claude/Kimi long context** advantages
+- **Failure Mode**: Context too long causes AI to "forget" instructions from the beginning
+- Hands-on: Upload a 30-page report, have AI generate a 5-page summary
 
-**Section 4：跨格式转换（25 分钟）· 深度杠杆：真实案例**
-- 访谈录音 → 文字稿 → 结构化报告
-- 公众号文章 → 小红书笔记 → 抖音脚本
-- 英文邮件 → 中文翻译 → 文化本地化
-- PPT 大纲 → 详细讲稿 → 演讲稿
+**Section 4: Cross-format Conversion (25 minutes) · Deep Leverage: Real Cases**
+- Interview recording → Transcript → Structured report
+- Official account article → Xiaohongshu note → TikTok script
+- English email → Chinese translation → Cultural localization
+- PPT outline → Detailed script → Speech draft
 
-**Section 5：AI 写作的雷区（20 分钟）· 深度杠杆：失败模式**
-- **事实性幻觉**：AI 会编造数据、引用、案例
-- **避坑方法**：任何具体数字、引用、案例必须核查
-- **版权陷阱**：AI 生成内容的版权归属（国内司法判例）
-- **同质化问题**：大量用户用同类提示词 → 内容撞车
-- **如何让 AI 写出"你的风格"**：提供历史作品作为样本
+**Section 5: AI Writing Pitfalls (20 minutes) · Deep Leverage: Failure Modes**
+- **Factual Hallucination**: AI fabricates data, citations, cases
+- **Avoidance Method**: Any specific numbers, citations, cases must be verified
+- **Copyright Trap**: Ownership of AI-generated content (domestic legal precedents)
+- **Homogenization Problem**: Many users using similar prompts → content collision
+- **How to get AI to write "your style"**: Provide historical works as samples
 
-### 深度保证
-- ✅ 机制：上下文窗口、Token 计算
-- ✅ 实现细节：三阶段工作法
-- ✅ 失败模式：幻觉、版权、同质化
-- ✅ 真实案例：每个场景的 before/after
+### Depth Guarantee
+- ✅ Mechanism: Context window, token calculation
+- ✅ Implementation Details: Three-stage workflow
+- ✅ Failure Modes: Hallucination, copyright, homogenization
+- ✅ Real Cases: Before/after for each scenario
 
-### 可带走的产出
-- **《AI 写作场景手册》**（20 个高频场景模板）
-- **《AI 内容核查清单》**（6 项必查项目）
+### Take-home Deliverable
+- **"AI Writing Scenario Handbook"** (20 high-frequency scenario templates)
+- **"AI Content Verification Checklist"** (6 must-check items)
 
-### 实操练习
-用 AI 完成本周一份真实工作文档，记录时间成本对比。
+### Hands-on Exercise
+Use AI to complete a real work document this week, record time cost comparison.
 
 ---
 
-## 第 3 课：AI 数据分析 - 不写代码也能洞察业务
+## Session 3: AI Data Analysis - Insights Without Code
 
 ### Hook
-"我不是数据分析师，老板却让我从 500 行 Excel 里找规律。以前我只会 SUM、AVG、透视表，现在我直接把表格扔给 AI，3 分钟拿到分析报告。" —— 某电商运营专员
+"I'm not a data analyst, but my boss asked me to find patterns in 500 rows of Excel. Before, I only knew SUM, AVG, pivot tables. Now I just throw the spreadsheet at AI and get an analysis report in 3 minutes." — An e-commerce operations specialist
 
-### 教学目标
-- 学会用自然语言描述数据分析需求
-- 掌握 AI + Excel/CSV 的协作模式
-- 能独立完成简单的业务数据解读
+### Learning Objectives
+- Learn to describe data analysis needs in natural language
+- Master the AI + Excel/CSV collaboration model
+- Be able to independently complete simple business data interpretation
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：从"技能门槛"到"描述能力"（15 分钟）· 深度杠杆：权衡**
-- 传统数据分析的门槛：SQL、Python、BI 工具
-- AI 分析的新门槛：能否**清晰描述分析目标**
-- **权衡**：自己学 Python vs 用 AI 辅助分析（投入/产出比对比）
+**Section 1: From "Skill Threshold" to "Description Ability" (15 minutes) · Deep Leverage: Trade-offs**
+- Traditional data analysis threshold: SQL, Python, BI tools
+- New AI analysis threshold: Can you **clearly describe analysis goals**
+- **Trade-off**: Learning Python yourself vs using AI-assisted analysis (input/output ratio comparison)
 
-**Section 2：可用工具全景（20 分钟）· 深度杠杆：决策清单**
+**Section 2: Available Tools Overview (20 minutes) · Deep Leverage: Decision Checklist**
 
-| 工具 | 特点 | 适用场景 | 数据敏感度 |
-|------|------|----------|------------|
-| ChatGPT 代码解释器 | 能上传、能画图 | 复杂分析 | 低（不宜敏感） |
-| Claude Artifacts | 能生成交互报告 | 可视化 | 低 |
-| 讯飞星火 | 中文友好、国内合规 | 日常分析 | 中 |
-| 豆包/Kimi | 免费、易上手 | 快速探索 | 中 |
-| Excel Copilot | 原地分析 | Office 生态 | 高（本地） |
-| WPS AI | 国产替代 | 国内企业 | 高 |
+| Tool | Features | Use Cases | Data Sensitivity |
+|------|----------|-----------|------------------|
+| ChatGPT Code Interpreter | Can upload, can chart | Complex analysis | Low (not for sensitive) |
+| Claude Artifacts | Can generate interactive reports | Visualization | Low |
+| iFlytek Spark | Chinese-friendly, domestic compliance | Daily analysis | Medium |
+| Doubao/Kimi | Free, easy to start | Quick exploration | Medium |
+| Excel Copilot | Analyze in-place | Office ecosystem | High (local) |
+| WPS AI | Domestic alternative | Domestic enterprises | High |
 
-**Section 3：三类分析任务（40 分钟）· 深度杠杆：真实案例**
+**Section 3: Three Types of Analysis Tasks (40 minutes) · Deep Leverage: Real Cases**
 
-**任务 1：描述性分析（数据说了什么）**
-- 场景：运营看销售数据
-- 提示词：`这是近 3 个月销售数据，帮我总结 5 个关键发现`
-- 实操：上传数据、读 AI 报告、提追问
+**Task 1: Descriptive Analysis (What the data says)**
+- Scenario: Operations looking at sales data
+- Prompt: `Here's the last 3 months of sales data, help me summarize 5 key findings`
+- Hands-on: Upload data, read AI report, ask follow-up questions
 
-**任务 2：诊断性分析（为什么这样）**
-- 场景：市场分析转化率下降
-- 提示词：`本月转化率从 3.2% 降到 2.1%，这里是用户行为数据和渠道数据，帮我找出可能原因`
-- 实操：假设 → 验证 → 排除的对话流
+**Task 2: Diagnostic Analysis (Why it's this way)**
+- Scenario: Marketing analyzing conversion rate drop
+- Prompt: `This month's conversion rate dropped from 3.2% to 2.1%, here's user behavior data and channel data, help me find possible causes`
+- Hands-on: Hypothesis → Verification → Elimination dialogue flow
 
-**任务 3：预测性分析（未来会怎样）**
-- 场景：HR 预测离职风险
-- 提示词：`基于过去 2 年离职员工特征数据，帮我建立高风险员工识别维度`
-- 实操：小心 **AI 预测的置信度** 问题
+**Task 3: Predictive Analysis (What will happen in the future)**
+- Scenario: HR predicting turnover risk
+- Prompt: `Based on past 2 years of departed employee characteristic data, help me build high-risk employee identification dimensions`
+- Hands-on: Be careful of **AI prediction confidence** issues
 
-**Section 4：可视化生成（25 分钟）· 深度杠杆：实现细节**
-- 让 AI 生成图表代码（HTML + ECharts）
-- 让 AI 直接生成图片（Claude Artifacts、ChatGPT）
-- 用 AI 生成 Excel 公式和透视表配置
-- 一图胜千言：**哪种图表适合哪种数据**的决策树
+**Section 4: Visualization Generation (25 minutes) · Deep Leverage: Implementation Details**
+- Have AI generate chart code (HTML + ECharts)
+- Have AI directly generate images (Claude Artifacts, ChatGPT)
+- Use AI to generate Excel formulas and pivot table configurations
+- A picture is worth a thousand words: **Decision tree for which chart fits which data**
 
-**Section 5：数据分析的安全红线（20 分钟）· 深度杠杆：失败模式**
-- **绝对不能上传的数据**：用户身份证、手机号、企业财务原始数据、未公开战略信息
-- **脱敏后可上传**：姓名→用户 A、部门→部门 1、金额→按比例缩放
-- **本地 AI 替代方案**：Ollama + 本地模型（企业敏感场景）
-- **错误案例**：某员工把客户名单喂给公网 AI，被合规约谈
+**Section 5: Data Analysis Safety Red Lines (20 minutes) · Deep Leverage: Failure Modes**
+- **Data that absolutely cannot be uploaded**: User ID numbers, phone numbers, enterprise raw financial data, unpublished strategic information
+- **Can be uploaded after desensitization**: Name → User A, Department → Department 1, Amount → Scale proportionally
+- **Local AI Alternatives**: Ollama + local models (enterprise sensitive scenarios)
+- **Error Case**: An employee fed client list to public AI, got called in by compliance
 
-### 深度保证
-- ✅ 权衡：学 Python vs 用 AI 的投入产出
-- ✅ 决策清单：6 款数据分析工具选型
-- ✅ 真实案例：三类分析任务全流程
-- ✅ 失败模式：数据安全红线
+### Depth Guarantee
+- ✅ Trade-offs: Learning Python vs using AI input/output
+- ✅ Decision Checklist: 6 data analysis tools selection
+- ✅ Real Cases: Full process for three types of analysis tasks
+- ✅ Failure Modes: Data safety red lines
 
-### 可带走的产出
-- **《数据分析提示词 3 件套》**（描述/诊断/预测）
-- **《数据脱敏操作指南》**
+### Take-home Deliverable
+- **"Data Analysis Prompts 3-Piece Set"** (Descriptive/Diagnostic/Predictive)
+- **"Data Desensitization Operation Guide"**
 
-### 实操练习
-带自己岗位一份真实数据（脱敏后），用 AI 生成分析报告。
+### Hands-on Exercise
+Bring a real dataset from your role (desensitized), use AI to generate an analysis report.
 
 ---
 
-## 第 4 课：AI 产品设计 - 从需求到原型的全流程
+## Session 4: AI Product Design - Full Process from Requirements to Prototype
 
 ### Hook
-一位创业者有个 App 想法，没技术背景。他用 AI：1 天写完 PRD，2 天生成原型图，3 天做出可点击的 demo 给投资人看。**不是因为 AI 替他干了活，而是 AI 把"有想法到做出东西"的门槛拉到了每个人都能跨过的高度。**
+A founder had an app idea, no technical background. Using AI: 1 day to finish PRD, 2 days to generate prototype, 3 days to make a clickable demo for investors. **Not because AI did the work for them, but AI lowered the barrier from "having an idea to making something" to a height everyone can cross.**
 
-### 教学目标
-- 用 AI 挖掘和结构化用户需求
-- 用 AI 生成产品原型（文字描述 → 可视化）
-- 掌握"需求→设计→验证"的全链路工作法
+### Learning Objectives
+- Use AI to mine and structure user requirements
+- Use AI to generate product prototypes (text description → visualization)
+- Master the "requirements → design → validation" end-to-end workflow
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：用户需求挖掘（25 分钟）· 深度杠杆：实现细节**
-- **用户访谈预处理**：AI 帮你设计访谈提纲
-- **访谈记录结构化**：录音转文字 → AI 提取痛点
-- **用户故事生成**：`作为...我希望...以便于...` 模板
-- **Jobs-to-be-Done 框架** 的 AI 应用
+**Section 1: User Requirement Mining (25 minutes) · Deep Leverage: Implementation Details**
+- **User Interview Preprocessing**: AI helps you design interview outline
+- **Interview Record Structuring**: Recording to transcript → AI extracts pain points
+- **User Story Generation**: `As a... I want... so that...` template
+- **Jobs-to-be-Done Framework** AI application
 
-**Section 2：需求文档生成（25 分钟）· 深度杠杆：真实案例**
-- **从一句话到完整 PRD** 的对话流
-- PRD 结构化模板（背景、目标、场景、功能、验收标准）
-- **优先级排序**：AI 辅助做 RICE 打分
-- 现场演示：15 分钟产出一份 8 页 PRD 草稿
+**Section 2: Requirements Document Generation (25 minutes) · Deep Leverage: Real Cases**
+- **From one sentence to complete PRD** dialogue flow
+- PRD structured template (background, goals, scenarios, features, acceptance criteria)
+- **Priority Ranking**: AI-assisted RICE scoring
+- Live Demo: Produce an 8-page PRD draft in 15 minutes
 
-**Section 3：原型生成（30 分钟）· 深度杠杆：真实案例**
+**Section 3: Prototype Generation (30 minutes) · Deep Leverage: Real Cases**
 
-当前主流方式：
-- **v0.dev**（Vercel）：文字 → React 页面
-- **Bolt.new**：文字 → 可运行全栈应用
-- **Lovable**：文字 → 完整产品 demo
-- **Claude Artifacts**：轻量原型
-- **即梦 / 文心**：生成设计稿图片
+Current mainstream approaches:
+- **v0.dev** (Vercel): Text → React page
+- **Bolt.new**: Text → Runnable full-stack application
+- **Lovable**: Text → Complete product demo
+- **Claude Artifacts**: Lightweight prototype
+- **Jimeng / ERNIE**: Generate design draft images
 
-对比演示：同一需求"招聘管理系统"在 4 个工具的输出对比。
+Comparative demo: Same requirement "Recruitment Management System" output comparison across 4 tools.
 
-**Section 4：需求验证与迭代（20 分钟）· 深度杠杆：权衡**
-- 用 AI 扮演不同角色（用户/客户/竞争对手）审视方案
-- **压力测试**：让 AI 挑刺，找出方案漏洞
-- **A/B 方案对比**：让 AI 从多个维度评估
-- **权衡**：AI 验证 vs 真实用户验证（什么场景适合哪种）
+**Section 4: Requirements Validation and Iteration (20 minutes) · Deep Leverage: Trade-offs**
+- Use AI to play different roles (user/customer/competitor) to review the solution
+- **Stress Testing**: Have AI find holes, identify solution flaws
+- **A/B Solution Comparison**: Have AI evaluate from multiple dimensions
+- **Trade-off**: AI validation vs real user validation (which scenario fits which)
 
-**Section 5：结果交付与协作（20 分钟）· 深度杠杆：决策清单**
-- 给研发团队：PRD + 原型 + 验收标准
-- 给设计师：AI 生成的线框图（不是最终稿）
-- 给老板：一句话电梯演讲 + demo 视频
-- **决策清单**：什么情况该自己画，什么情况交给 AI
+**Section 5: Delivery and Collaboration (20 minutes) · Deep Leverage: Decision Checklist**
+- To development team: PRD + prototype + acceptance criteria
+- To designer: AI-generated wireframes (not final draft)
+- To boss: One-sentence elevator pitch + demo video
+- **Decision Checklist**: When to draw yourself, when to let AI handle it
 
-### 深度保证
-- ✅ 实现细节：用户需求挖掘全流程
-- ✅ 真实案例：PRD 生成、原型生成的现场演示
-- ✅ 权衡：AI 验证 vs 真实用户验证
-- ✅ 决策清单：交付物的分层策略
+### Depth Guarantee
+- ✅ Implementation Details: Full user requirement mining process
+- ✅ Real Cases: PRD generation, prototype generation live demo
+- ✅ Trade-offs: AI validation vs real user validation
+- ✅ Decision Checklist: Deliverable layering strategy
 
-### 可带走的产出
-- **《需求到原型 全流程模板》**
-- **《原型工具对比表》**（v0、Bolt、Lovable、Claude）
+### Take-home Deliverable
+- **"Requirements to Prototype Full Process Template"**
+- **"Prototype Tool Comparison Chart"** (v0, Bolt, Lovable, Claude)
 
-### 实操练习
-为自己部门选 1 个真实痛点，用 AI 完整走一遍：需求 → PRD → 原型。
+### Hands-on Exercise
+Pick 1 real pain point in your department, use AI to complete the full process: Requirements → PRD → Prototype.
 
 ---
 
-## 第 5 课：AI 工作流自动化 - 让重复工作消失
+## Session 5: AI Workflow Automation - Make Repetitive Work Disappear
 
 ### Hook
-市场部有个每周例行工作：从 5 个渠道汇总数据 → 做成 PPT → 发给老板。某实习生用 Coze 搭了个工作流，现在每周一早上 9 点，PPT 自动出现在老板邮箱。**他不是程序员，只是会拖拽。**
+The marketing department has a weekly routine: aggregate data from 5 channels → make PPT → send to boss. An intern used Coze to build a workflow, now every Monday at 9 AM, the PPT automatically appears in the boss's inbox. **They're not a programmer, they just know how to drag and drop.**
 
-### 教学目标
-- 理解"工作流"是什么，什么场景值得自动化
-- 能用零代码平台搭建简单的自动化工作流
-- 掌握"人工 + AI + 自动化"的协作模式
+### Learning Objectives
+- Understand what "workflow" is, what scenarios are worth automating
+- Be able to use no-code platforms to build simple automated workflows
+- Master the "human + AI + automation" collaboration model
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：什么是 AI 工作流（20 分钟）· 深度杠杆：机制**
-- 从单点任务到流程自动化
-- **三要素**：触发器（何时）+ 处理（做什么）+ 输出（到哪）
-- **ROI 公式**：自动化投入 < 每周节省时间 × 时薪 × 52 周
+**Section 1: What is AI Workflow (20 minutes) · Deep Leverage: Mechanism**
+- From single tasks to process automation
+- **Three Elements**: Trigger (when) + Processing (what) + Output (where)
+- **ROI Formula**: Automation investment < Weekly time saved × Hourly rate × 52 weeks
 
-**Section 2：零代码平台生态（25 分钟）· 深度杠杆：决策清单**
+**Section 2: No-Code Platform Ecosystem (25 minutes) · Deep Leverage: Decision Checklist**
 
-| 平台 | 所属 | 特点 | 适用人群 |
-|------|------|------|----------|
-| **扣子（Coze）** | 字节 | 国内最易用、生态全 | 初学者首选 |
-| **Dify** | 开源 | 可私有化部署 | 企业内部 |
-| **n8n** | 开源 | 灵活、可接 API | 稍有技术背景 |
-| **Zapier** | 国外 | 生态最全、贵 | 跨国业务 |
-| **飞书多维表格 + AI** | 飞书 | 数据驱动场景 | 飞书用户 |
-| **钉钉 AI 助理** | 钉钉 | 钉钉生态 | 钉钉用户 |
+| Platform | Owner | Features | Target Users |
+|----------|-------|----------|--------------|
+| **Coze** | ByteDance | Easiest in China, complete ecosystem | First choice for beginners |
+| **Dify** | Open Source | Can be privately deployed | Enterprise internal |
+| **n8n** | Open Source | Flexible, can connect APIs | Some technical background |
+| **Zapier** | International | Largest ecosystem, expensive | International business |
+| **Feishu Multi-dimensional Table + AI** | Feishu | Data-driven scenarios | Feishu users |
+| **DingTalk AI Assistant** | DingTalk | DingTalk ecosystem | DingTalk users |
 
-**Section 3：5 个经典场景手把手（40 分钟）· 深度杠杆：真实案例**
+**Section 3: 5 Classic Scenarios Step-by-Step (40 minutes) · Deep Leverage: Real Cases**
 
-**场景 1：自动周报**（适合所有岗位）
-- 触发：每周五 17:00
-- 处理：从数据源拉取 → AI 总结 → 生成 PPT/文档
-- 输出：邮件/飞书/钉钉
+**Scenario 1: Automatic Weekly Report** (Fits all roles)
+- Trigger: Every Friday 17:00
+- Processing: Pull from data source → AI summarize → Generate PPT/document
+- Output: Email/Feishu/DingTalk
 
-**场景 2：竞品动态监控**（市场/产品）
-- 触发：每天早上 9:00
-- 处理：爬取竞品官网/社媒 → AI 提取关键变化
-- 输出：企业微信群
+**Scenario 2: Competitor Monitoring** (Marketing/Product)
+- Trigger: Every day 9:00 AM
+- Processing: Crawl competitor websites/social media → AI extract key changes
+- Output: WeCom group
 
-**场景 3：客服 FAQ 机器人**（客服/销售）
-- 触发：用户提问
-- 处理：检索知识库 → AI 生成回复 → 人工审核
-- 输出：直接回复
+**Scenario 3: Customer Service FAQ Bot** (CS/Sales)
+- Trigger: User question
+- Processing: Search knowledge base → AI generate reply → Human review
+- Output: Direct reply
 
-**场景 4：招聘简历筛选**（HR）
-- 触发：收到简历
-- 处理：AI 提取关键信息 → 对照 JD 打分
-- 输出：筛选报告给 HR
+**Scenario 4: Recruitment Resume Screening** (HR)
+- Trigger: Resume received
+- Processing: AI extract key info → Score against JD
+- Output: Screening report to HR
 
-**场景 5：内容分发矩阵**（运营/市场）
-- 触发：发布一篇主文
-- 处理：AI 改写成 N 个平台版本
-- 输出：公众号/小红书/抖音/视频号
+**Scenario 5: Content Distribution Matrix** (Operations/Marketing)
+- Trigger: Publish one main article
+- Processing: AI rewrite into N platform versions
+- Output: Official account/Xiaohongshu/TikTok/Video account
 
-**Section 4：动手搭建（25 分钟）· 实操**
-- 现场演示：用 Coze 搭建 "场景 1 自动周报"
-- 学员跟做：每人搭建一个属于自己岗位的简单工作流
+**Section 4: Hands-on Building (25 minutes) · Practice**
+- Live Demo: Use Coze to build "Scenario 1 Automatic Weekly Report"
+- Student Follow-along: Each person builds a simple workflow for their role
 
-**Section 5：工作流的局限与风险（10 分钟）· 深度杠杆：失败模式**
-- **不适合自动化的场景**：需要主观判断、情感沟通、创意决策
-- **人在环路**：关键节点保留人工审核
-- **故障应对**：流程报错怎么办（监控 + 告警）
-- **维护成本**：平台更新、API 变更的持续投入
+**Section 5: Workflow Limitations and Risks (10 minutes) · Deep Leverage: Failure Modes**
+- **Scenarios not suitable for automation**: Require subjective judgment, emotional communication, creative decisions
+- **Human-in-the-loop**: Keep human review at key checkpoints
+- **Failure Handling**: What to do when process errors (monitoring + alerts)
+- **Maintenance Cost**: Ongoing investment for platform updates, API changes
 
-### 深度保证
-- ✅ 机制：工作流三要素、ROI 公式
-- ✅ 决策清单：6 个零代码平台对比
-- ✅ 真实案例：5 个经典场景的完整搭建
-- ✅ 失败模式：不适合自动化的场景
+### Depth Guarantee
+- ✅ Mechanism: Workflow three elements, ROI formula
+- ✅ Decision Checklist: 6 no-code platforms comparison
+- ✅ Real Cases: Complete build for 5 classic scenarios
+- ✅ Failure Modes: Scenarios not suitable for automation
 
-### 可带走的产出
-- **《5 大工作流模板》**（可直接复制到 Coze）
-- 每人 1 个已搭建并运行的工作流
+### Take-home Deliverable
+- **"5 Major Workflow Templates"** (Can be directly copied to Coze)
+- Each person gets 1 built and running workflow
 
-### 实操练习
-在本周把 1 个每周重复做的工作改造成自动工作流。
+### Hands-on Exercise
+Transform 1 weekly repetitive task into an automated workflow this week.
 
 ---
 
-## 第 6 课：AI 工具生态 - 选对工具事半功倍
+## Session 6: AI Tool Ecosystem - Choose Right, Work Smarter
 
 ### Hook
-"我老板要我做个视频广告，没素材没视频技能。我用 4 个 AI 工具接力：文心写脚本 → 即梦生图 → 可灵做动画 → 剪映 AI 剪辑。从想法到成片 2 小时，老板以为我外包了专业团队。"
+"My boss wanted me to make a video ad, no footage no video skills. I used 4 AI tools in sequence: ERNIE wrote script → Jimeng generated images → Kling made animation → CapCut AI edited. From idea to finished video in 2 hours, my boss thought I outsourced to a professional team."
 
-### 教学目标
-- 建立 AI 工具全景认知
-- 掌握工具选型方法论
-- 学会工具组合使用（AI Stack 搭建）
+### Learning Objectives
+- Build a comprehensive understanding of AI tools
+- Master tool selection methodology
+- Learn tool combination usage (AI Stack building)
 
-### 核心内容（5 个章节）
+### Core Content (5 Sections)
 
-**Section 1：四大类 AI 工具全景（30 分钟）· 深度杠杆：决策清单**
+**Section 1: Four Categories of AI Tools Overview (30 minutes) · Deep Leverage: Decision Checklist**
 
-**文本类**：ChatGPT、Claude、讯飞星火、文心一言、豆包、Kimi、DeepSeek
-**图像类**：Midjourney、即梦、通义万相、DALL-E、Stable Diffusion
-**视频类**：Sora、可灵、即梦 AI 视频、Pika、Runway
-**音频类**：ElevenLabs、讯飞语音、Suno（音乐）
+**Text**: ChatGPT, Claude, iFlytek Spark, ERNIE Bot, Doubao, Kimi, DeepSeek
+**Image**: Midjourney, Jimeng, Tongyi Wanxiang, DALL-E, Stable Diffusion
+**Video**: Sora, Kling, Jimeng AI Video, Pika, Runway
+**Audio**: ElevenLabs, iFlytek Voice, Suno (Music)
 
-每类展示：**能做什么 + 不能做什么 + 典型价格 + 国内可用性**
+For each category: **What it can do + What it can't + Typical pricing + Domestic availability**
 
-**Section 2：办公场景 AI 产品（25 分钟）· 深度杠杆：实现细节**
-- **Microsoft Copilot**：Office 全家桶
-- **WPS AI**：国产替代，金山生态
-- **飞书 AI**：协作 + AI 深度整合
-- **钉钉 AI 助理**：钉钉生态
-- **Notion AI**：知识管理
-- **对比维度**：功能覆盖、价格、数据合规、生态契合
+**Section 2: Office Scenario AI Products (25 minutes) · Deep Leverage: Implementation Details**
+- **Microsoft Copilot**: Office suite
+- **WPS AI**: Domestic alternative, Kingsoft ecosystem
+- **Feishu AI**: Collaboration + AI deep integration
+- **DingTalk AI Assistant**: DingTalk ecosystem
+- **Notion AI**: Knowledge management
+- **Comparison Dimensions**: Feature coverage, pricing, data compliance, ecosystem fit
 
-**Section 3：选型三问（20 分钟）· 深度杠杆：决策清单**
+**Section 3: Three Questions for Selection (20 minutes) · Deep Leverage: Decision Checklist**
 
-**三问法**：
-1. **我要解决什么问题？**（任务类型：生成/分析/转换/搜索）
-2. **数据敏感度多高？**（公网 AI vs 企业私有部署）
-3. **预算和生态怎样？**（免费/付费、独立使用/融入现有工具）
+**Three-Question Method**:
+1. **What problem am I solving?** (Task type: generation/analysis/transformation/search)
+2. **How sensitive is the data?** (Public AI vs enterprise private deployment)
+3. **What's the budget and ecosystem?** (Free/paid, standalone/integrated into existing tools)
 
-**选型矩阵**（现场填表）：
+**Selection Matrix** (fill in live):
 
-| 任务 | 数据敏感度 | 预算 | 推荐工具 |
-|------|-----------|------|----------|
-| 写邮件 | 低 | 0 | 豆包/Kimi |
-| 分析财务 | 高 | 付费 | 星火企业版 |
-| 设计海报 | 中 | 付费 | 即梦 |
+| Task | Data Sensitivity | Budget | Recommended Tool |
+|------|------------------|--------|------------------|
+| Write email | Low | 0 | Doubao/Kimi |
+| Analyze finance | High | Paid | Spark Enterprise |
+| Design poster | Medium | Paid | Jimeng |
 
-**Section 4：AI Stack 组合应用（25 分钟）· 深度杠杆：真实案例**
+**Section 4: AI Stack Combination Application (25 minutes) · Deep Leverage: Real Cases**
 
-**案例 1：一人营销团队**
-- 灵感（ChatGPT）→ 文案（文心）→ 图（即梦）→ 视频（可灵）→ 剪辑（剪映）→ 分发（Coze 工作流）
+**Case 1: One-Person Marketing Team**
+- Inspiration (ChatGPT) → Copy (ERNIE) → Image (Jimeng) → Video (Kling) → Edit (CapCut) → Distribute (Coze workflow)
 
-**案例 2：一人产品经理**
-- 用户访谈（飞书妙记转文字）→ 需求整理（Claude）→ PRD（星火）→ 原型（v0.dev）→ 评审 PPT（Gamma）
+**Case 2: One-Person Product Manager**
+- User interview (Feishu Minutes to text) → Requirement organization (Claude) → PRD (Spark) → Prototype (v0.dev) → Review PPT (Gamma)
 
-**案例 3：一人 HR**
-- JD 撰写（文心）→ 简历筛选（Coze 工作流）→ 面试题库（Claude）→ 背调问题（星火）
+**Case 3: One-Person HR**
+- JD writing (ERNIE) → Resume screening (Coze workflow) → Interview question bank (Claude) → Background check questions (Spark)
 
-**Section 5：工具迭代跟踪（20 分钟）· 深度杠杆：权衡**
-- AI 工具半年换一代：**如何不被新工具绑架**
-- 关注原则：**场景不变、工具可换**
-- 学习资源：**量子位、机器之心、AI 科技评论、Hugging Face**
-- **权衡**：追新 vs 稳定使用（选型策略）
+**Section 5: Tool Iteration Tracking (20 minutes) · Deep Leverage: Trade-offs**
+- AI tools change every 6 months: **How not to be held hostage by new tools**
+- Follow principle: **Scenarios stay constant, tools can change**
+- Learning resources: **QbitAI, Jiqizhixin, AI Technology Review, Hugging Face**
+- **Trade-off**: Chasing new vs stable usage (selection strategy)
 
-### 深度保证
-- ✅ 决策清单：四大类工具 + 办公场景 + 三问法
-- ✅ 实现细节：各类办公 AI 产品对比
-- ✅ 真实案例：3 个 AI Stack 组合
-- ✅ 权衡：追新 vs 稳定
+### Depth Guarantee
+- ✅ Decision Checklist: Four tool categories + Office scenarios + Three-question method
+- ✅ Implementation Details: Various office AI products comparison
+- ✅ Real Cases: 3 AI Stack combinations
+- ✅ Trade-offs: Chasing new vs stable
 
-### 可带走的产出
-- **《AI 工具总览大地图》**（一页纸）
-- **《AI 工具选型三问清单》**
-- **《3 个岗位的 AI Stack 蓝图》**
+### Take-home Deliverable
+- **"AI Tool Overview Map"** (one page)
+- **"AI Tool Selection Three-Question Checklist"**
+- **"AI Stack Blueprints for 3 Roles"**
 
-### 实操练习
-为自己岗位设计一套 AI Stack（3-5 个工具组合）。
+### Hands-on Exercise
+Design an AI Stack for your role (3-5 tool combination).
 
 ---
 
-## 第 7 课：AI 协作与安全 - 负责任地使用 AI
+## Session 7: AI Collaboration & Security - Using AI Responsibly
 
 ### Hook
-2024 年某律师用 ChatGPT 写诉状，引用了 6 个判例。法官一查——全是编的。律师被罚款 $5000 + 纪律处分。**AI 不会害你，但会用你的错误决策害你。**
+In 2024, a lawyer used ChatGPT to write a legal complaint, citing 6 cases. The judge checked—all were fabricated. Lawyer fined $5000 + disciplinary action. **AI won't harm you, but your wrong decisions using it will.**
 
-### 教学目标
-- 识别 AI 输出的风险点（幻觉、偏见、版权）
-- 掌握数据安全的边界和替代方案
-- 建立个人 / 团队的 AI 使用规范
+### Learning Objectives
+- Identify risk points in AI output (hallucination, bias, copyright)
+- Master data security boundaries and alternatives
+- Build personal/team AI usage guidelines
 
-### 核心内容（6 个章节）
+### Core Content (6 Sections)
 
-**Section 1：AI 幻觉 - 最常见的坑（25 分钟）· 深度杠杆：机制 + 失败模式**
-- **为什么会幻觉**：语言模型的本质是预测，不是检索
-- **高危场景**：引用、数据、人名、日期、法条、医学建议
-- **识别方法**：三问法
-  - 这是事实还是推理？
-  - 有没有明确来源？
-  - 细节越具体越要警惕
-- **减少幻觉**：给上下文、要求 AI 标注不确定、用联网版
-- **真实案例**：律师罚款案、学术论文撤稿案
+**Section 1: AI Hallucination - The Most Common Pitfall (25 minutes) · Deep Leverage: Mechanism + Failure Modes**
+- **Why hallucination happens**: Language models predict, they don't retrieve
+- **High-risk scenarios**: Citations, data, names, dates, legal provisions, medical advice
+- **Identification method**: Three-question approach
+  - Is this fact or inference?
+  - Is there a clear source?
+  - The more specific the details, the more alert you should be
+- **Reduce hallucination**: Give context, ask AI to note uncertainty, use web-connected version
+- **Real Cases**: Lawyer fine case, academic paper retraction case
 
-**Section 2：数据安全红线（25 分钟）· 深度杠杆：失败模式**
+**Section 2: Data Security Red Lines (25 minutes) · Deep Leverage: Failure Modes**
 
-**绝对不能输入公网 AI 的信息**：
-- 用户个人信息（身份证、手机、地址）
-- 企业财务原始数据、未公开战略
-- 商业秘密、客户名单
-- 内部代码、架构图
-- 合同原文、法律文书
+**Information that absolutely cannot be input to public AI**:
+- User personal information (ID number, phone, address)
+- Enterprise raw financial data, unpublished strategy
+- Trade secrets, client lists
+- Internal code, architecture diagrams
+- Contract originals, legal documents
 
-**脱敏策略**：
-- **替换**：真实姓名 → 用户 A
-- **泛化**：具体金额 → 数量级
-- **切片**：长文档 → 非敏感片段
-- **本地替代**：企业私有 AI、Ollama + 本地模型
+**Desensitization Strategies**:
+- **Replacement**: Real name → User A
+- **Generalization**: Specific amount → Order of magnitude
+- **Slicing**: Long document → Non-sensitive fragments
+- **Local Alternative**: Enterprise private AI, Ollama + local models
 
-**合规要求**：
-- 《生成式人工智能服务管理暂行办法》
-- 《个人信息保护法》
-- 所在企业的 AI 使用政策
+**Compliance Requirements**:
+- "Interim Measures for the Administration of Generative AI Services"
+- "Personal Information Protection Law"
+- Your enterprise's AI usage policy
 
-**Section 3：版权与合规（20 分钟）· 深度杠杆：决策清单**
-- AI 生成内容的版权归属（北京互联网法院典型判例）
-- **商业使用前的核查清单**：
-  - 工具 TOS 是否允许商用
-  - 是否需要标注 "AI 生成"
-  - 是否涉及他人素材
-- **国内合规要求**：深度合成内容的标识义务
+**Section 3: Copyright & Compliance (20 minutes) · Deep Leverage: Decision Checklist**
+- Ownership of AI-generated content (Beijing Internet Court typical case)
+- **Pre-commercial use checklist**:
+  - Does tool TOS allow commercial use
+  - Does it need to be labeled "AI generated"
+  - Does it involve others' materials
+- **Domestic compliance requirements**: Labeling obligations for deep synthesis content
 
-**Section 4：AI 偏见与公平（15 分钟）· 深度杠杆：失败模式**
-- AI 的偏见来自训练数据
-- **高风险场景**：招聘筛选、信贷评估、绩效评价
-- **减轻策略**：人工审核、多样化提示、定期校准
+**Section 4: AI Bias & Fairness (15 minutes) · Deep Leverage: Failure Modes**
+- AI bias comes from training data
+- **High-risk scenarios**: Recruitment screening, credit assessment, performance evaluation
+- **Mitigation strategies**: Human review, diverse prompts, regular calibration
 
-**Section 5：个人 / 团队 AI 规范（20 分钟）· 实操**
+**Section 5: Personal/Team AI Guidelines (20 minutes) · Hands-on**
 
-**个人 AI 使用手册模板**：
-1. 我会用 AI 做什么（清单）
-2. 我绝对不用 AI 做什么（清单）
-3. 我上传数据前的自检 3 问
-4. 我对外输出的核查清单
+**Personal AI Usage Manual Template**:
+1. What I will use AI for (list)
+2. What I absolutely won't use AI for (list)
+3. My 3 questions before uploading data
+4. My checklist for external output
 
-**团队 AI 规范模板**：
-1. 团队推荐工具清单
-2. 允许 / 禁止的使用场景
-3. 数据处理流程
-4. 异常报告机制
+**Team AI Guidelines Template**:
+1. Team recommended tool list
+2. Allowed/prohibited usage scenarios
+3. Data processing procedures
+4. Exception reporting mechanism
 
-现场活动：**制定你的"个人 AI 使用手册"**
+Live Activity: **Create your "Personal AI Usage Manual"**
 
-**Section 6：走向"AI 原生"工作方式（15 分钟）· 深度杠杆：权衡**
-- 从 "偶尔用 AI" 到 "默认用 AI"
-- **能力复利**：持续学习、持续优化
-- **避免过度依赖**：保留核心能力（思考、判断、沟通）
-- **权衡**：效率 vs 独立思考（AI 让你更聪明还是更懒）
-- 结课寄语：**AI 是杠杆，你是支点。支点不稳，杠杆越长摔得越惨。**
+**Section 6: Toward "AI-Native" Work Style (15 minutes) · Deep Leverage: Trade-offs**
+- From "occasionally using AI" to "defaulting to AI"
+- **Capability Compound Interest**: Continuous learning, continuous optimization
+- **Avoid over-reliance**: Preserve core capabilities (thinking, judgment, communication)
+- **Trade-off**: Efficiency vs independent thinking (Does AI make you smarter or lazier)
+- Closing message: **AI is the lever, you are the fulcrum. If the fulcrum is unstable, the longer the lever, the harder you fall.**
 
-### 深度保证
-- ✅ 机制：为什么会幻觉
-- ✅ 失败模式：幻觉、数据泄露、版权风险、偏见
-- ✅ 决策清单：合规检查清单
-- ✅ 权衡：效率 vs 独立思考
+### Depth Guarantee
+- ✅ Mechanism: Why hallucination happens
+- ✅ Failure Modes: Hallucination, data leakage, copyright risk, bias
+- ✅ Decision Checklist: Compliance check list
+- ✅ Trade-offs: Efficiency vs independent thinking
 
-### 可带走的产出
-- **《个人 AI 使用手册》**（学员自主完成）
-- **《团队 AI 规范模板》**
-- **《AI 输出核查 6 问清单》**
+### Take-home Deliverable
+- **"Personal AI Usage Manual"** (student self-completed)
+- **"Team AI Guidelines Template"**
+- **"AI Output Verification 6-Question Checklist"**
 
-### 实操练习
-起草一份 1 页纸的个人 AI 使用手册，下月在团队内分享。
-
----
-
-## 🏆 结课项目
-
-### 项目要求
-选择自己岗位的 1 个真实工作场景，交付完整的 **"AI 增强工作方案"**：
-
-1. **痛点描述**（1 页）：现在怎么做、时间成本、困扰
-2. **AI 方案设计**（2 页）：用哪些工具、怎么组合、提示词模板
-3. **实际效果**（1 页）：时间对比、输出质量对比、改进空间
-4. **推广建议**（1 页）：在团队推广的阻力和应对
-
-### 评审标准
-- 场景真实性：是工作中真的痛点，不是编的
-- 方案可行性：别人可以直接复用
-- 效果可衡量：有具体的时间/质量数据
-- 安全合规：数据处理符合规范
-
-### 优秀作品
-- 内部知识库收录
-- 下一期培训案例
-- 跨部门分享
+### Hands-on Exercise
+Draft a 1-page personal AI usage manual, share in team next month.
 
 ---
 
-## 📋 课程时间分配（总览）
+## 🏆 Final Project
 
-| 课程 | 讲解 | 实操 | 答疑 | 总时长 |
-|------|------|------|------|--------|
-| 第 0 课 | 60 min | 40 min | 20 min | 120 min |
-| 第 1 课 | 55 min | 50 min | 15 min | 120 min |
-| 第 2 课 | 65 min | 40 min | 15 min | 120 min |
-| 第 3 课 | 60 min | 45 min | 15 min | 120 min |
-| 第 4 课 | 70 min | 35 min | 15 min | 120 min |
-| 第 5 课 | 55 min | 50 min | 15 min | 120 min |
-| 第 6 课 | 70 min | 35 min | 15 min | 120 min |
-| 第 7 课 | 80 min | 25 min | 15 min | 120 min |
+### Project Requirements
+Choose 1 real work scenario from your role, deliver a complete **"AI-Enhanced Work Solution"**:
 
----
+1. **Pain Point Description** (1 page): How it's done now, time cost, frustrations
+2. **AI Solution Design** (2 pages): Which tools, how to combine, prompt templates
+3. **Actual Results** (1 page): Time comparison, output quality comparison, improvement space
+4. **Scaling Recommendations** (1 page): Barriers and responses for team rollout
 
-## 🎯 教学原则
+### Evaluation Criteria
+- Scenario authenticity: Is it a real pain point at work, not made up
+- Solution feasibility: Others can directly reuse it
+- Measurable results: Have specific time/quality data
+- Safety compliance: Data processing follows guidelines
 
-1. **场景开头**：每节课用真实案例开场（翻车或惊艳）
-2. **对比驱动**：总有 "差 vs 好" 的对比展示
-3. **岗位适配**：同一能力在不同岗位如何落地
-4. **动手为主**：讲解 ≤ 60%，其余是实操、讨论、分享
-5. **可带走**：每节课必须有 1-2 个可直接用的模板/清单
-6. **迭代更新**：每季度根据新工具、新政策更新内容
+### Outstanding Works
+- Internal knowledge base inclusion
+- Next training cohort case study
+- Cross-department sharing
 
 ---
 
-## 📅 建议排课方式
+## 📋 Course Time Allocation (Overview)
 
-**集中式**（1 周）：周一到周五，每天 2-3 节课
-**分散式**（8 周）：每周 1 次，每次 2 小时
-**混合式**（推荐）：周五下午线下集中 + 平时线上回放 + 实操打卡
+| Session | Lecture | Hands-on | Q&A | Total |
+|---------|---------|----------|-----|-------|
+| Session 0 | 60 min | 40 min | 20 min | 120 min |
+| Session 1 | 55 min | 50 min | 15 min | 120 min |
+| Session 2 | 65 min | 40 min | 15 min | 120 min |
+| Session 3 | 60 min | 45 min | 15 min | 120 min |
+| Session 4 | 70 min | 35 min | 15 min | 120 min |
+| Session 5 | 55 min | 50 min | 15 min | 120 min |
+| Session 6 | 70 min | 35 min | 15 min | 120 min |
+| Session 7 | 80 min | 25 min | 15 min | 120 min |
+
+---
+
+## 🎯 Teaching Principles
+
+1. **Scenario-led**: Each session opens with a real case (failure or success)
+2. **Comparison-driven**: Always have "bad vs good" comparison demonstrations
+3. **Role-adapted**: How the same capability lands in different roles
+4. **Hands-on focus**: Lecture ≤ 60%, rest is practice, discussion, sharing
+5. **Take-home value**: Each session must have 1-2 directly usable templates/checklists
+6. **Iterative updates**: Update content quarterly based on new tools, new policies
+
+---
+
+## 📅 Recommended Scheduling
+
+**Intensive** (1 week): Monday to Friday, 2-3 sessions per day
+**Spread** (8 weeks): 1 session per week, 2 hours each
+**Hybrid** (Recommended): Friday afternoon in-person + weekday online replay + hands-on check-ins

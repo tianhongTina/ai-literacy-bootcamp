@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ailiteracy.ai/sitemap.xml
+
+# Disallow admin or private paths (none for this public site)

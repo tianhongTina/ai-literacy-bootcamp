@@ -1,77 +1,77 @@
-# 第 5 课：AI 工作流自动化 - 让重复工作消失
+# Lesson 5: AI Workflow Automation - Making Repetitive Work Disappear
 
-> **课程时长**: 2小时 | **难度**: 进阶 | **风格**: 实操为主
-
----
-
-## 📋 本课概览
-
-### 🎯 核心观点
-
-AI 不仅能帮你完成单个任务，还能串联多个步骤，实现工作流自动化：
-- 自动化重复性工作
-- 多工具协同使用
-- 建立个人知识库
-- 提升团队协作效率
-
-### 📚 你将学到
-
-- 识别可自动化的工作场景
-- 常见自动化工具的使用
-- 如何设计自动化工作流
-- AI + 自动化工具的组合使用
-
-### 🎁 你将带走
-
-- 10 个常见自动化场景模板
-- 工作流设计检查清单
-- 自动化工具选型指南
+> **Duration**: 2 hours | **Difficulty**: Advanced | **Style**: Hands-on Practice
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. 可自动化的工作场景
+### 🎯 Core Concepts
 
-**识别标准**：
-- ✅ 重复性高（每周/每月都要做）
-- ✅ 规则明确（步骤固定）
-- ✅ 耗时较长（超过 30 分钟）
-- ✅ 容易出错（人工操作易疏漏）
+AI can not only help you complete individual tasks, but also connect multiple steps to achieve workflow automation:
+- Automate repetitive work
+- Use multiple tools collaboratively
+- Build personal knowledge bases
+- Improve team collaboration efficiency
 
-**常见场景**：
-1. 定期报告生成
-2. 数据收集和整理
-3. 邮件批量发送
-4. 文档格式转换
-5. 社交媒体内容发布
+### 📚 What You Will Learn
 
-### 2. 自动化工具生态
+- Identify work scenarios that can be automated
+- Use common automation tools
+- How to design automated workflows
+- Combine AI + automation tools
 
-**自动化工具生态图**：
+### 🎁 What You Will Take Away
+
+- 10 common automation scenario templates
+- Workflow design checklist
+- Automation tool selection guide
+
+---
+
+## 📖 Course Content
+
+### 1. Automatable Work Scenarios
+
+**Identification Criteria**:
+- ✅ High repetitiveness (needs to be done weekly/monthly)
+- ✅ Clear rules (fixed steps)
+- ✅ Time-consuming (over 30 minutes)
+- ✅ Error-prone (easy to miss with manual operation)
+
+**Common Scenarios**:
+1. Periodic report generation
+2. Data collection and organization
+3. Batch email sending
+4. Document format conversion
+5. Social media content publishing
+
+### 2. Automation Tool Ecosystem
+
+**Automation Tool Ecosystem Diagram**:
 
 ```mermaid
 graph TB
-    A[自动化工具生态] --> B[无代码平台]
-    A --> C[AI 增强工具]
-    A --> D[企业协作平台]
-    A --> E[专业自动化]
+    A[Automation Tool Ecosystem] --> B[No-Code Platforms]
+    A --> C[AI-Enhanced Tools]
+    A --> D[Enterprise Collaboration Platforms]
+    A --> E[Professional Automation]
     
-    B --> B1[Zapier<br/>5000+ 应用]
-    B --> B2[Make<br/>可视化流程]
-    B --> B3[IFTTT<br/>简单触发]
-    B --> B4[集简云<br/>国内集成]
+    B --> B1[Zapier<br/>5000+ Apps]
+    B --> B2[Make<br/>Visual Workflows]
+    B --> B3[IFTTT<br/>Simple Triggers]
+    B --> B4[Jijianyun<br/>China Integration]
     
     C --> C1[ChatGPT + Zapier]
     C --> C2[Claude + API]
-    C --> C3[文心一言 + 飞书]
+    C --> C3[Ernie Bot + Feishu]
     
-    D --> D1[钉钉自动化]
-    D --> D2[飞书自动化]
-    D --> D3[企业微信]
+    D --> D1[DingTalk Automation]
+    D --> D2[Feishu Automation]
+    D --> D3[WeCom]
     
-    E --> E1[n8n<br/>开源自部署]
-    E --> E2[Airflow<br/>数据流程]
+    E --> E1[n8n<br/>Self-hosted]
+    E --> E2[Airflow<br/>Data Pipelines]
     E --> E3[Jenkins<br/>CI/CD]
     
     style A fill:#e1f5ff
@@ -81,249 +81,249 @@ graph TB
     style E fill:#f5e1ff
 ```
 
-#### 无代码自动化平台
+#### No-Code Automation Platforms
 
-**国外工具**：
-- **Zapier** - 连接 5000+ 应用
-- **Make (Integromat)** - 可视化工作流
-- **IFTTT** - 简单的触发-动作
+**International Tools**:
+- **Zapier** - Connects 5000+ apps
+- **Make (Integromat)** - Visual workflows
+- **IFTTT** - Simple trigger-action
 
-**国内工具**：
-- **集简云** - 国内应用集成
-- **简道云** - 低代码平台
-- **钉钉/飞书** - 企业自动化
+**Chinese Tools**:
+- **Jijianyun** - Domestic app integration
+- **Jiandaoyun** - Low-code platform
+- **DingTalk/Feishu** - Enterprise automation
 
-#### AI 增强工具
+#### AI-Enhanced Tools
 
-- **ChatGPT + Zapier** - AI 驱动的自动化
-- **Claude + API** - 自定义 AI 工作流
-- **文心一言 + 飞书** - 国内方案
+- **ChatGPT + Zapier** - AI-driven automation
+- **Claude + API** - Custom AI workflows
+- **Ernie Bot + Feishu** - Chinese solution
 
-### 3. 工作流设计方法
+### 3. Workflow Design Method
 
-**自动化工作流设计流程**：
+**Automated Workflow Design Process**:
 
 ```mermaid
 graph TD
-    A[识别重复性工作] --> B[拆解工作流程]
-    B --> C[列出所有步骤]
-    C --> D{评估每个步骤}
+    A[Identify Repetitive Work] --> B[Break Down Workflow]
+    B --> C[List All Steps]
+    C --> D{Evaluate Each Step}
     
-    D -->|可自动化| E[标记为自动化节点]
-    D -->|需人工| F[标记为人工节点]
+    D -->|Can Automate| E[Mark as Automation Node]
+    D -->|Needs Human| F[Mark as Manual Node]
     
-    E --> G[选择自动化工具]
+    E --> G[Select Automation Tools]
     F --> G
     
-    G --> H[设计工作流]
-    H --> I[配置触发条件]
-    I --> J[设置执行动作]
-    J --> K[添加异常处理]
+    G --> H[Design Workflow]
+    H --> I[Configure Triggers]
+    I --> J[Set Execution Actions]
+    J --> K[Add Exception Handling]
     
-    K --> L[小范围测试]
-    L --> M{测试通过?}
+    K --> L[Small-scale Testing]
+    L --> M{Test Passed?}
     
-    M -->|否| N[调试优化]
+    M -->|No| N[Debug and Optimize]
     N --> L
     
-    M -->|是| O[全面推广]
-    O --> P[监控运行]
-    P --> Q[持续优化]
+    M -->|Yes| O[Full Rollout]
+    O --> P[Monitor Operations]
+    P --> Q[Continuous Optimization]
     
     style A fill:#e1f5ff
     style O fill:#ccffcc
     style N fill:#fff4e1
 ```
 
-**四步法**：
+**Four-Step Method**:
 
 ```
-第一步：拆解流程 → 列出所有步骤
-第二步：识别节点 → 哪些步骤可以自动化
-第三步：选择工具 → 匹配合适的工具
-第四步：测试优化 → 小范围测试后推广
+Step 1: Break Down Process → List all steps
+Step 2: Identify Nodes → Which steps can be automated
+Step 3: Select Tools → Match appropriate tools
+Step 4: Test and Optimize → Test on small scale before rolling out
 ```
 
-**示例：周报自动生成**
+**Example: Weekly Report Auto-Generation**
 
 ```
-手动流程：
-1. 打开项目管理工具，导出本周任务
-2. 整理成文档格式
-3. 添加数据分析
-4. 发送给领导
+Manual Process:
+1. Open project management tool, export this week's tasks
+2. Organize into document format
+3. Add data analysis
+4. Send to manager
 
-自动化流程：
-1. [自动] 每周五下午 5 点触发
-2. [自动] 从项目管理工具拉取数据
-3. [AI] 生成周报文档
-4. [自动] 发送邮件
+Automated Process:
+1. [Auto] Trigger every Friday at 5 PM
+2. [Auto] Pull data from project management tool
+3. [AI] Generate weekly report document
+4. [Auto] Send email
 ```
 
-### 4. 实战案例
+### 4. Practical Cases
 
-#### 案例 1：社交媒体内容发布
+#### Case 1: Social Media Content Publishing
 
-**场景**：每天在多个平台发布内容
+**Scenario**: Publishing content on multiple platforms daily
 
-**工作流**：
+**Workflow**:
 ```
-1. 在 Notion 中写好内容
-2. [触发] 标记为"待发布"
-3. [AI] 根据不同平台调整格式和长度
-4. [自动] 定时发布到各平台
-5. [自动] 记录发布结果
-```
-
-**工具组合**：
-- Notion（内容管理）
-- ChatGPT（内容改写）
-- Zapier（自动化编排）
-- 各平台 API（发布）
-
-#### 案例 2：客户反馈收集分析
-
-**场景**：每周整理客户反馈
-
-**工作流**：
-```
-1. [自动] 从多个渠道收集反馈
-   - 邮件
-   - 在线表单
-   - 客服系统
-2. [AI] 分类和打标签
-3. [AI] 生成分析报告
-4. [自动] 发送给产品团队
+1. Write content in Notion
+2. [Trigger] Mark as "To Publish"
+3. [AI] Adjust format and length for different platforms
+4. [Auto] Schedule publishing to each platform
+5. [Auto] Record publishing results
 ```
 
-#### 案例 3：会议纪要自动化
+**Tool Combination**:
+- Notion (Content management)
+- ChatGPT (Content rewriting)
+- Zapier (Automation orchestration)
+- Platform APIs (Publishing)
 
-**场景**：会议后整理纪要
+#### Case 2: Customer Feedback Collection and Analysis
 
-**工作流**：
+**Scenario**: Organizing customer feedback weekly
+
+**Workflow**:
 ```
-1. [自动] 会议录音转文字
-2. [AI] 提取关键信息
-   - 讨论要点
-   - 决策事项
-   - 待办任务
-3. [AI] 生成结构化纪要
-4. [自动] 发送给参会人员
-5. [自动] 待办事项同步到任务系统
+1. [Auto] Collect feedback from multiple channels
+   - Email
+   - Online forms
+   - Customer service system
+2. [AI] Classify and tag
+3. [AI] Generate analysis report
+4. [Auto] Send to product team
+```
+
+#### Case 3: Meeting Notes Automation
+
+**Scenario**: Organizing notes after meetings
+
+**Workflow**:
+```
+1. [Auto] Transcribe meeting recording to text
+2. [AI] Extract key information
+   - Discussion points
+   - Decisions
+   - Action items
+3. [AI] Generate structured notes
+4. [Auto] Send to attendees
+5. [Auto] Sync action items to task system
 ```
 
 ---
 
-## 💡 岗位专属案例
+## 💡 Role-Specific Cases
 
-### 运营
+### Operations
 
-**活动数据日报**
-
-```
-每天早上 9 点自动生成：
-1. 从数据平台拉取昨日数据
-2. AI 生成数据分析和趋势
-3. 发送到运营群
-```
-
-### 产品经理
-
-**需求收集整理**
+**Campaign Data Daily Report**
 
 ```
-每周自动整理：
-1. 从多个渠道收集需求
-2. AI 去重和分类
-3. 生成需求池报告
-4. 同步到项目管理工具
+Auto-generated every morning at 9 AM:
+1. Pull yesterday's data from data platform
+2. AI generates data analysis and trends
+3. Send to operations group
+```
+
+### Product Manager
+
+**Requirement Collection and Organization**
+
+```
+Auto-organized weekly:
+1. Collect requirements from multiple channels
+2. AI deduplicates and classifies
+3. Generate requirement pool report
+4. Sync to project management tool
 ```
 
 ### HR
 
-**简历筛选**
+**Resume Screening**
 
 ```
-收到简历后自动：
-1. AI 提取关键信息
-2. 匹配岗位要求
-3. 生成初筛结果
-4. 通知招聘负责人
+Auto-triggered when resume received:
+1. AI extracts key information
+2. Match job requirements
+3. Generate initial screening results
+4. Notify hiring manager
 ```
 
 ---
 
-## 🎯 实战练习
+## 🎯 Hands-on Exercises
 
-### 练习 1：设计你的第一个自动化工作流
+### Exercise 1: Design Your First Automated Workflow
 
-选择一个重复性工作，设计自动化方案：
-1. 画出当前流程图
-2. 标注可自动化的节点
-3. 选择合适的工具
-4. 写出实施计划
+Choose a repetitive task and design an automation plan:
+1. Draw the current process flow
+2. Mark automatable nodes
+3. Select appropriate tools
+4. Write implementation plan
 
-### 练习 2：搭建简单的自动化
+### Exercise 2: Build a Simple Automation
 
-用 Zapier 或集简云搭建一个简单的自动化：
-- 新邮件 → AI 总结 → 发送到 Slack
-- 表单提交 → AI 分类 → 记录到表格
-
----
-
-## 🛠️ 推荐工具
-
-### 自动化平台
-
-| 工具 | 适用场景 | 价格 |
-|------|----------|------|
-| Zapier | 国外应用集成 | 免费版 + 付费 |
-| Make | 复杂工作流 | 免费版 + 付费 |
-| 集简云 | 国内应用集成 | 免费版 + 付费 |
-| n8n | 开源自部署 | 免费 |
-
-### AI 工具
-
-- **ChatGPT API** - 最强大，需付费
-- **Claude API** - 长文本处理好
-- **文心一言 API** - 国内方案
+Use Zapier or Jijianyun to build a simple automation:
+- New email → AI summary → Send to Slack
+- Form submission → AI classification → Record to spreadsheet
 
 ---
 
-## ⚠️ 注意事项
+## 🛠️ Recommended Tools
 
-### 数据安全
+### Automation Platforms
 
-- ❌ 不要在自动化流程中传输敏感数据
-- ✅ 使用企业版工具，确保数据安全
-- ✅ 定期审查自动化流程的权限
+| Tool | Use Case | Pricing |
+|------|----------|---------|
+| Zapier | International app integration | Free tier + Paid |
+| Make | Complex workflows | Free tier + Paid |
+| Jijianyun | Chinese app integration | Free tier + Paid |
+| n8n | Self-hosted open source | Free |
 
-### 错误处理
+### AI Tools
 
-- ✅ 设置异常通知
-- ✅ 保留人工审核环节
-- ✅ 定期检查自动化结果
-
----
-
-## 📚 延伸阅读
-
-- [自动化工作流设计指南](https://example.com)
-- [Zapier 官方教程](https://zapier.com/learn)
-- [AI 自动化最佳实践](https://example.com)
+- **ChatGPT API** - Most powerful, requires payment
+- **Claude API** - Good for long texts
+- **Ernie Bot API** - Chinese solution
 
 ---
 
-## ❓ 常见问题
+## ⚠️ Important Notes
 
-**Q: 自动化会不会让我失业？**
+### Data Security
 
-A: 自动化是让你从重复劳动中解放出来，去做更有价值的工作。
+- ❌ Do not transmit sensitive data in automation workflows
+- ✅ Use enterprise version tools to ensure data security
+- ✅ Regularly review automation workflow permissions
 
-**Q: 搭建自动化需要编程基础吗？**
+### Error Handling
 
-A: 不需要。现代自动化工具都是可视化的，拖拽即可完成。
+- ✅ Set up exception notifications
+- ✅ Keep human review checkpoints
+- ✅ Regularly check automation results
 
-**Q: 自动化出错了怎么办？**
+---
 
-A: 设置异常通知，保留人工审核环节，定期检查结果。
+## 📚 Further Reading
+
+- [Automated Workflow Design Guide](https://example.com)
+- [Zapier Official Tutorial](https://zapier.com/learn)
+- [AI Automation Best Practices](https://example.com)
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Q: Will automation make me lose my job?**
+
+A: Automation frees you from repetitive labor so you can do more valuable work.
+
+**Q: Do I need programming skills to set up automation?**
+
+A: No. Modern automation tools are visual - you can complete them with drag and drop.
+
+**Q: What if the automation makes an error?**
+
+A: Set up exception notifications, keep human review checkpoints, and regularly check results.

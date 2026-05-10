@@ -1,100 +1,100 @@
-# 第 1 课：提示词工程 - 让 AI 听懂你的话
+# Lesson 1: Prompt Engineering - Making AI Understand You
 
-> **课程时长**: 2小时 | **难度**: 入门 | **风格**: 实操为主
-
----
-
-## 📋 本课概览
-
-本课将教你如何编写高质量的提示词，让 AI 准确理解你的需求并给出有价值的输出。
-
-### 🎯 核心观点
-
-提示词不是"命令"，而是"对话的开场白"。好的提示词需要：
-- 明确的角色定位
-- 清晰的任务描述
-- 具体的输出要求
-- 必要的上下文信息
-
-### 📚 你将学到
-
-- 提示词的 4 个核心要素
-- 5 种常用提示词模板
-- 如何迭代优化提示词
-- 避免常见的提示词陷阱
-
-### 🎁 你将带走
-
-- 40+ 个场景化提示词模板
-- 提示词质量自检清单
-- 岗位专属提示词库
+> **Duration**: 2 hours | **Difficulty**: Beginner | **Style**: Hands-on Practice
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. 提示词的基本结构
+This lesson will teach you how to write high-quality prompts that enable AI to accurately understand your needs and provide valuable outputs.
 
-**四要素框架**：
+### 🎯 Key Insight
+
+A prompt is not a "command," but rather an "opening line for a conversation." A good prompt requires:
+- Clear role definition
+- Specific task description
+- Concrete output requirements
+- Necessary contextual information
+
+### 📚 What You Will Learn
+
+- The 4 core elements of prompts
+- 5 common prompt templates
+- How to iteratively refine prompts
+- Avoiding common prompt pitfalls
+
+### 🎁 What You Will Take Away
+
+- 40+ scenario-based prompt templates
+- Prompt quality self-check checklist
+- Role-specific prompt library
+
+---
+
+## 📖 Course Content
+
+### 1. Basic Structure of Prompts
+
+**Four Elements Framework**:
 
 ```
-角色 + 任务 + 要求 + 示例
+Role + Task + Requirements + Example
 ```
 
-**提示词构建流程图**：
+**Prompt Building Process Flow**:
 
 ```mermaid
 graph LR
-    A[开始构建提示词] --> B[1. 定义角色<br/>Who]
-    B --> C[2. 描述任务<br/>What]
-    C --> D[3. 明确要求<br/>How]
-    D --> E[4. 提供示例<br/>Example]
-    E --> F[完整提示词]
+    A[Start Building Prompt] --> B[1. Define Role<br/>Who]
+    B --> C[2. Describe Task<br/>What]
+    C --> D[3. Specify Requirements<br/>How]
+    D --> E[4. Provide Example<br/>Example]
+    E --> F[Complete Prompt]
     
-    B --> B1[我是谁?<br/>AI扮演谁?]
-    C --> C1[具体做什么?<br/>目标是什么?]
-    D --> D1[格式/长度<br/>风格/约束]
-    E --> E1[参考案例<br/>期望格式]
+    B --> B1[Who am I?<br/>Who does AI play?]
+    C --> C1[What specifically to do?<br/>What's the goal?]
+    D --> D1[Format/Length<br/>Style/Constraints]
+    E --> E1[Reference Case<br/>Expected Format]
     
     style A fill:#e1f5ff
     style F fill:#ccffcc
 ```
 
-**示例**：
+**Example**:
 
 ```
-你是一位资深的产品经理（角色）
-请帮我分析这个功能需求的可行性（任务）
-从技术实现、用户价值、商业价值三个维度分析（要求）
-参考格式：[提供示例]（示例）
+You are a senior product manager (Role)
+Please help me analyze the feasibility of this feature requirement (Task)
+Analyze from three dimensions: technical implementation, user value, and business value (Requirements)
+Reference format: [provide example] (Example)
 ```
 
-### 2. 常用提示词模板
+### 2. Common Prompt Templates
 
-**提示词模板分类图**：
+**Prompt Template Classification Diagram**:
 
 ```mermaid
 graph TB
-    A[提示词模板库] --> B[内容生成类]
-    A --> C[内容优化类]
-    A --> D[数据分析类]
-    A --> E[问题解决类]
+    A[Prompt Template Library] --> B[Content Generation]
+    A --> C[Content Optimization]
+    A --> D[Data Analysis]
+    A --> E[Problem Solving]
     
-    B --> B1[文章写作]
-    B --> B2[邮件撰写]
-    B --> B3[报告生成]
+    B --> B1[Article Writing]
+    B --> B2[Email Drafting]
+    B --> B3[Report Generation]
     
-    C --> C1[改写润色]
-    C --> C2[风格转换]
-    C --> C3[长度调整]
+    C --> C1[Rewriting & Polishing]
+    C --> C2[Style Conversion]
+    C --> C3[Length Adjustment]
     
-    D --> D1[数据总结]
-    D --> D2[趋势分析]
-    D --> D3[对比分析]
+    D --> D1[Data Summary]
+    D --> D2[Trend Analysis]
+    D --> D3[Comparative Analysis]
     
-    E --> E1[头脑风暴]
-    E --> E2[方案设计]
-    E --> E3[问题诊断]
+    E --> E1[Brainstorming]
+    E --> E2[Solution Design]
+    E --> E3[Problem Diagnosis]
     
     style A fill:#e1f5ff
     style B fill:#fff4e1
@@ -103,161 +103,161 @@ graph TB
     style E fill:#f5e1ff
 ```
 
-#### 模板 1：内容生成
+#### Template 1: Content Generation
 
 ```
-我需要写一篇关于 [主题] 的 [文档类型]
-目标读者是 [受众]
-核心要传达的信息是 [关键点]
-风格要求：[正式/轻松/专业等]
-字数：[具体数字]
+I need to write a [document type] about [topic]
+The target audience is [audience]
+The core message to convey is [key points]
+Style requirements: [formal/casual/professional, etc.]
+Word count: [specific number]
 ```
 
-#### 模板 2：内容优化
+#### Template 2: Content Optimization
 
 ```
-请帮我优化以下内容：
-[原始内容]
+Please help me optimize the following content:
+[original content]
 
-优化方向：
-1. [方向1]
-2. [方向2]
-保持原有的 [要保留的特点]
+Optimization directions:
+1. [direction 1]
+2. [direction 2]
+Maintain the original [characteristics to preserve]
 ```
 
-#### 模板 3：数据分析
+#### Template 3: Data Analysis
 
 ```
-这是一份 [数据类型] 数据：
-[数据内容]
+Here is [data type] data:
+[data content]
 
-请帮我：
-1. 找出 [分析维度1]
-2. 分析 [分析维度2]
-3. 给出 [结论类型]
+Please help me:
+1. Identify [analysis dimension 1]
+2. Analyze [analysis dimension 2]
+3. Provide [conclusion type]
 ```
 
-### 3. 实战练习
+### 3. Hands-on Practice
 
-**提示词迭代优化流程**：
+**Prompt Iteration and Optimization Process**:
 
 ```mermaid
 graph TD
-    A[初始提示词] --> B[AI 第一版输出]
-    B --> C{满意?}
-    C -->|否| D[分析问题]
-    D --> E{问题类型?}
+    A[Initial Prompt] --> B[AI First Output]
+    B --> C{Satisfied?}
+    C -->|No| D[Analyze Problem]
+    D --> E{Problem Type?}
     
-    E -->|太泛| F[增加具体约束]
-    E -->|方向错| G[调整角色/目标]
-    E -->|格式不对| H[明确输出格式]
-    E -->|缺少信息| I[补充背景资料]
+    E -->|Too vague| F[Add specific constraints]
+    E -->|Wrong direction| G[Adjust role/goal]
+    E -->|Wrong format| H[Clarify output format]
+    E -->|Missing info| I[Add background information]
     
-    F --> J[优化后提示词]
+    F --> J[Optimized Prompt]
     G --> J
     H --> J
     I --> J
     
-    J --> K[AI 新版输出]
-    K --> L{满意?}
-    L -->|否| D
-    L -->|是| M[保存到模板库]
+    J --> K[AI New Output]
+    K --> L{Satisfied?}
+    L -->|No| D
+    L -->|Yes| M[Save to Template Library]
     
-    C -->|是| M
+    C -->|Yes| M
     
     style A fill:#e1f5ff
     style M fill:#ccffcc
     style D fill:#fff4e1
 ```
 
-**练习 1：为你的岗位编写 3 个常用提示词**
+**Exercise 1: Write 3 Common Prompts for Your Role**
 
-选择你工作中最常见的 3 个场景，为每个场景编写一个提示词模板。
+Select the 3 most common scenarios in your work and write a prompt template for each scenario.
 
-**练习 2：提示词迭代优化**
+**Exercise 2: Prompt Iteration and Optimization**
 
-选择一个提示词，通过 3 轮对话不断优化，记录每次的改进点。
-
----
-
-## 💡 岗位专属案例
-
-### 产品经理
-
-**场景**：编写用户故事
-
-```
-你是一位敏捷开发专家
-请帮我将以下需求转换为用户故事格式：
-[需求描述]
-
-要求：
-- 使用 "作为...我想要...以便..." 格式
-- 包含验收标准
-- 标注优先级
-```
-
-### 运营
-
-**场景**：活动文案生成
-
-```
-我需要为 [活动名称] 写一组推广文案
-活动信息：
-- 时间：[具体时间]
-- 目标用户：[用户画像]
-- 核心卖点：[3个卖点]
-
-请生成：
-1. 朋友圈文案（50字内）
-2. 公众号推文标题（3个备选）
-3. 短信通知文案（70字内）
-```
-
-### 市场
-
-**场景**：竞品分析
-
-```
-请帮我分析 [竞品名称] 的市场定位
-从以下维度分析：
-1. 目标用户群体
-2. 核心功能特点
-3. 定价策略
-4. 营销策略
-5. 与我们产品的差异点
-
-输出格式：表格对比
-```
+Select one prompt, continuously optimize it through 3 rounds of conversation, and record the improvements made each time.
 
 ---
 
-## 🎯 课后作业
+## 💡 Role-Specific Examples
 
-1. **建立个人提示词库**：为你的岗位整理 10 个常用提示词模板
-2. **实战应用**：用 AI 完成一个真实工作任务，记录提示词迭代过程
-3. **分享交流**：在团队内分享你的最佳实践
+### Product Manager
+
+**Scenario**: Writing User Stories
+
+```
+You are an agile development expert
+Please help me convert the following requirement into user story format:
+[requirement description]
+
+Requirements:
+- Use "As a... I want to... so that..." format
+- Include acceptance criteria
+- Mark priority level
+```
+
+### Operations
+
+**Scenario**: Event Copywriting Generation
+
+```
+I need to write a set of promotional copy for [event name]
+Event information:
+- Time: [specific time]
+- Target users: [user persona]
+- Core selling points: [3 selling points]
+
+Please generate:
+1. Social media post (within 50 words)
+2. Article headlines (3 alternatives)
+3. SMS notification copy (within 70 words)
+```
+
+### Marketing
+
+**Scenario**: Competitive Analysis
+
+```
+Please help me analyze the market positioning of [competitor name]
+Analyze from the following dimensions:
+1. Target user group
+2. Core feature characteristics
+3. Pricing strategy
+4. Marketing strategy
+5. Differentiation points from our product
+
+Output format: Table comparison
+```
 
 ---
 
-## 📚 延伸阅读
+## 🎯 After-Class Assignment
 
-- [OpenAI 提示词工程指南](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic 提示词库](https://docs.anthropic.com/claude/prompt-library)
-- [提示词工程最佳实践](https://www.promptingguide.ai/)
+1. **Build a Personal Prompt Library**: Organize 10 commonly used prompt templates for your role
+2. **Practical Application**: Use AI to complete a real work task, documenting the prompt iteration process
+3. **Share and Exchange**: Share your best practices within your team
 
 ---
 
-## ❓ 常见问题
+## 📚 Further Reading
 
-**Q: 提示词越长越好吗？**
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Anthropic Prompt Library](https://docs.anthropic.com/claude/prompt-library)
+- [Prompt Engineering Best Practices](https://www.promptingguide.ai/)
 
-A: 不是。提示词要"精准"而非"冗长"。关键是提供必要的上下文和明确的要求。
+---
 
-**Q: 如何判断提示词质量？**
+## ❓ Frequently Asked Questions
 
-A: 看输出结果是否：1) 符合预期 2) 可直接使用 3) 减少了迭代次数
+**Q: Are longer prompts better?**
 
-**Q: 中文和英文提示词有区别吗？**
+A: No. Prompts should be "precise" rather than "lengthy." The key is providing necessary context and clear requirements.
 
-A: 对于支持中文的模型，中文提示词效果很好。但某些专业术语用英文可能更准确。
+**Q: How to judge prompt quality?**
+
+A: Check if the output: 1) Meets expectations 2) Can be used directly 3) Reduces iteration rounds
+
+**Q: Is there a difference between Chinese and English prompts?**
+
+A: For models that support Chinese, Chinese prompts work well. However, certain professional terminology may be more accurate in English.

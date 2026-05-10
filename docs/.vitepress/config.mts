@@ -1,70 +1,109 @@
 import { defineConfig } from 'vitepress'
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'AI 素养训练营',
-  description: '面向非研发体系人员的 AI 能力提升培训课程',
-  lang: 'zh-CN',
-  base: '/ai-literacy-bootcamp/',
+  title: 'AI Literacy Bootcamp',
+  description: 'AI capability training for non-developers - Learn prompt engineering, AI tools, and workflow automation',
+  lang: 'en-US',
+  titleTemplate: ':title | AI Literacy Bootcamp',
+
+  // Clean URLs for custom domain
+  cleanUrls: true,
+
+  // Dev server config
+  vite: {
+    server: {
+      host: '127.0.0.1',
+      port: 5173
+    }
+  },
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/ai-literacy-bootcamp/logo.svg' }],
+    // Favicon
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+
+    // Theme color
     ['meta', { name: 'theme-color', content: '#667eea' }],
+
+    // Open Graph / Facebook
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'AI 素养训练营' }],
-    ['meta', { property: 'og:description', content: '面向非研发人员的 AI 能力提升 - 场景优先，动手为主' }],
+    ['meta', { property: 'og:title', content: 'AI Literacy Bootcamp' }],
+    ['meta', { property: 'og:description', content: 'AI capability training for non-developers - Learn prompt engineering, AI tools, and workflow automation' }],
+    ['meta', { property: 'og:image', content: '/og-image.png' }],
+    ['meta', { property: 'og:url', content: 'https://ailiteracy.ai' }],
+    ['meta', { property: 'og:site_name', content: 'AI Literacy Bootcamp' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'AI Literacy Bootcamp' }],
+    ['meta', { name: 'twitter:description', content: 'AI capability training for non-developers - Learn prompt engineering, AI tools, and workflow automation' }],
+    ['meta', { name: 'twitter:image', content: '/og-image.png' }],
+
+    // SEO
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    ['meta', { name: 'googlebot', content: 'index, follow' }],
+    ['meta', { name: 'author', content: 'AI Literacy Bootcamp Team' }],
+    ['meta', { name: 'keywords', content: 'AI, artificial intelligence, machine learning, prompt engineering, AI tools, AI training, AI literacy, non-developers, workflow automation' }],
+
+    // Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }]
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+
+    // Canonical URL
+    ['link', { rel: 'canonical', href: 'https://ailiteracy.ai/' }]
   ],
 
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: 'AI 素养训练营',
+    siteTitle: 'AI Literacy Bootcamp',
 
     nav: [
-      { text: '首页', link: '/' },
-      { text: '课程列表', link: '/courses' },
-      { text: '完整大纲', link: '/outline' },
-      { text: '工具清单', link: '/tools' },
+      { text: 'Home', link: '/' },
+      { text: 'Courses', link: '/courses' },
+      { text: 'Full Outline', link: '/outline' },
+      { text: 'Tool List', link: '/tools' },
       { text: 'GitHub', link: 'https://github.com/AICode-Nexus/ai-literacy-bootcamp' }
     ],
 
     sidebar: [
       {
-        text: '课程介绍',
+        text: 'Course Introduction',
         items: [
-          { text: '课程定位', link: '/' },
-          { text: '课程列表', link: '/courses' },
-          { text: '完整大纲', link: '/outline' },
-          { text: '课程设计', link: '/design' },
-          { text: '工具清单', link: '/tools' }
+          { text: 'Course Overview', link: '/' },
+          { text: 'Course List', link: '/courses' },
+          { text: 'Full Outline', link: '/outline' },
+          { text: 'Course Design', link: '/design' },
+          { text: 'Tool List', link: '/tools' }
         ]
       },
       {
-        text: '阶段一：认知与基础',
+        text: 'Phase 1: Awareness & Basics',
         items: [
-          { text: '第 0 课：AI 认知重构', link: '/lessons/lesson-0' },
-          { text: '第 1 课：提示词工程', link: '/lessons/lesson-1' }
+          { text: 'Lesson 0: AI Cognitive Restructuring', link: '/lessons/lesson-0' },
+          { text: 'Lesson 1: Prompt Engineering', link: '/lessons/lesson-1' }
         ]
       },
       {
-        text: '阶段二：场景化应用',
+        text: 'Phase 2: Scenario-Based Applications',
         items: [
-          { text: '第 2 课：AI 写作助手', link: '/lessons/lesson-2' },
-          { text: '第 3 课：AI 数据分析', link: '/lessons/lesson-3' },
-          { text: '第 4 课：AI 产品设计', link: '/lessons/lesson-4' }
+          { text: 'Lesson 2: AI Writing Assistant', link: '/lessons/lesson-2' },
+          { text: 'Lesson 3: AI Data Analysis', link: '/lessons/lesson-3' },
+          { text: 'Lesson 4: AI Product Design', link: '/lessons/lesson-4' }
         ]
       },
       {
-        text: '阶段三：进阶与生态',
+        text: 'Phase 3: Advanced & Ecosystem',
         items: [
-          { text: '第 5 课：AI 工作流自动化', link: '/lessons/lesson-5' },
-          { text: '第 6 课：AI 工具生态', link: '/lessons/lesson-6' }
+          { text: 'Lesson 5: AI Workflow Automation', link: '/lessons/lesson-5' },
+          { text: 'Lesson 6: AI Tool Ecosystem', link: '/lessons/lesson-6' }
         ]
       },
       {
-        text: '阶段四：安全与治理',
+        text: 'Phase 4: Security & Governance',
         items: [
-          { text: '第 7 课：AI 协作与安全', link: '/lessons/lesson-7' }
+          { text: 'Lesson 7: AI Collaboration & Security', link: '/lessons/lesson-7' }
         ]
       }
     ],
@@ -74,8 +113,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '采用 CC BY-NC-SA 4.0 许可协议',
-      copyright: 'Copyright © 2026 AI 素养训练营'
+      message: 'Licensed under CC BY-NC-SA 4.0',
+      copyright: 'Copyright © 2026 AI Literacy Bootcamp'
     },
 
     search: {
@@ -84,7 +123,22 @@ export default defineConfig({
 
     outline: {
       level: [2, 3],
-      label: '目录'
+      label: 'Table of Contents'
+    },
+
+    // Edit link for GitHub
+    editLink: {
+      pattern: 'https://github.com/AICode-Nexus/ai-literacy-bootcamp/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
     }
+  },
+
+  // Ignore dead links in internal planning documents
+  ignoreDeadLinks: true,
+
+  // Sitemap generation
+  sitemap: {
+    hostname: 'https://ailiteracy.ai',
+    lastmodDateOnly: false
   }
 })

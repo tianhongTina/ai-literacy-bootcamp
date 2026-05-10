@@ -1,45 +1,45 @@
-# 第 3 课：AI 数据分析 - 不写代码也能做分析
+# Lesson 3: AI Data Analysis - Doing Analysis Without Writing Code
 
-> **课程时长**: 2小时 | **难度**: 进阶 | **风格**: 实操为主
-
----
-
-## 📋 本课概览
-
-### 🎯 核心观点
-
-AI 让数据分析不再是技术人员的专属技能。通过自然语言对话，你可以：
-- 快速理解数据特征
-- 发现数据中的规律
-- 生成可视化图表
-- 得出业务洞察
-
-### 📚 你将学到
-
-- 如何用 AI 进行数据清洗
-- 常见数据分析场景的提示词
-- 数据可视化的最佳实践
-- 如何验证 AI 分析结果
-
-### 🎁 你将带走
-
-- 数据分析提示词模板库
-- 常用图表类型选择指南
-- 数据分析报告模板
+> **Course Duration**: 2 hours | **Difficulty**: Intermediate | **Style**: Hands-on Practice
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. AI 数据分析工具
+### 🎯 Core Concepts
 
-**AI 数据分析工具生态图**：
+AI makes data analysis no longer an exclusive skill for technical professionals. Through natural language conversation, you can:
+- Quickly understand data characteristics
+- Discover patterns in data
+- Generate visualization charts
+- Derive business insights
+
+### 📚 What You Will Learn
+
+- How to use AI for data cleaning
+- Prompts for common data analysis scenarios
+- Best practices for data visualization
+- How to validate AI analysis results
+
+### 🎁 What You Will Take Away
+
+- Data analysis prompt template library
+- Common chart type selection guide
+- Data analysis report template
+
+---
+
+## 📖 Course Content
+
+### 1. AI Data Analysis Tools
+
+**AI Data Analysis Tool Ecosystem Diagram**:
 
 ```mermaid
 graph TB
-    A[AI 数据分析工具] --> B[通用 AI + 代码能力]
-    A --> C[专业数据分析工具]
-    A --> D[办公软件集成]
+    A[AI Data Analysis Tools] --> B[General AI + Code Capabilities]
+    A --> C[Professional Data Analysis Tools]
+    A --> D[Office Software Integration]
     
     B --> B1[ChatGPT<br/>Code Interpreter]
     B --> B2[Claude<br/>Artifacts]
@@ -59,44 +59,44 @@ graph TB
     style D fill:#ffe1f5
 ```
 
-**推荐工具**：
-- ChatGPT Code Interpreter（付费）
-- Claude with Artifacts（免费）
-- Google Gemini（免费）
-- 文心一言（免费）
+**Recommended Tools**:
+- ChatGPT Code Interpreter (Paid)
+- Claude with Artifacts (Free)
+- Google Gemini (Free)
+- Ernie Bot (Free)
 
-### 2. 数据分析流程
+### 2. Data Analysis Process
 
-**AI 数据分析完整流程图**：
+**Complete AI Data Analysis Flowchart**:
 
 ```mermaid
 graph TD
-    A[准备数据文件] --> B[上传到 AI 工具]
-    B --> C[数据探索]
-    C --> D[查看数据结构]
-    D --> E[统计描述]
-    E --> F{数据质量?}
+    A[Prepare Data File] --> B[Upload to AI Tool]
+    B --> C[Data Exploration]
+    C --> D[View Data Structure]
+    D --> E[Statistical Description]
+    E --> F{Data Quality?}
     
-    F -->|有问题| G[数据清洗]
-    G --> G1[处理缺失值]
-    G --> G2[删除重复数据]
-    G --> G3[修正异常值]
+    F -->|Issues Found| G[Data Cleaning]
+    G --> G1[Handle Missing Values]
+    G --> G2[Remove Duplicate Data]
+    G --> G3[Correct Anomalies]
     G1 --> H
     G2 --> H
     G3 --> H
     
-    F -->|良好| H[提出分析问题]
-    H --> I[AI 执行分析]
-    I --> J[生成可视化]
-    J --> K[解读结果]
-    K --> L{结果合理?}
+    F -->|Good| H[Ask Analysis Questions]
+    H --> I[AI Executes Analysis]
+    I --> J[Generate Visualizations]
+    J --> K[Interpret Results]
+    K --> L{Results Reasonable?}
     
-    L -->|否| M[调整分析方法]
+    L -->|No| M[Adjust Analysis Method]
     M --> H
     
-    L -->|是| N[生成分析报告]
-    N --> O[人工验证]
-    O --> P[最终交付]
+    L -->|Yes| N[Generate Analysis Report]
+    N --> O[Manual Verification]
+    O --> P[Final Delivery]
     
     style A fill:#e1f5ff
     style P fill:#ccffcc
@@ -104,39 +104,39 @@ graph TD
 ```
 
 ```
-第一步：上传数据 → CSV、Excel、JSON 等格式
-第二步：数据探索 → 了解数据结构和特征
-第三步：提出问题 → 用自然语言描述分析需求
-第四步：验证结果 → 检查逻辑和计算是否正确
-第五步：生成报告 → 整理成可分享的格式
+Step 1: Upload Data → CSV, Excel, JSON and other formats
+Step 2: Data Exploration → Understand data structure and characteristics
+Step 3: Ask Questions → Describe analysis requirements in natural language
+Step 4: Validate Results → Check if logic and calculations are correct
+Step 5: Generate Report → Organize into shareable format
 ```
 
-### 3. 常见分析场景
+### 3. Common Analysis Scenarios
 
-**数据分析场景分类图**：
+**Data Analysis Scenario Classification Diagram**:
 
 ```mermaid
 graph LR
-    A[数据分析场景] --> B[描述性分析<br/>What happened]
-    A --> C[诊断性分析<br/>Why happened]
-    A --> D[预测性分析<br/>What will happen]
-    A --> E[处方性分析<br/>What should do]
+    A[Data Analysis Scenarios] --> B[Descriptive Analysis<br/>What happened]
+    A --> C[Diagnostic Analysis<br/>Why happened]
+    A --> D[Predictive Analysis<br/>What will happen]
+    A --> E[Prescriptive Analysis<br/>What should do]
     
-    B --> B1[趋势分析]
-    B --> B2[对比分析]
-    B --> B3[分布分析]
+    B --> B1[Trend Analysis]
+    B --> B2[Comparative Analysis]
+    B --> B3[Distribution Analysis]
     
-    C --> C1[相关性分析]
-    C --> C2[归因分析]
-    C --> C3[异常检测]
+    C --> C1[Correlation Analysis]
+    C --> C2[Attribution Analysis]
+    C --> C3[Anomaly Detection]
     
-    D --> D1[时间序列预测]
-    D --> D2[分类预测]
-    D --> D3[回归预测]
+    D --> D1[Time Series Forecasting]
+    D --> D2[Classification Prediction]
+    D --> D3[Regression Prediction]
     
-    E --> E1[优化建议]
-    E --> E2[决策支持]
-    E --> E3[行动方案]
+    E --> E1[Optimization Suggestions]
+    E --> E2[Decision Support]
+    E --> E3[Action Plans]
     
     style A fill:#e1f5ff
     style B fill:#fff4e1
@@ -145,154 +145,154 @@ graph LR
     style E fill:#f5e1ff
 ```
 
-#### 场景 1：销售数据分析
+#### Scenario 1: Sales Data Analysis
 
 ```
-这是我们过去 6 个月的销售数据：
-[上传 CSV 文件]
+Here is our sales data for the past 6 months:
+[Upload CSV file]
 
-请帮我分析：
-1. 每月销售额趋势
-2. 销售额 Top 5 的产品
-3. 哪个地区销售最好
-4. 给出提升销售的建议
+Please help me analyze:
+1. Monthly sales trend
+2. Top 5 products by sales
+3. Which region has the best sales
+4. Suggestions for improving sales
 
-请用图表展示关键数据。
+Please display key data with charts.
 ```
 
-#### 场景 2：用户行为分析
+#### Scenario 2: User Behavior Analysis
 
 ```
-这是用户行为日志数据：
-[上传数据]
+Here is user behavior log data:
+[Upload data]
 
-请分析：
-1. 用户活跃时段分布
-2. 最常用的功能是什么
-3. 用户流失的关键节点
-4. 如何提升用户留存
+Please analyze:
+1. User activity time distribution
+2. What are the most commonly used features
+3. Key points of user churn
+4. How to improve user retention
 
-输出：分析报告 + 可视化图表
+Output: Analysis report + visualization charts
 ```
 
-#### 场景 3：问卷调查分析
+#### Scenario 3: Survey Analysis
 
 ```
-这是一份用户满意度调查问卷的结果：
-[上传数据]
+Here are the results of a user satisfaction survey:
+[Upload data]
 
-请帮我：
-1. 统计各题目的选项分布
-2. 找出满意度最低的 3 个方面
-3. 分析不同用户群体的差异
-4. 生成可用于汇报的图表
+Please help me:
+1. Calculate the distribution of options for each question
+2. Find the 3 aspects with lowest satisfaction
+3. Analyze differences between user groups
+4. Generate charts suitable for presentation
 ```
 
 ---
 
-## 💡 岗位专属案例
+## 💡 Role-Specific Examples
 
-### 运营
+### Operations
 
-**活动效果分析**
-
-```
-这是我们上周活动的数据：
-- 参与人数：[数据]
-- 转化率：[数据]
-- 各渠道来源：[数据]
-
-请分析：
-1. 哪个渠道效果最好
-2. 转化漏斗在哪个环节流失最多
-3. 与上次活动对比如何
-4. 下次活动的优化建议
-```
-
-### 产品经理
-
-**功能使用分析**
+**Campaign Performance Analysis**
 
 ```
-这是新功能上线后的使用数据：
-[上传数据]
+Here is the data from our campaign last week:
+- Participants: [data]
+- Conversion rate: [data]
+- Traffic by channel: [data]
 
-请分析：
-1. 功能使用率趋势
-2. 哪些用户群体使用最多
-3. 使用频次分布
-4. 是否达到预期目标
+Please analyze:
+1. Which channel performed best
+2. At which stage of the conversion funnel was the most drop-off
+3. How does it compare to the previous campaign
+4. Optimization suggestions for the next campaign
+```
+
+### Product Manager
+
+**Feature Usage Analysis**
+
+```
+Here is the usage data after the new feature launch:
+[Upload data]
+
+Please analyze:
+1. Feature usage trend
+2. Which user groups use it most
+3. Usage frequency distribution
+4. Whether it achieved expected goals
 ```
 
 ### HR
 
-**招聘数据分析**
+**Recruitment Data Analysis**
 
 ```
-这是今年的招聘数据：
-[上传数据]
+Here is this year's recruitment data:
+[Upload data]
 
-请分析：
-1. 各岗位的招聘周期
-2. 简历来源渠道效果
-3. 面试通过率
-4. 招聘成本分析
+Please analyze:
+1. Recruitment cycle by position
+2. Effectiveness of resume source channels
+3. Interview pass rate
+4. Recruitment cost analysis
 ```
 
 ---
 
-## 🎯 实战练习
+## 🎯 Hands-on Exercises
 
-### 练习 1：数据清洗
+### Exercise 1: Data Cleaning
 
-上传一份包含缺失值、重复数据的表格，让 AI 帮你清洗。
+Upload a spreadsheet containing missing values and duplicate data, and let AI help you clean it.
 
-### 练习 2：趋势分析
+### Exercise 2: Trend Analysis
 
-用 AI 分析一组时间序列数据，生成趋势图和预测。
+Use AI to analyze a set of time series data and generate trend charts and forecasts.
 
-### 练习 3：对比分析
+### Exercise 3: Comparative Analysis
 
-对比两组数据（如今年 vs 去年），找出差异和原因。
-
----
-
-## ⚠️ 注意事项
-
-### 数据安全
-
-- ❌ 不要上传包含个人隐私的数据
-- ❌ 不要上传公司机密数据
-- ✅ 使用脱敏后的数据
-- ✅ 使用样本数据进行测试
-
-### 结果验证
-
-- ❌ 不要盲目相信 AI 的计算结果
-- ✅ 抽查关键数据点
-- ✅ 用常识判断结果是否合理
-- ✅ 重要决策前人工复核
+Compare two sets of data (e.g., this year vs. last year) and identify differences and reasons.
 
 ---
 
-## 📚 延伸阅读
+## ⚠️ Important Notes
 
-- [数据分析基础知识](https://example.com)
-- [常用图表类型及使用场景](https://example.com)
-- [数据可视化最佳实践](https://example.com)
+### Data Security
+
+- ❌ Do not upload data containing personal privacy information
+- ❌ Do not upload company confidential data
+- ✅ Use anonymized data
+- ✅ Use sample data for testing
+
+### Result Validation
+
+- ❌ Do not blindly trust AI calculation results
+- ✅ Spot-check key data points
+- ✅ Use common sense to judge if results are reasonable
+- ✅ Manually review before making important decisions
 
 ---
 
-## ❓ 常见问题
+## 📚 Further Reading
 
-**Q: AI 能处理多大的数据文件？**
+- [Data Analysis Basics](https://example.com)
+- [Common Chart Types and Use Cases](https://example.com)
+- [Data Visualization Best Practices](https://example.com)
 
-A: 不同工具有不同限制。ChatGPT Code Interpreter 支持 100MB 以内，其他工具通常在 10-50MB。
+---
 
-**Q: AI 分析结果准确吗？**
+## ❓ Frequently Asked Questions
 
-A: AI 可能出现计算错误或理解偏差。关键数据必须人工验证。
+**Q: How large a data file can AI process?**
 
-**Q: 如何让 AI 生成更专业的图表？**
+A: Different tools have different limits. ChatGPT Code Interpreter supports up to 100MB, while other tools typically handle 10-50MB.
 
-A: 明确指定图表类型、配色方案、标签格式等细节要求。
+**Q: Are AI analysis results accurate?**
+
+A: AI may produce calculation errors or understanding biases. Key data must be manually verified.
+
+**Q: How can I get AI to generate more professional charts?**
+
+A: Clearly specify chart type, color scheme, label format, and other detailed requirements.

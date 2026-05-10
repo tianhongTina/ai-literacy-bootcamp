@@ -3,8 +3,8 @@
     <div class="lesson-header">
       <div class="lesson-number">{{ lessonNumber }}</div>
       <div class="lesson-status">
-        <span v-if="isCompleted" class="status-badge completed">✓ 已完成</span>
-        <span v-else class="status-badge">未开始</span>
+        <span v-if="isCompleted" class="status-badge completed">✓ Completed</span>
+        <span v-else class="status-badge">Not Started</span>
       </div>
     </div>
     <h3 class="lesson-title">{{ title }}</h3>
@@ -26,7 +26,7 @@
       </span>
     </div>
     <a :href="link" class="lesson-link">
-      开始学习 →
+      Start Learning →
     </a>
   </div>
 </template>

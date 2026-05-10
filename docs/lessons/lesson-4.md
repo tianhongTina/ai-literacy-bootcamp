@@ -1,123 +1,123 @@
-# 第 4 课：AI 产品设计 - 从需求到原型
+# Lesson 4: AI Product Design - From Requirements to Prototype
 
-> **课程时长**: 2小时 | **难度**: 进阶 | **风格**: 场景化实操
-
----
-
-## 📋 本课概览
-
-### 🎯 核心观点
-
-AI 可以帮助产品设计的全流程：
-- 需求分析和用户研究
-- 功能设计和交互流程
-- 原型图和界面设计
-- 文档撰写和评审
-
-### 📚 你将学到
-
-- 如何用 AI 进行竞品分析
-- 用户故事和用例设计
-- 原型图生成技巧
-- PRD 文档快速生成
-
-### 🎁 你将带走
-
-- 产品设计全流程模板
-- 原型设计提示词库
-- PRD 文档模板
+> **Duration**: 2 hours | **Level**: Intermediate | **Style**: Scenario-based Practice
 
 ---
 
-## 📖 课程内容
+## 📋 Lesson Overview
 
-### 1. 需求分析阶段
+### 🎯 Key Concepts
 
-**产品设计完整流程图**：
+AI can assist with the entire product design process:
+- Requirements analysis and user research
+- Feature design and interaction flows
+- Prototypes and interface design
+- Documentation and reviews
+
+### 📚 What You Will Learn
+
+- How to use AI for competitive analysis
+- User stories and use case design
+- Prototype generation techniques
+- Rapid PRD document generation
+
+### 🎁 Takeaways
+
+- Complete product design process template
+- Prototype design prompt library
+- PRD document template
+
+---
+
+## 📖 Course Content
+
+### 1. Requirements Analysis Phase
+
+**Complete Product Design Flowchart**:
 
 ```mermaid
 graph TD
-    A[需求分析] --> B[竞品分析]
-    A --> C[用户研究]
-    B --> D[功能设计]
+    A[Requirements Analysis] --> B[Competitive Analysis]
+    A --> C[User Research]
+    B --> D[Feature Design]
     C --> D
     
-    D --> E[用户故事]
-    D --> F[交互流程]
+    D --> E[User Stories]
+    D --> F[Interaction Flows]
     
-    E --> G[原型设计]
+    E --> G[Prototype Design]
     F --> G
     
-    G --> H[页面结构]
-    G --> I[界面文案]
+    G --> H[Page Structure]
+    G --> I[Interface Copy]
     
-    H --> J[PRD 文档]
+    H --> J[PRD Document]
     I --> J
     
-    J --> K[评审反馈]
-    K --> L{通过?}
-    L -->|否| M[优化调整]
+    J --> K[Review Feedback]
+    K --> L{Approved?}
+    L -->|No| M[Optimization & Adjustment]
     M --> D
-    L -->|是| N[开发实现]
+    L -->|Yes| N[Development Implementation]
     
     style A fill:#e1f5ff
     style N fill:#ccffcc
     style K fill:#fff4e1
 ```
 
-#### 竞品分析
+#### Competitive Analysis
 
 ```
-请帮我分析 [竞品名称] 的产品特点
+Please help me analyze the product features of [Competitor Name]
 
-分析维度：
-1. 目标用户群体
-2. 核心功能列表
-3. 交互设计亮点
-4. 商业模式
-5. 优势和不足
+Analysis dimensions:
+1. Target user groups
+2. Core feature list
+3. Interaction design highlights
+4. Business model
+5. Strengths and weaknesses
 
-输出格式：结构化表格
+Output format: Structured table
 ```
 
-#### 用户画像
+#### User Personas
 
 ```
-我们的产品是 [产品描述]
+Our product is [Product Description]
 
-请帮我创建 3 个典型用户画像，包含：
-- 基本信息（年龄、职业、收入）
-- 使用场景
-- 痛点和需求
-- 使用动机
+Please help me create 3 typical user personas, including:
+- Basic information (age, occupation, income)
+- Usage scenarios
+- Pain points and needs
+- Usage motivation
 ```
 
-### 2. 功能设计阶段
+### 2. Feature Design Phase
 
-**功能设计思维导图**：
+**Feature Design Mind Map**:
 
 ```mermaid
 graph LR
-    A[功能设计] --> B[用户故事<br/>User Story]
-    A --> C[用例设计<br/>Use Case]
-    A --> D[交互流程<br/>Flow]
-    A --> E[数据模型<br/>Data Model]
+    A[Feature Design] --> B[User Story]
+    A --> C[Use Case]
+    A --> D[Interaction Flow]
+    A --> E[Data Model]
     
-    B --> B1[角色定义]
-    B --> B2[需求描述]
-    B --> B3[验收标准]
+    B --> B1[Role Definition]
+    B --> B2[Requirement Description]
+    B --> B3[Acceptance Criteria]
     
-    C --> C1[正常流程]
-    C --> C2[异常流程]
-    C --> C3[边界条件]
+    C --> C1[Normal Flow]
+    C --> C2[Exception Flow]
+    C --> C3[Boundary Conditions]
     
-    D --> D1[页面跳转]
-    D --> D2[状态变化]
-    D --> D3[交互反馈]
+    D --> D1[Page Navigation]
+    D --> D2[State Changes]
+    D --> D3[Interaction Feedback]
     
-    E --> E1[实体关系]
-    E --> E2[字段定义]
-    E --> E3[约束规则]
+    E --> E1[Entity Relationships]
+    E --> E2[Field Definitions]
+    E --> E3[Constraint Rules]
     
     style A fill:#e1f5ff
     style B fill:#fff4e1
@@ -126,206 +126,206 @@ graph LR
     style E fill:#f5e1ff
 ```
 
-#### 用户故事
+#### User Stories
 
 ```
-功能需求：[功能描述]
+Feature requirement: [Feature Description]
 
-请生成 5 个用户故事，格式：
-"作为 [角色]，我想要 [功能]，以便 [目标]"
+Please generate 5 user stories in the format:
+"As a [role], I want [feature], so that [goal]"
 
-每个故事包含：
-- 验收标准
-- 优先级（P0/P1/P2）
-- 预估工作量
+Each story should include:
+- Acceptance criteria
+- Priority (P0/P1/P2)
+- Estimated effort
 ```
 
-#### 交互流程
+#### Interaction Flow
 
 ```
-功能：[功能名称]
+Feature: [Feature Name]
 
-请设计完整的交互流程，包含：
-1. 用户操作步骤
-2. 系统响应
-3. 异常情况处理
-4. 边界条件
+Please design a complete interaction flow, including:
+1. User operation steps
+2. System responses
+3. Exception handling
+4. Boundary conditions
 
-用流程图或步骤列表展示。
+Present using a flowchart or step list.
 ```
 
-### 3. 原型设计阶段
+### 3. Prototype Design Phase
 
-#### 页面结构
-
-```
-我需要设计 [页面名称] 的原型
-
-页面目标：[目标描述]
-核心功能：[功能列表]
-用户群体：[用户描述]
-
-请提供：
-1. 页面布局建议
-2. 关键元素位置
-3. 交互说明
-4. 文案建议
-```
-
-#### 界面文案
+#### Page Structure
 
 ```
-功能：[功能描述]
+I need to design a prototype for [Page Name]
 
-请为以下界面元素撰写文案：
-1. 页面标题
-2. 按钮文字
-3. 提示信息
-4. 错误提示
-5. 空状态文案
+Page goal: [Goal Description]
+Core features: [Feature List]
+Target users: [User Description]
 
-要求：简洁、友好、符合 [品牌调性]
+Please provide:
+1. Page layout suggestions
+2. Key element positioning
+3. Interaction specifications
+4. Copy suggestions
 ```
 
-### 4. 文档撰写阶段
-
-#### PRD 文档
+#### Interface Copy
 
 ```
-我需要为 [功能名称] 写 PRD
+Feature: [Feature Description]
 
-背景信息：
-- 用户痛点：[痛点描述]
-- 业务目标：[目标描述]
-- 使用场景：[场景描述]
+Please write copy for the following interface elements:
+1. Page title
+2. Button text
+3. Prompt messages
+4. Error messages
+5. Empty state copy
 
-请按以下结构输出：
-1. 需求背景
-2. 目标用户
-3. 功能描述
-4. 交互流程
-5. 数据埋点
-6. 验收标准
+Requirements: Concise, friendly, consistent with [Brand Tone]
 ```
 
----
+### 4. Documentation Phase
 
-## 💡 岗位专属案例
-
-### 产品经理
-
-**快速输出 MVP 方案**
+#### PRD Document
 
 ```
-我们要做一个 [产品类型] 产品
+I need to write a PRD for [Feature Name]
 
-目标：[业务目标]
-资源限制：[时间/人力/预算]
+Background information:
+- User pain points: [Pain Point Description]
+- Business goals: [Goal Description]
+- Usage scenarios: [Scenario Description]
 
-请帮我设计 MVP 方案：
-1. 核心功能（必须有）
-2. 次要功能（可以后续迭代）
-3. 技术方案建议
-4. 开发排期建议
-```
-
-### UX 设计师
-
-**交互设计评审**
-
-```
-这是我设计的交互流程：
-[描述或上传原型图]
-
-请从以下角度评审：
-1. 用户体验是否流畅
-2. 是否符合常见交互模式
-3. 边界情况是否考虑周全
-4. 优化建议
-```
-
-### 运营
-
-**活动页面设计**
-
-```
-我需要设计一个 [活动类型] 活动页面
-
-活动信息：
-- 主题：[主题]
-- 目标：[目标]
-- 卖点：[卖点列表]
-
-请提供：
-1. 页面结构建议
-2. 视觉风格建议
-3. 文案框架
-4. CTA 按钮设计
+Please output in the following structure:
+1. Requirement Background
+2. Target Users
+3. Feature Description
+4. Interaction Flow
+5. Data Tracking
+6. Acceptance Criteria
 ```
 
 ---
 
-## 🎯 实战练习
+## 💡 Role-Specific Cases
 
-### 练习 1：完整产品设计流程
+### Product Manager
 
-选择一个小功能，用 AI 辅助完成从需求到原型的全流程。
+**Quick MVP Output**
 
-### 练习 2：竞品分析
+```
+We want to build a [Product Type] product
 
-选择 3 个竞品，用 AI 生成对比分析报告。
+Goal: [Business Goal]
+Constraints: [Time/Staff/Budget]
 
-### 练习 3：PRD 撰写
+Please help me design an MVP plan:
+1. Core features (must-have)
+2. Secondary features (can be iterated later)
+3. Technical solution suggestions
+4. Development timeline suggestions
+```
 
-为一个真实需求撰写 PRD，用 AI 辅助完成。
+### UX Designer
+
+**Interaction Design Review**
+
+```
+Here is the interaction flow I designed:
+[Description or upload prototype]
+
+Please review from the following perspectives:
+1. Is the user experience smooth?
+2. Does it follow common interaction patterns?
+3. Are edge cases thoroughly considered?
+4. Optimization suggestions
+```
+
+### Operations
+
+**Event Page Design**
+
+```
+I need to design an [Event Type] event page
+
+Event information:
+- Theme: [Theme]
+- Goal: [Goal]
+- Selling points: [Selling Point List]
+
+Please provide:
+1. Page structure suggestions
+2. Visual style suggestions
+3. Copy framework
+4. CTA button design
+```
 
 ---
 
-## 🛠️ 推荐工具
+## 🎯 Practical Exercises
 
-### 原型设计工具
+### Exercise 1: Complete Product Design Process
 
-- **Figma** + AI 插件（如 Magician）
-- **即时设计** + AI 功能
-- **Uizard**（AI 原型生成）
+Choose a small feature and use AI to complete the entire process from requirements to prototype.
 
-### 文档工具
+### Exercise 2: Competitive Analysis
+
+Select 3 competitors and use AI to generate a comparative analysis report.
+
+### Exercise 3: PRD Writing
+
+Write a PRD for a real requirement using AI assistance.
+
+---
+
+## 🛠️ Recommended Tools
+
+### Prototype Design Tools
+
+- **Figma** + AI plugins (e.g., Magician)
+- **Instant Design** + AI features
+- **Uizard** (AI prototype generation)
+
+### Documentation Tools
 
 - **Notion AI**
-- **飞书文档 AI**
-- **语雀 AI**
+- **Feishu Docs AI**
+- **Yuque AI**
 
 ---
 
-## ⚠️ 注意事项
+## ⚠️ Important Notes
 
-### AI 的局限性
+### AI Limitations
 
-- ❌ AI 不能替代用户调研
-- ❌ AI 不能做出商业决策
-- ✅ AI 是辅助工具，最终决策需要人来做
-- ✅ AI 生成的方案需要结合实际情况调整
-
----
-
-## 📚 延伸阅读
-
-- [产品设计方法论](https://example.com)
-- [用户体验设计原则](https://example.com)
-- [PRD 撰写最佳实践](https://example.com)
+- ❌ AI cannot replace user research
+- ❌ AI cannot make business decisions
+- ✅ AI is an assistive tool; final decisions need human judgment
+- ✅ AI-generated solutions need to be adjusted based on actual conditions
 
 ---
 
-## ❓ 常见问题
+## 📚 Further Reading
 
-**Q: AI 能直接生成可用的原型图吗？**
+- [Product Design Methodology](https://example.com)
+- [User Experience Design Principles](https://example.com)
+- [PRD Writing Best Practices](https://example.com)
 
-A: 目前 AI 主要生成文字描述和简单示意图，专业原型图还需要设计工具。
+---
 
-**Q: 如何让 AI 理解我们的产品风格？**
+## ❓ FAQ
 
-A: 提供现有产品的截图、设计规范、品牌指南作为参考。
+**Q: Can AI directly generate usable prototypes?**
 
-**Q: AI 生成的 PRD 可以直接给研发吗？**
+A: Currently, AI mainly generates text descriptions and simple diagrams. Professional prototypes still require design tools.
 
-A: 需要人工审核和补充细节，特别是技术实现和边界条件。
+**Q: How can I help AI understand our product style?**
+
+A: Provide screenshots of existing products, design specifications, and brand guidelines as references.
+
+**Q: Can AI-generated PRDs be given directly to developers?**
+
+A: Manual review and adding details are needed, especially for technical implementation and boundary conditions.

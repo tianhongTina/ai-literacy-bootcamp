@@ -1,796 +1,803 @@
-# 第 0 课：AI 认知重构 - 从工具到协作者
+# Lesson 0: AI Cognitive Restructuring - From Tool to Collaborator
 
-> **课程时长**: 2小时 | **难度**: 入门 | **风格**: 技术深度 + 实操手册
-
----
-
-## 📋 本课概览
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  🎯 核心观点：AI 不是搜索引擎,是需要对话迭代的协作者           │
-├─────────────────────────────────────────────────────────────────┤
-│  📚 你将学到：                                                   │
-│    • 打破对 AI 的 3 个常见误解                                   │
-│    • 理解大模型的本质机制(Token、上下文窗口、训练数据)           │
-│    • 掌握 AI 的能力边界与失败模式                                │
-│    • 建立国内外主流产品的选型决策框架                            │
-│    • 完成第一次高质量的 AI 对话                                  │
-├─────────────────────────────────────────────────────────────────┤
-│  🎁 你将带走：                                                   │
-│    • 一张《AI 工具选型对照表》（打印贴工位）                     │
-│    • 一份《第一次对话记录模板》（5 个字段照填）                  │
-│    • 一套《3 误解排查清单》（遇到翻车时逐条对照）                │
-│    • 一张《大模型能力边界图》（什么能做、什么不能做一目了然）    │
-│    • 一次"与 AI 完成真实任务"的完整实操记录                      │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**本课的承诺**：
-- 当天学完，明天上班就能用
-- 不讲算法、不讲数学、不讲神经网络内部结构
-- 每个 Section 都有「步骤化操作」+「复制即用模板」+「快速诊断表」
-- 讲解时间不超过 50%，剩下一半是你动手
+> **Course Duration**: 2 hours | **Difficulty**: Introductory | **Style**: Technical Depth + Practical Handbook
 
 ---
 
-## 🎬 Opening Hook(10分钟)
+## Lesson Overview
 
-大家好,欢迎来到 AI 素养训练营的第 0 课。
+```
++---------------------------------------------------------------------+
+|  Core Insight: AI is not a search engine, but a collaborator        |
+|                requiring iterative dialogue                         |
++---------------------------------------------------------------------+
+|  What You Will Learn:                                               |
+|    • Break down 3 common misconceptions about AI                    |
+|    • Understand the essence of large models (Token, context        |
+|      window, training data)                                         |
+|    • Master AI's capability boundaries and failure modes            |
+|    • Build a decision framework for mainstream domestic and        |
+|      international products                                         |
+|    • Complete your first high-quality AI conversation               |
++---------------------------------------------------------------------+
+|  What You Will Take Away:                                           |
+|    • An "AI Tool Selection Comparison Chart" (print and post at    |
+|      your desk)                                                     |
+|    • A "First Conversation Record Template" (5 fields to fill in)  |
+|    • A "3 Misconceptions Troubleshooting Checklist" (check each   |
+|      item when things go wrong)                                     |
+|    • A "Large Model Capability Boundary Map" (what AI can and      |
+|      cannot do at a glance)                                         |
+|    • A complete hands-on record of "completing a real task with   |
+|      AI"                                                            |
++---------------------------------------------------------------------+
+```
 
-我先给大家讲两个真实的故事。
+**This Lesson's Promise:**
+- Learn today, use at work tomorrow
+- No algorithms, no math, no neural network internals
+- Every Section includes "Step-by-step Operations" + "Copy-and-Use Templates" + "Quick Diagnosis Tables"
+- Lecture time no more than 50%, the rest is hands-on practice
 
-**故事一：两个产品经理的 PRD**
+---
 
-上个月,我们公司两位产品经理同时接到任务:为新功能写 PRD。他们都决定用 AI 辅助。
+## Opening Hook (10 minutes)
 
-产品经理 A 打开 ChatGPT,输入:"帮我写一份用户管理系统的 PRD"。2 小时后,她拿到了一份 8 页的文档,看起来很专业——有背景、有目标、有功能列表。但当她拿给研发团队评审时,技术负责人问了 3 个问题就卡壳了:"这个系统是给内部用还是外部用?""用户量级预期多少?""权限体系要做到什么粒度?" 她一个都答不上来,因为 AI 给的是"万能模板",什么场景都能套,但什么场景都不够深入。
+Hello everyone, welcome to Lesson 0 of the AI Literacy Bootcamp.
 
-产品经理 B 也用 ChatGPT,但他的第一句话是:"我是一家 50 人 SaaS 公司的产品经理,我们要做一个内部员工管理系统,目前用 Excel 管理 50 个员工信息很混乱,经常出现权限不清、信息更新不及时的问题。我需要你帮我设计一个解决方案。" AI 问了他 5 个澄清问题,他回答后,AI 给出了针对性的方案。15 分钟后,他又追问:"这个方案在 50 人规模下,哪些功能是 P0 必须做的,哪些可以二期?" 最终他用 30 分钟拿到了一份可以直接进入开发的 PRD,研发团队评审时只提了 2 个小修改意见。
+Let me start with two real stories.
 
-**差别在哪?**
+**Story 1: Two Product Managers' PRDs**
 
-不是 AI 的问题,是**使用 AI 的方式**。产品经理 A 把 AI 当成"自动生成器",扔一个需求就等结果。产品经理 B 把 AI 当成"协作者",通过对话逐步明确需求、迭代方案。
+Last month, two product managers at our company were assigned the same task: write a PRD for a new feature. Both decided to use AI assistance.
 
-这就是今天这节课要解决的核心问题:**如何建立正确的 AI 认知,从"用工具"升级到"协作者"模式**。
+Product Manager A opened ChatGPT and typed: "Help me write a PRD for a user management system." Two hours later, she got an 8-page document that looked professional - with background, objectives, and feature list. But when she presented it to the development team for review, the technical lead asked 3 questions that stumped her: "Is this system for internal or external use?" "What's the expected user scale?" "What granularity should the permission system achieve?" She couldn't answer any of them, because AI gave her a "universal template" that could fit any scenario but wasn't deep enough for any specific one.
 
-**核心观点对比**：
+Product Manager B also used ChatGPT, but his first message was: "I'm a product manager at a 50-person SaaS company. We need to build an internal employee management system. Currently, we use Excel to manage 50 employees' information, which is very messy. We often have issues with unclear permissions and delayed information updates. I need you to help me design a solution." AI asked him 5 clarifying questions. After he answered, AI provided a targeted solution. 15 minutes later, he followed up: "For a 50-person scale, which features are P0 must-haves and which can be in phase 2?" In the end, he spent 30 minutes getting a PRD ready for development, with only 2 minor revision suggestions from the development team.
 
-| 工具思维 | 协作思维 |
-|---------|---------|
-| 我按按钮，它出结果 | 我给任务、给背景、给反馈 |
-| 出不好 → 工具不行 | 出不好 → 看谁的问题 |
-| 一次性提问 | 对话迭代 |
-| 期待完美答案 | 期待可迭代的草稿 |
+**What's the difference?**
 
-这一字之差，决定你未来 3 年的职业天花板。
+It's not about AI - it's about **how AI is used**. Product Manager A treated AI as an "auto-generator," throwing a requirement and waiting for results. Product Manager B treated AI as a "collaborator," gradually clarifying requirements and iterating on solutions through dialogue.
 
-**思维模式对比图**：
+This is the core problem this lesson will solve: **How to build the correct AI cognition, upgrading from "using a tool" to "collaborator mode"**.
+
+**Mindset Comparison:**
+
+| Tool Mindset | Collaboration Mindset |
+|--------------|----------------------|
+| I press a button, it gives results | I provide tasks, context, feedback |
+| Poor output = Tool's fault | Poor output = Whose problem is it? |
+| One-time question | Iterative dialogue |
+| Expect perfect answers | Expect iterable drafts |
+
+This one word difference determines your career ceiling for the next 3 years.
+
+**Mindset Comparison Diagram:**
 
 ```mermaid
 graph LR
-    A[用户需求] --> B{思维模式}
-    B -->|工具思维| C[一次性输入]
-    C --> D[期待完美结果]
-    D --> E{满意?}
-    E -->|否| F[放弃/抱怨]
-    E -->|是| G[使用]
-    
-    B -->|协作思维| H[提供背景]
-    H --> I[初步输出]
-    I --> J[评估反馈]
-    J --> K[迭代优化]
-    K --> L{满意?}
-    L -->|否| J
-    L -->|是| M[高质量结果]
-    
+    A[User Need] --> B{Mindset}
+    B -->|Tool Mindset| C[One-time Input]
+    C --> D[Expect Perfect Result]
+    D --> E{Satisfied?}
+    E -->|No| F[Give Up/Complain]
+    E -->|Yes| G[Use]
+
+    B -->|Collaboration Mindset| H[Provide Context]
+    H --> I[Initial Output]
+    I --> J[Evaluate & Feedback]
+    J --> K[Iterate & Optimize]
+    K --> L{Satisfied?}
+    L -->|No| J
+    L -->|Yes| M[High Quality Result]
+
     style F fill:#ffcccc
     style M fill:#ccffcc
 ```
 
-在接下来的 2 小时里,我会带大家深入了解:
-- AI 到底是什么,为什么有时很聪明有时很笨
-- 它能做什么、不能做什么,边界在哪
-- 国内外有哪些主流产品,怎么选
-- 如何进行第一次高质量对话
+In the next 2 hours, I'll guide you through:
+- What AI really is, and why it's sometimes smart and sometimes dumb
+- What it can and cannot do, where the boundaries lie
+- What mainstream products exist domestically and internationally, and how to choose
+- How to have your first high-quality conversation
 
-准备好了吗?让我们开始吧!
+Ready? Let's begin!
 
 ---
 
-## Section 1:三个常见误解(20分钟)
+## Section 1: Three Common Misconceptions (20 minutes)
 
-好,我们先来破除三个最常见的误解。这三个误解是大部分人用不好 AI 的根本原因。
+Let's start by debunking the three most common misconceptions. These misconceptions are the root cause of most people's inability to use AI effectively.
 
-不管你用过 AI 没有,脑子里都有一些"默认预设"。这些预设 80% 是错的。我们先拆掉它们,才能建新的认知。
+Whether you've used AI or not, you have some "default assumptions" in your mind. 80% of these assumptions are wrong. We need to tear them down before building new cognition.
 
-我用 3 个场景挨个拆。每个场景都有「❌ 别这样做」和「✅ 应该这样做」对比。
+I'll break down each one using 3 scenarios. Each scenario has "Don't Do This" and "Do This Instead" comparisons.
 
-### 1.1 误解一:AI 是万能的
+### 1.1 Misconception 1: AI is Omnipotent
 
-**典型表现:**
-"AI 都能写代码了,肯定能帮我做数据分析"
-"AI 能画画,那做个 PPT 肯定没问题"
-"听说 AI 能通过司法考试,那法律咨询应该很准"
+**Typical Manifestations:**
+"AI can write code, so it can definitely help with data analysis"
+"AI can create art, so making a PPT should be no problem"
+"I heard AI can pass the bar exam, so legal consulting should be accurate"
 
-**真相:能力边界非常清晰**
+**The Truth: Capability Boundaries Are Very Clear**
 
-我给大家看一个真实案例。2023 年 5 月,美国纽约一位律师 Steven Schwartz 在法庭提交的诉讼文件中,引用了 6 个判例来支持他的论点。法官审查时发现——这 6 个判例全是假的,案件编号、当事人、判决内容都是编造的。
+Let me show you a real case. In May 2023, American attorney Steven Schwartz submitted a court filing that cited 6 legal precedents to support his argument. During review, the judge discovered - all 6 precedents were fake, with fabricated case numbers, parties, and judgment contents.
 
-律师承认这些判例来自 ChatGPT。他以为 AI 能像法律数据库一样检索判例,但实际上 AI 是"生成"了看起来很像真判例的内容。最终他被罚款 5000 美元,还面临纪律处分。
+The attorney admitted these precedents came from ChatGPT. He thought AI could retrieve precedents like a legal database, but in reality, AI "generated" content that looked like real precedents. He was ultimately fined $5,000 and faced disciplinary action.
 
-**为什么会这样?**
+**Why does this happen?**
 
-因为 AI 的本质是**语言预测器**,不是知识库。它擅长的是"根据上文预测下文",而不是"检索准确信息"。当你问它一个问题,它会生成一个"听起来合理"的答案,但不保证事实正确。
+Because AI is essentially a **language predictor**, not a knowledge base. It excels at "predicting the next word based on context," not "retrieving accurate information." When you ask a question, it generates an answer that "sounds reasonable" but doesn't guarantee factual accuracy.
 
-**❌ 别这样做**:
-- 把"具体目标（10% 转化）"直接甩给 AI
-- 指望 AI 知道你的产品、用户、渠道、预算
-- 拿到结果不核查,直接用
+**Don't Do This:**
+- Throw "specific goals (10% conversion)" directly at AI
+- Expect AI to know your product, users, channels, budget
+- Take results without verification and use directly
 
-**✅ 应该这样做**:
+**Do This Instead:**
 
-**步骤化操作（3 步）**:
+**Step-by-Step Operations (3 Steps):**
 
-1. **第 1 步：拆问题**。把"做一场活动"拆成「用户画像」「核心卖点」「渠道」「转化漏斗」4 个小任务。
-2. **第 2 步：喂背景**。每个小任务前先告诉 AI：产品是什么、用户是谁、过去做过什么、数据什么样。
-3. **第 3 步：要建议不要结论**。问 AI "给我 3 个思路、各自优劣、如何验证"，而不是"给我一个方案"。
+1. **Step 1: Break Down the Problem**. Split "run an event" into 4 smaller tasks: "User Profile," "Core Selling Points," "Channels," "Conversion Funnel."
+2. **Step 2: Provide Context**. Before each small task, tell AI: what the product is, who the users are, what's been done before, what the data looks like.
+3. **Step 3: Ask for Suggestions, Not Conclusions**. Ask AI "Give me 3 approaches, their pros and cons, and how to validate each," not "Give me one solution."
 
-**快速诊断表**：
+**Quick Diagnosis Table:**
 
-| 你问 AI 的方式 | 症状 | 处方 |
-|---------------|------|------|
-| "帮我做 X" | 给万能模板、套话 | 加背景、加约束、加验收标准 |
-| "给我最好的方案" | AI 胡编一个最高大上的 | 改成"给 3 个方案 + 各自适用场景" |
-| 没提供任何项目/公司/用户信息 | 输出空洞、可用度低 | 补 3 句话：我是谁、我在哪、我要干什么 |
+| How You Ask AI | Symptom | Prescription |
+|----------------|---------|--------------|
+| "Help me do X" | Gets universal templates, clichés | Add context, constraints, acceptance criteria |
+| "Give me the best solution" | AI makes up something grandiose | Change to "Give 3 solutions + applicable scenarios for each" |
+| No project/company/user info provided | Output is hollow, low usability | Add 3 sentences: Who am I, Where am I, What do I want to do |
 
-**AI 真正擅长的:**
-- 文本生成、改写、润色
-- 头脑风暴、创意发散
-- 总结、提炼、翻译
-- 解释概念、类比说明
-- 代码生成(但需要验证)
+**What AI Is Truly Good At:**
+- Text generation, rewriting, polishing
+- Brainstorming, creative ideation
+- Summarizing, extracting, translating
+- Explaining concepts, making analogies
+- Code generation (but needs verification)
 
-**AI 不擅长的:**
-- 实时信息(股票价格、今天天气)
-- 精确计算(复杂数学、财务核算)
-- 主观判断(法律咨询、医疗诊断)
-- 保密内容(企业内部数据、未公开信息)
+**What AI Is Not Good At:**
+- Real-time information (stock prices, today's weather)
+- Precise calculations (complex math, financial accounting)
+- Subjective judgments (legal consulting, medical diagnosis)
+- Confidential content (internal company data, undisclosed information)
 
-**这一段的核心 Takeaway:**
-AI 不是万能的,它有明确的能力边界。用 AI 之前先问自己:这个任务是"生成创造类"还是"精确查询类"?前者适合 AI,后者要谨慎。
+**Key Takeaway:**
+AI is not omnipotent; it has clear capability boundaries. Before using AI, ask yourself: Is this task "generative/creative" or "precise query"? The former suits AI; be cautious with the latter.
 
-### 1.2 误解二:AI 是搜索引擎
+### 1.2 Misconception 2: AI is a Search Engine
 
-**典型表现:**
-"帮我查一下今天苹果股价"
-"2024 年诺贝尔文学奖得主是谁"
-"我们公司去年 Q4 的销售数据是多少"
+**Typical Manifestations:**
+"Check today's Apple stock price for me"
+"Who won the 2024 Nobel Prize in Literature?"
+"What were our company's Q4 sales last year?"
 
-**真相:AI 是语言预测器,不是搜索引擎**
+**The Truth: AI is a Language Predictor, Not a Search Engine**
 
-我给大家做个对比:
+Let me give you a comparison:
 
-**搜索引擎的工作方式:**
-1. 你输入关键词
-2. 它去索引库里检索匹配的网页
-3. 返回链接列表
-4. 你点开链接查看原始信息
+**How Search Engines Work:**
+1. You input keywords
+2. It searches its index for matching web pages
+3. Returns a list of links
+4. You click links to view original information
 
-**大模型的工作方式:**
-1. 你输入问题
-2. 它根据训练数据中的模式,**预测**一个合理的回答
-3. 直接生成文本
-4. 不提供信息来源(除非是联网版本)
+**How Large Models Work:**
+1. You input a question
+2. It **predicts** a reasonable answer based on patterns in training data
+3. Directly generates text
+4. Doesn't provide information sources (unless it's a web-connected version)
 
-**关键区别:生成 vs 检索**
+**Key Difference: Generation vs. Retrieval**
 
-我举个例子。假设你问:"Python 中如何读取 CSV 文件?"
+Let me give you an example. Suppose you ask: "How to read a CSV file in Python?"
 
-搜索引擎会给你:
-- Stack Overflow 上的讨论链接
-- Python 官方文档链接
-- 各种教程博客链接
+A search engine would give you:
+- Discussion links on Stack Overflow
+- Python official documentation links
+- Various tutorial blog links
 
-AI 会直接给你:
+AI would directly give you:
 ```python
 import pandas as pd
 
-# 读取 CSV 文件
+# Read CSV file
 df = pd.read_csv('data.csv')
 
-# 显示前 5 行
+# Display first 5 rows
 print(df.head())
 ```
 
-看起来 AI 更方便对吧?但问题来了——**如果 AI 的训练数据里这个知识是错的,或者过时了,它也会一本正经地给你错误答案**。
+Seems more convenient, right? But here's the problem - **if this knowledge is wrong or outdated in AI's training data, it will confidently give you a wrong answer**.
 
-**❌ 别这样做**:
-- 问 AI 当前时事、最新政策、实时价格
-- 把 AI 输出的数字/引用/人名/日期直接当事实
-- 问"最近怎么样"这种依赖时效的问题
+**Don't Do This:**
+- Ask AI about current events, latest policies, real-time prices
+- Take AI's numbers/citations/names/dates directly as facts
+- Ask "how are things recently" type questions that depend on timeliness
 
-**✅ 应该这样做**:
+**Do This Instead:**
 
-**决策树（文字版）**:
-
-```
-你要找的信息 →
-├─ 是"最新的"吗？（今天、本月、实时）
-│   ├─ 是 → 用联网搜索 / Perplexity / 带联网功能的 AI
-│   └─ 否 → 继续判断
-├─ 是"确定的数字/引用/法条"吗？
-│   ├─ 是 → 必须去官方/权威源核查
-│   └─ 否 → 可以让 AI 直接答
-└─ 是"观点/思路/写作/总结"吗？
-    └─ 是 → AI 最擅长的，直接用
-```
-
-**烂提示词 vs 好提示词:**
-
-❌ **烂提示词:**
-"2026 年 5 月 6 日北京天气怎么样?"
-→ AI 会编一个答案,因为它的训练数据截止日期可能是 2025 年,根本不知道今天天气。
-
-✅ **好提示词:**
-"我要写一篇关于天气对心情影响的文章,帮我生成 3 个不同天气场景下的心理描写。"
-→ 这是生成创造类任务,AI 擅长。
-
-❌ **烂提示词:**
-"我们公司上个月的销售额是多少?"
-→ AI 不可能知道你公司的内部数据。
-
-✅ **好提示词:**
-"我有一份销售数据表格(已上传),帮我总结上个月的销售趋势,找出 Top 3 产品和增长最快的区域。"
-→ 你提供数据,AI 做分析。
-
-**复制即用模板卡**:
+**Decision Tree (Text Version):**
 
 ```
-【事实核查三问】
-向 AI 要任何具体数字、人名、引用、法条、日期时，必问：
-1. 这个来源是什么？能给我链接吗？
-2. 如果不确定，请标注"未核实"。
-3. 给我 2 个可以交叉验证的权威信息源。
+Information you're looking for ->
+├─ Is it "latest"? (today, this month, real-time)
+│   ├─ Yes -> Use web search / Perplexity / AI with web access
+│   └─ No -> Continue judging
+├─ Is it "specific numbers/citations/laws"?
+│   ├─ Yes -> Must verify from official/authoritative sources
+│   └─ No -> Can let AI answer directly
+└─ Is it "opinions/ideas/writing/summarization"?
+    └─ Yes -> AI's strength, use directly
 ```
 
-**深度杠杆:机制解析**
+**Bad Prompt vs. Good Prompt:**
 
-为什么 AI 不是搜索引擎?因为它的工作原理完全不同:
+**Bad Prompt:**
+"What's the weather in Beijing on May 6, 2026?"
+-> AI will make up an answer because its training data cutoff might be 2025, so it doesn't know today's weather.
 
-1. **训练阶段**(已完成,你无法改变):
-   - AI 读了海量文本(书籍、网页、代码等)
-   - 学习了语言的统计规律:"什么词后面通常跟什么词"
-   - 形成了一个巨大的"概率模型"
+**Good Prompt:**
+"I want to write an article about how weather affects mood. Help me generate psychological descriptions for 3 different weather scenarios."
+-> This is a generative/creative task, which AI excels at.
 
-2. **推理阶段**(你使用时):
-   - 你输入问题
-   - AI 根据概率模型,逐个词地预测回答
-   - 每个词的选择都是"在当前上下文中,哪个词出现概率最高"
+**Bad Prompt:**
+"What were our company's sales last month?"
+-> AI can't possibly know your company's internal data.
 
-所以 AI 本质上是在**续写**,不是在**查询**。它生成的内容"听起来像人类会说的话",但不保证事实正确。
+**Good Prompt:**
+"I have a sales data spreadsheet (uploaded). Help me summarize last month's sales trends and identify the Top 3 products and fastest-growing regions."
+-> You provide data, AI does analysis.
 
-**AI 工作原理对比图**：
+**Copy-and-Use Template Card:**
+
+```
+[Factual Verification Three Questions]
+When asking AI for any specific numbers, names, citations, laws, dates, always ask:
+1. What's the source? Can you give me a link?
+2. If uncertain, please mark "unverified."
+3. Give me 2 authoritative sources for cross-verification.
+```
+
+**Deep Insight: Mechanism Analysis**
+
+Why isn't AI a search engine? Because its working principle is completely different:
+
+1. **Training Phase** (completed, you can't change it):
+   - AI read massive amounts of text (books, web pages, code, etc.)
+   - Learned statistical patterns of language: "what word typically follows what word"
+   - Formed a giant "probability model"
+
+2. **Inference Phase** (when you use it):
+   - You input a question
+   - AI predicts the answer word by word based on its probability model
+   - Each word choice is "which word has the highest probability in the current context"
+
+So AI is essentially **continuing text**, not **querying**. The content it generates "sounds like what a human would say," but doesn't guarantee factual accuracy.
+
+**AI Working Principle Comparison Diagram:**
 
 ```mermaid
 graph TB
-    subgraph 搜索引擎
-    A1[用户输入关键词] --> B1[检索索引库]
-    B1 --> C1[匹配相关网页]
-    C1 --> D1[返回链接列表]
-    D1 --> E1[用户点击查看]
+    subgraph Search Engine
+    A1[User inputs keywords] --> B1[Search index database]
+    B1 --> C1[Match relevant web pages]
+    C1 --> D1[Return list of links]
+    D1 --> E1[User clicks to view]
     end
-    
-    subgraph AI大模型
-    A2[用户输入问题] --> B2[理解上下文]
-    B2 --> C2[基于训练数据预测]
-    C2 --> D2[逐词生成回答]
-    D2 --> E2[直接返回文本]
+
+    subgraph AI Large Model
+    A2[User inputs question] --> B2[Understand context]
+    B2 --> C2[Predict based on training data]
+    C2 --> D2[Generate answer word by word]
+    D2 --> E2[Return text directly]
     end
-    
+
     style B1 fill:#e1f5ff
     style C2 fill:#fff4e1
 ```
 
-**这一段的核心 Takeaway:**
-AI 不是搜索引擎,是语言预测器。不要问它"查询类"问题,要给它"生成类"任务。需要准确信息时,要么用搜索引擎,要么用联网版 AI 并核查来源。
+**Key Takeaway:**
+AI is not a search engine; it's a language predictor. Don't ask it "query-type" questions; give it "generative" tasks. When you need accurate information, either use a search engine or use a web-connected AI and verify sources.
 
-### 1.3 误解三:AI 一次就能给完美答案
+### 1.3 Misconception 3: AI Can Give Perfect Answers in One Go
 
-**典型表现:**
-"帮我写个周报" → 拿到结果 → "就这?" → 放弃使用
+**Typical Manifestations:**
+"Help me write a weekly report" -> Gets result -> "That's it?" -> Give up using it
 
-**真相:对话迭代才是正道**
+**The Truth: Iterative Dialogue Is the Way**
 
-我给大家看两个真实对话记录。
+Let me show you two real conversation records.
 
-**对话 A(一次性提问,失败案例):**
-
-```
-用户:帮我写一封给客户的道歉信。
-
-AI:尊敬的客户:
-您好!非常抱歉给您带来不便。我们已经注意到问题,正在积极处理。
-感谢您的理解与支持。
-此致
-敬礼
-
-用户心想:这也太敷衍了吧...算了,还是自己写。
-```
-
-**对话 B(多轮迭代,成功案例):**
+**Conversation A (One-time Question, Failed Case):**
 
 ```
-用户:我需要写一封给客户的道歉信。背景是:我们承诺 3 天交付的定制报告,因为数据源出问题延迟了 2 天,客户很不满。
+User: Help me write an apology letter to a client.
 
-AI:明白了。请问:
-1. 这位客户是新客户还是老客户?
-2. 延迟对客户造成了什么具体影响?
-3. 你们准备提供什么补偿方案?
+AI: Dear Client,
+Hello! We sincerely apologize for the inconvenience. We have noted the issue and are actively addressing it.
+Thank you for your understanding and support.
+Sincerely,
+[Signature]
 
-用户:老客户,合作 2 年了。他们要在董事会上用这份报告,现在只能推迟会议。我们准备免费赠送下个月的报告服务。
-
-AI:[生成一封 300 字的道歉信,包含:
-- 对老客户的感谢
-- 对延迟的具体说明和原因
-- 对客户损失的理解
-- 补偿方案
-- 改进措施]
-
-用户:很好,但语气能不能更诚恳一些?现在感觉有点官方。
-
-AI:[调整后的版本,语气更真诚,增加了"我个人深感抱歉"等表述]
-
-用户:完美,就用这个!
+User thinks: This is too perfunctory... forget it, I'll write it myself.
 ```
 
-**对比分析:**
+**Conversation B (Multi-round Iteration, Successful Case):**
 
-| 维度 | 对话 A | 对话 B |
-|------|--------|--------|
-| 提供的上下文 | 几乎没有 | 详细的背景信息 |
-| 对话轮次 | 1 轮 | 4 轮 |
-| AI 的理解程度 | 只知道"道歉信" | 知道客户关系、影响、补偿 |
-| 输出质量 | 通用模板 | 定制化方案 |
-| 用户满意度 | 放弃 | 采用 |
+```
+User: I need to write an apology letter to a client. The background is: we promised a custom report in 3 days, but due to data source issues, it was delayed by 2 days. The client is very unhappy.
 
-**❌ 别这样做**:
-- 看到第一版不满意,直接关窗口说"AI 不行"
-- 重开对话、重问一次、期待不一样
-- 在心里骂 AI,然后自己从头写
+AI: Understood. May I ask:
+1. Is this client a new or existing client?
+2. What specific impact did the delay have on the client?
+3. What compensation plan are you prepared to offer?
 
-**✅ 应该这样做**:
+User: Existing client, working together for 2 years. They needed this report for a board meeting, now they have to postpone the meeting. We're offering free report service for next month.
 
-**步骤化操作（迭代 4 式）**:
+AI: [Generates a 300-word apology letter including:
+- Appreciation for the long-term client
+- Specific explanation of the delay and reasons
+- Understanding of the client's loss
+- Compensation plan
+- Improvement measures]
 
-1. **第 1 式：更具体**。"太泛了，针对互联网公司 30-50 人规模重写。"
-2. **第 2 式：加约束**。"预算每人每月不超过 2 万，必须包含期权。"
-3. **第 3 式：换视角**。"站在应届生角度看，哪部分吸引力不足？"
-4. **第 4 式：要对比**。"再给我一版激进型、一版保守型，各自的利弊。"
+User: Good, but can the tone be more sincere? It feels a bit formal now.
 
-**快速诊断表**:
+AI: [Adjusted version with more sincere tone, adding phrases like "I personally deeply apologize"]
 
-| 症状 | 用哪一式 | 话术例子 |
-|------|---------|---------|
-| 输出太泛、像套话 | 第 1 式 | "太泛，针对 XX 场景重写" |
-| 输出方向对但有硬伤 | 第 2 式 | "不能超过 X，必须包含 Y" |
-| 你拿不定主意该不该用 | 第 3 式 | "从老板/用户/对手角度看这版" |
-| 想做决策却只有一个选项 | 第 4 式 | "再给 2 版，不同策略" |
+User: Perfect, let's use this!
+```
 
-**深度杠杆:为什么需要迭代?**
+**Comparison Analysis:**
 
-因为 AI 面对的是**信息不对称**:
-- 你脑子里有完整的背景、目标、约束条件
-- AI 只看到你打出来的那几个字
-- 你觉得"显而易见"的信息,AI 完全不知道
+| Dimension | Conversation A | Conversation B |
+|-----------|----------------|----------------|
+| Context Provided | Almost none | Detailed background info |
+| Dialogue Rounds | 1 round | 4 rounds |
+| AI's Understanding | Only knows "apology letter" | Knows client relationship, impact, compensation |
+| Output Quality | Generic template | Customized solution |
+| User Satisfaction | Abandoned | Adopted |
 
-就像你去餐厅,只说"给我来个菜",服务员怎么知道你要川菜还是粤菜、辣的还是不辣的、主食还是小吃?
+**Don't Do This:**
+- See first version unsatisfactory, close window and say "AI doesn't work"
+- Start new conversation, ask again, expect different result
+- Complain about AI internally, then write from scratch yourself
 
-**好的对话流程:**
+**Do This Instead:**
 
-1. **第一轮:给足上下文**
-   - 我是谁(角色/背景)
-   - 我要做什么(任务)
-   - 为什么要做(目标)
-   - 有什么限制(约束)
+**Step-by-Step Operations (Iteration 4 Moves):**
 
-2. **第二轮:让 AI 提问**
-   - "在给出方案前,你还需要了解什么?"
-   - AI 会问出你没想到的关键信息
+1. **Move 1: Be More Specific**. "Too general, rewrite for an internet company with 30-50 employees."
+2. **Move 2: Add Constraints**. "Budget no more than 20K per person per month, must include stock options."
+3. **Move 3: Change Perspective**. "From a fresh graduate's perspective, which part lacks appeal?"
+4. **Move 4: Request Comparisons**. "Give me an aggressive version and a conservative version, with pros and cons of each."
 
-3. **第三轮:评估输出**
-   - 哪里好、哪里不好
-   - 具体的修改方向
+**Quick Diagnosis Table:**
 
-4. **第四轮:精细调整**
-   - 语气、长度、格式等细节
+| Symptom | Which Move to Use | Example Phrase |
+|---------|-------------------|----------------|
+| Output too generic, sounds like boilerplate | Move 1 | "Too general, rewrite for XX scenario" |
+| Output direction right but has fatal flaws | Move 2 | "Can't exceed X, must include Y" |
+| You can't decide whether to use it | Move 3 | "Look at this version from boss/user/competitor perspective" |
+| Want to make a decision but only have one option | Move 4 | "Give 2 more versions with different strategies" |
 
-**这一段的核心 Takeaway:**
-AI 不是自动售货机,投币就出货。它是协作者,需要通过对话逐步明确需求、迭代方案。第一次输出不满意是正常的,关键是学会追问和调整。
+**Deep Insight: Why Iteration Is Needed?**
 
-**本节产出**
+Because AI faces **information asymmetry**:
+- You have complete background, objectives, and constraints in your mind
+- AI only sees the few words you typed
+- Information you think is "obvious," AI knows nothing about
 
-✅ 你现在应该能做到:
-- 看到"AI 帮我做个 X"这种请求,立刻能判断该不该拆、该怎么拆
-- 任何具体数字/引用/日期,都条件反射想"要不要核查"
-- 第一版不满意,不再关窗口,而是用"迭代 4 式"继续
+It's like going to a restaurant and only saying "give me a dish." How does the waiter know if you want Sichuan or Cantonese, spicy or not, main dish or snack?
 
-**带走的工具**: 《3 误解排查清单》——遇到 AI 翻车时,逐条对照。
+**Good Dialogue Process:**
+
+1. **First Round: Give Enough Context**
+   - Who am I (role/background)
+   - What do I want to do (task)
+   - Why am I doing it (objective)
+   - What are the constraints
+
+2. **Second Round: Let AI Ask Questions**
+   - "Before giving a solution, what else do you need to know?"
+   - AI will ask about key information you hadn't thought of
+
+3. **Third Round: Evaluate Output**
+   - What's good, what's not
+   - Specific directions for modification
+
+4. **Fourth Round: Fine-tune**
+   - Tone, length, format and other details
+
+**Key Takeaway:**
+AI isn't a vending machine where you insert coins and get products. It's a collaborator that needs to gradually clarify requirements and iterate solutions through dialogue. Being unsatisfied with the first output is normal; the key is learning to follow up and adjust.
+
+**Section Output**
+
+Now you should be able to:
+- See an "AI help me do X" request and immediately judge whether and how to break it down
+- For any specific numbers/citations/dates, have the conditioned reflex "should I verify this?"
+- When the first version isn't satisfactory, instead of closing the window, use the "Iteration 4 Moves" to continue
+
+**Takeaway Tool**: "3 Misconceptions Troubleshooting Checklist" - check each item when AI goes wrong.
 
 ---
 
-## Section 2:大模型到底是什么(25分钟)
+## Section 2: What Is a Large Model Really (25 minutes)
 
-好,现在我们来深入理解大模型的本质。只有理解了它的工作机制,你才能知道为什么它有时很聪明,有时很笨。
+Now let's dive into understanding the essence of large models. Only by understanding how they work can you know why they're sometimes smart and sometimes dumb.
 
-这节是唯一一节"必须听懂原理"的。不听懂,后面你永远不知道 AI 为什么忽聪明忽笨。
+This is the only section where "you must understand the principles." Without understanding, you'll never know why AI is inconsistently smart and dumb.
 
-但我不会讲神经网络、不讲矩阵、不讲梯度下降。我用 4 个类比,10 分钟让你彻底搞懂。
+But I won't talk about neural networks, matrices, or gradient descent. I'll use 4 analogies to help you thoroughly understand in 10 minutes.
 
-### 2.1 最佳类比:世界上最强的"词语接龙选手"
+### 2.1 Best Analogy: The World's Strongest "Word Chain Player"
 
-我先给大家一个最直观的类比。
+Let me give you the most intuitive analogy.
 
-想象你在玩"词语接龙"游戏:
-- 我说"人工",你接"智能"
-- 我说"今天天气",你接"真好"
-- 我说"Python 是一种",你接"编程语言"
+Imagine you're playing a "word chain" game:
+- I say "artificial," you respond "intelligence"
+- I say "today's weather," you respond "is nice"
+- I say "Python is a," you respond "programming language"
 
-你为什么能接得这么自然?因为你见过大量类似的句子,知道什么词后面通常跟什么词。
+Why can you respond so naturally? Because you've seen many similar sentences and know what word typically follows what word.
 
-**大模型就是这样工作的**,只不过它:
-- 见过的句子比你多几万倍(整个互联网的文本)
-- 接龙的规则比你复杂几万倍(数千亿个参数)
-- 接龙的速度比你快几万倍(每秒生成几十个词)
+**Large models work exactly this way**, except:
+- They've seen tens of thousands more sentences than you (the entire internet's text)
+- Their chain rules are tens of thousands more complex than yours (hundreds of billions of parameters)
+- They chain tens of thousands faster than you (generating dozens of words per second)
 
-当你问 AI "Python 如何读取文件?",它不是去"查"答案,而是根据训练时见过的无数代码示例,**预测**出一个最可能的回答。
+When you ask AI "How does Python read a file?", it doesn't "look up" the answer. Instead, based on countless code examples seen during training, it **predicts** the most likely answer.
 
-**这个类比解释了很多现象:**
+**This analogy explains many phenomena:**
 
-1. **为什么 AI 有时会"一本正经地胡说八道"?**
-   - 因为它只管"接龙接得通顺",不管"内容是否真实"
-   - 就像你玩接龙时,可以说"今天天气真糟糕",也可以说"今天天气真美好",两个都通顺,但只有一个是事实
+1. **Why does AI sometimes "confidently make things up"?**
+   - Because it only cares about "chaining smoothly," not "whether the content is true"
+   - Just like when playing word chain, you can say "today's weather is terrible" or "today's weather is beautiful" - both are smooth, but only one is fact
 
-2. **为什么给 AI 更多上下文,它回答得更好?**
-   - 因为上下文就是"接龙的前文",前文越详细,后文越准确
-   - 就像你听到"在医院里,医生对病人说",你会接医学相关的话;听到"在酒吧里,朋友对朋友说",你会接日常对话
+2. **Why does giving AI more context lead to better answers?**
+   - Because context is "the preceding text for chaining" - the more detailed the preceding text, the more accurate the following text
+   - Just like when you hear "in a hospital, a doctor says to a patient," you'll follow with medical-related words; when you hear "in a bar, a friend says to a friend," you'll follow with casual conversation
 
-3. **为什么 AI 有"知识截止日期"?**
-   - 因为它的"接龙规则"是训练时学的,训练完成后就固定了
-   - 就像你 2020 年学的知识,到 2026 年还是 2020 年的,除非你继续学习
+3. **Why does AI have a "knowledge cutoff date"?**
+   - Because its "chaining rules" were learned during training and fixed after training completes
+   - Just like knowledge you learned in 2020 is still 2020 knowledge in 2026, unless you continue learning
 
-**❌ 别这样做**: 以为 AI 在"思考"你的问题。
+**Don't Do This**: Think AI is "thinking" about your question.
 
-**✅ 应该这样做**: 把 AI 当成一个"读过 1000 万本书但记性有点乱的朋友",你要**引导他往对的方向接龙**。
+**Do This Instead**: Treat AI as a "friend who has read 10 million books but has a somewhat messy memory." You need to **guide them to chain in the right direction**.
 
-### 2.2 Token:AI 看到的不是汉字,是数字
+### 2.2 Token: AI Doesn't See Characters, It Sees Numbers
 
-现在我们来讲第一个技术概念:**Token**。这是理解 AI 成本、限制、行为的关键。
+Now let's discuss the first technical concept: **Token**. This is key to understanding AI costs, limitations, and behavior.
 
-**什么是 Token?**
+**What is a Token?**
 
-简单说,Token 是 AI 处理文本的最小单位。但它不是"字"也不是"词",而是介于两者之间的"语言片段"。
+Simply put, a Token is the smallest unit AI uses to process text. But it's not a "character" or a "word" - it's a "language fragment" between the two.
 
-AI 眼里没有汉字、没有单词、没有句子。它把一切文字切成**"Token"**——你可以理解成"积木块"。
+AI doesn't see Chinese characters, words, or sentences. It cuts all text into **"Tokens"** - you can think of them as "building blocks."
 
-**Token 处理流程**：
+**Token Processing Flow:**
 
 ```mermaid
 graph LR
-    A[原始文本<br/>人工智能] --> B[分词器<br/>Tokenizer]
-    B --> C[Token序列<br/>人工 智能]
-    C --> D[数字ID<br/>1234 5678]
-    D --> E[神经网络<br/>处理]
-    E --> F[输出ID<br/>9012 3456]
-    F --> G[解码器]
-    G --> H[生成文本<br/>很强大]
-    
+    A[Original Text<br/>Artificial Intelligence] --> B[Tokenizer]
+    B --> C[Token Sequence<br/>Artificial Intelligence]
+    C --> D[Numeric IDs<br/>1234 5678]
+    D --> E[Neural Network<br/>Processing]
+    E --> F[Output IDs<br/>9012 3456]
+    F --> G[Decoder]
+    G --> H[Generated Text<br/>is powerful]
+
     style B fill:#e1f5ff
     style E fill:#fff4e1
     style G fill:#e1ffe1
 ```
 
-我给大家看几个例子:
+Let me show you some examples:
 
-**中文:**
-- "人工智能" → 可能被切成 ["人工", "智能"] (2 个 Token)
-- "AI" → 1 个 Token
-- "ChatGPT" → 可能是 ["Chat", "G", "PT"] (3 个 Token)
-- 一个汉字 ≈ 1-1.5 个 Token(平均)
+**Chinese:**
+- "人工智能" (Artificial Intelligence) -> Might be split into ["人工", "智能"] (2 Tokens)
+- "AI" -> 1 Token
+- "ChatGPT" -> Might be ["Chat", "G", "PT"] (3 Tokens)
+- One Chinese character ≈ 1-1.5 Tokens (average)
 
-**英文:**
-- "artificial intelligence" → ["art", "ificial", " intelligence"] (3 个 Token)
-- "AI" → 1 个 Token
-- 一个英文单词 ≈ 1.3 个 Token(平均)
+**English:**
+- "artificial intelligence" -> ["art", "ificial", " intelligence"] (3 Tokens)
+- "AI" -> 1 Token
+- One English word ≈ 1.3 Tokens (average)
 
-**为什么要分 Token?**
+**Why split into Tokens?**
 
-因为计算机不认识文字,只认识数字。AI 的工作流程是:
-1. **分词**(Tokenization):把文本切成 Token
-2. **编码**:每个 Token 转成一个数字 ID
-3. **计算**:用神经网络处理这些数字
-4. **解码**:把输出的数字 ID 转回 Token,再拼成文本
+Because computers don't recognize text, only numbers. AI's workflow is:
+1. **Tokenization**: Cut text into Tokens
+2. **Encoding**: Convert each Token to a numeric ID
+3. **Computation**: Process these numbers with a neural network
+4. **Decoding**: Convert output numeric IDs back to Tokens, then assemble into text
 
-**为什么这个概念重要?**
+**Why is this concept important?**
 
-**原因 1:成本计算**
+**Reason 1: Cost Calculation**
 
-几乎所有 AI 服务都按 Token 收费:
-- GPT-4:输入 $0.03/1K Token,输出 $0.06/1K Token
-- Claude:输入 $0.015/1K Token,输出 $0.075/1K Token
-- 国内模型:通常 ¥0.001-0.01/1K Token
+Almost all AI services charge by Token:
+- GPT-4: Input $0.03/1K Tokens, Output $0.06/1K Tokens
+- Claude: Input $0.015/1K Tokens, Output $0.075/1K Tokens
+- Domestic models: Usually ¥0.001-0.01/1K Tokens
 
-一个 1000 字的中文文档 ≈ 1500-2000 Token。
+A 1000-character Chinese document ≈ 1500-2000 Tokens.
 
-**原因 2:上下文窗口限制**
+**Reason 2: Context Window Limitations**
 
-每个模型都有"上下文窗口"限制,单位是 Token:
-- GPT-4:128K Token(约 10 万字中文)
-- Claude:200K Token(约 15 万字中文)
-- 讯飞星火:128K Token
+Every model has a "context window" limit, measured in Tokens:
+- GPT-4: 128K Tokens (approximately 100K Chinese characters)
+- Claude: 200K Tokens (approximately 150K Chinese characters)
+- iFlytek Spark: 128K Tokens
 
-超过这个限制,AI 就"记不住"了。
+Exceed this limit, and AI "can't remember" anymore.
 
-**原因 3:中英文成本差异**
+**Reason 3: Chinese vs. English Cost Difference**
 
-同样的意思:
-- 英文:"AI is powerful" → 4 Token
-- 中文:"AI 很强大" → 5-6 Token
+The same meaning:
+- English: "AI is powerful" -> 4 Tokens
+- Chinese: "AI很强大" -> 5-6 Tokens
 
-所以用中文和 AI 对话,Token 消耗通常比英文多 30-50%,成本也更高。这不是歧视,是技术特性——中文的语言结构更复杂,切分效率更低。
+So conversing with AI in Chinese typically consumes 30-50% more Tokens than English, costing more. This isn't discrimination, it's a technical characteristic - Chinese language structure is more complex with lower splitting efficiency.
 
-**快速诊断表**:
+**Quick Diagnosis Table:**
 
-| 输入类型 | 大致 Token 数 | 对应中文字数 |
-|---------|-------------|------------|
-| 一条微信消息 | 20-50 | 30-80 字 |
-| 一封工作邮件 | 200-500 | 300-800 字 |
-| 一份产品需求 | 1000-3000 | 1500-5000 字 |
-| 一份 30 页报告 | 15000-25000 | 2-4 万字 |
+| Input Type | Approximate Tokens | Corresponding Chinese Characters |
+|------------|-------------------|----------------------------------|
+| One WeChat message | 20-50 | 30-80 characters |
+| One work email | 200-500 | 300-800 characters |
+| One product requirement | 1000-3000 | 1500-5000 characters |
+| One 30-page report | 15000-25000 | 20-40K characters |
 
-**实际影响:**
+**Practical Impact:**
 
-假设你要让 AI 总结一份 50 页的报告:
-- 50 页 ≈ 2.5 万字 ≈ 3.5 万 Token
-- 如果用 GPT-4:输入成本 = 35 × $0.03 = $1.05
-- 如果 AI 生成 2000 字摘要 ≈ 3000 Token:输出成本 = 3 × $0.06 = $0.18
-- 总成本 ≈ $1.23(约 ¥9)
+Suppose you want AI to summarize a 50-page report:
+- 50 pages ≈ 25K characters ≈ 35K Tokens
+- Using GPT-4: Input cost = 35 × $0.03 = $1.05
+- If AI generates a 2000-character summary ≈ 3000 Tokens: Output cost = 3 × $0.06 = $0.18
+- Total cost ≈ $1.23 (about ¥9)
 
-看起来不贵,但如果你每天处理 10 份报告,一个月就是 ¥2700。这就是为什么企业要考虑成本优化。
+Seems cheap, but if you process 10 reports daily, that's ¥2700 per month. This is why enterprises need to consider cost optimization.
 
-**这一段的核心 Takeaway:**
-Token 是 AI 的"货币单位",决定了成本和限制。中文比英文更"贵",长文档要注意上下文窗口。
+**Key Takeaway:**
+Token is AI's "currency unit," determining costs and limitations. Chinese is more "expensive" than English; pay attention to context window for long documents.
 
-### 2.3 上下文窗口:AI 的"短期记忆"
+### 2.3 Context Window: AI's "Short-term Memory"
 
-**什么是上下文窗口?**
+**What is a Context Window?**
 
-上下文窗口(Context Window)是 AI 在一次对话中能"记住"的最大信息量,单位是 Token。
+Context Window is the maximum amount of information AI can "remember" in a single conversation, measured in Tokens.
 
-**类比:**
+**Analogy:**
 
-想象你在和一个有短期记忆障碍的人对话:
-- 他能记住最近 10 分钟的对话内容
-- 超过 10 分钟的,他就忘了
-- 你必须在 10 分钟内把重要信息说完,或者重复之前说过的
+Imagine conversing with someone who has short-term memory impairment:
+- They can remember the last 10 minutes of conversation
+- Beyond 10 minutes, they forget
+- You must say important information within 10 minutes, or repeat what was said before
 
-AI 的上下文窗口就是这个"10 分钟"。
+AI's context window is this "10 minutes."
 
-你可以把"上下文窗口"理解成 AI 的**工作桌面**——桌面多大,它一次能处理多少东西就有个上限。
+You can think of "context window" as AI's **work desk** - how big the desk is determines the upper limit of how much it can process at once.
 
-**上下文窗口示意图**：
+**Context Window Schematic:**
 
 ```mermaid
 graph TB
-    subgraph 上下文窗口_128K_Token
-    A[系统提示词<br/>5K Token] --> B[用户输入1<br/>10K Token]
-    B --> C[AI回复1<br/>15K Token]
-    C --> D[用户输入2<br/>8K Token]
-    D --> E[AI回复2<br/>12K Token]
-    E --> F[用户输入3<br/>5K Token]
-    F --> G[AI回复3<br/>10K Token]
-    G --> H[剩余空间<br/>63K Token]
+    subgraph Context_Window_128K_Tokens
+    A[System Prompt<br/>5K Tokens] --> B[User Input 1<br/>10K Tokens]
+    B --> C[AI Response 1<br/>15K Tokens]
+    C --> D[User Input 2<br/>8K Tokens]
+    D --> E[AI Response 2<br/>12K Tokens]
+    E --> F[User Input 3<br/>5K Tokens]
+    F --> G[AI Response 3<br/>10K Tokens]
+    G --> H[Remaining Space<br/>63K Tokens]
     end
-    
-    I[新输入] -.超出窗口.-> J[丢弃最早对话]
-    
+
+    I[New Input] -.exceeds window.-> J[Discard Earliest Dialogue]
+
     style A fill:#e1f5ff
     style H fill:#ccffcc
     style J fill:#ffcccc
 ```
 
-**主流模型的上下文窗口:**
+**Context Windows of Mainstream Models:**
 
-| 模型 | 上下文窗口 | 约等于 | 大致相当于 |
-|------|-----------|--------|-----------|
-| GPT-4 Turbo | 128K Token | 10 万字中文,约 300 页 Word | 一本薄书 |
-| Claude 3.5 Sonnet | 200K Token | 15 万字中文,约 500 页 Word | 1-5 本书 |
-| Gemini 1.5 Pro | 1M Token | 75 万字中文,约 2500 页 Word | 十几本书 |
-| 讯飞星火 | 128K Token | 10 万字中文 | 一本薄书 |
-| 文心一言 | 128K Token | 10 万字中文 | 一本薄书 |
-| Kimi | 200K Token | 15 万字中文 | 1-5 本书 |
+| Model | Context Window | Equivalent To | Roughly Equivalent To |
+|-------|---------------|---------------|----------------------|
+| GPT-4 Turbo | 128K Tokens | 100K Chinese characters, ~300 Word pages | A thin book |
+| Claude 3.5 Sonnet | 200K Tokens | 150K Chinese characters, ~500 Word pages | 1-5 books |
+| Gemini 1.5 Pro | 1M Tokens | 750K Chinese characters, ~2500 Word pages | Over a dozen books |
+| iFlytek Spark | 128K Tokens | 100K Chinese characters | A thin book |
+| Wenxin Yiyan | 128K Tokens | 100K Chinese characters | A thin book |
+| Kimi | 200K Tokens | 150K Chinese characters | 1-5 books |
 
-**上下文窗口包含什么?**
+**What Does Context Window Include?**
 
-一次对话中的所有内容都占用上下文窗口:
-- 你的所有输入(提示词 + 上传的文档)
-- AI 的所有输出
-- 系统提示词(你看不到,但存在)
+All content in a conversation occupies the context window:
+- All your inputs (prompts + uploaded documents)
+- All AI's outputs
+- System prompts (you don't see them, but they exist)
 
-**举例:**
+**Example:**
 
-假设你用 GPT-4(128K Token 窗口):
-1. 你上传一份 50 页报告(3.5 万 Token)
-2. 你问"总结这份报告"(10 Token)
-3. AI 回答 2000 字(3000 Token)
-4. 你追问"重点讲讲第 3 章"(10 Token)
-5. AI 再回答 1000 字(1500 Token)
+Suppose you use GPT-4 (128K Token window):
+1. You upload a 50-page report (35K Tokens)
+2. You ask "Summarize this report" (10 Tokens)
+3. AI responds with 2000 characters (3000 Tokens)
+4. You follow up "Focus on Chapter 3" (10 Tokens)
+5. AI responds with another 1000 characters (1500 Tokens)
 
-此时已用:35000 + 10 + 3000 + 10 + 1500 = 39520 Token
+Used so far: 35000 + 10 + 3000 + 10 + 1500 = 39520 Tokens
 
-剩余:128000 - 39520 = 88480 Token,还能继续对话。
+Remaining: 128000 - 39520 = 88480 Tokens, can continue the conversation.
 
-**超出窗口会怎样?**
+**What Happens When Exceeding the Window?**
 
-不同模型处理方式不同:
-- **截断**:丢弃最早的对话,只保留最近的(最常见)
-- **报错**:直接提示"上下文过长,请缩短输入"
-- **总结压缩**:自动总结早期对话,用总结替代原文(Claude 的做法)
+Different models handle this differently:
+- **Truncation**: Discard earliest dialogue, keep only the most recent (most common)
+- **Error**: Directly prompt "Context too long, please shorten input"
+- **Summary Compression**: Automatically summarize early dialogue, replace original with summary (Claude's approach)
 
-**❌ 别这样做**:
-- 把 100 页 PDF 直接扔给 8K 窗口的老模型
-- 一个对话窗口从早聊到晚,几百轮对话都不换
-- 改了一个小需求就重复粘贴整份 PRD
+**Don't Do This:**
+- Throw a 100-page PDF to an old model with an 8K window
+- Use one conversation window all day, hundreds of rounds without switching
+- Re-paste an entire PRD for a small requirement change
 
-**✅ 应该这样做**:
+**Do This Instead:**
 
-**步骤化操作（3 个习惯）**:
+**Step-by-Step Operations (3 Habits):**
 
-1. **第 1 步：任务切换就新开对话**。写邮件一个窗口,做分析一个窗口,互不污染。
-2. **第 2 步：长文档先压缩再喂**。30 页报告先让 AI 按章节总结,再讨论。
-3. **第 3 步：重要指令放在最后**。AI 越往后看越"记得清",最关键的要求放最后一段。
+1. **Habit 1: Start New Conversation When Switching Tasks**. One window for emails, another for analysis, don't cross-contaminate.
+2. **Habit 2: Compress Long Documents Before Feeding**. For a 30-page report, have AI summarize by chapter first, then discuss.
+3. **Habit 3: Put Important Instructions at the End**. AI "remembers better" what comes later; put key requirements in the final paragraph.
 
-**实际影响:**
+**Practical Impact:**
 
-**场景 1:长文档分析**
-- 如果文档超过上下文窗口,必须分段处理
-- 或者选择窗口更大的模型(如 Gemini 1.5 Pro、Kimi)
+**Scenario 1: Long Document Analysis**
+- If the document exceeds the context window, must process in segments
+- Or choose a model with a larger window (like Gemini 1.5 Pro, Kimi)
 
-**场景 2:长对话**
-- 对话轮次太多,AI 会"忘记"最开始的指令
-- 解决方法:定期重申关键信息,或重开对话
+**Scenario 2: Long Conversations**
+- Too many dialogue rounds, AI will "forget" initial instructions
+- Solution: Periodically reiterate key information, or start a new conversation
 
-**场景 3:成本优化**
-- 上下文越长,每次调用成本越高(因为要重新处理所有历史)
-- 不必要的长上下文是浪费钱
+**Scenario 3: Cost Optimization**
+- Longer context means higher cost per call (because all history must be reprocessed)
+- Unnecessary long context is wasting money
 
-**这一段的核心 Takeaway:**
-上下文窗口是 AI 的"短期记忆"限制。选模型时要看窗口大小,用的时候要注意不要塞太多无关信息。
+**Key Takeaway:**
+Context window is AI's "short-term memory" limit. When choosing a model, look at window size; when using it, be careful not to stuff too much irrelevant information.
 
-### 2.4 训练数据:AI 为什么有"知识截止日期"
+### 2.4 Training Data: Why AI Has a "Knowledge Cutoff Date"
 
-**什么是训练数据?**
+**What is Training Data?**
 
-AI 的"知识"来自训练数据——它在训练阶段读过的所有文本。训练完成后,这些知识就固定了,除非重新训练。
+AI's "knowledge" comes from training data - all the text it read during the training phase. After training completes, this knowledge is fixed unless retrained.
 
-每个大模型都有一个**"知识截止日期"**——它学到的东西只到那个时间点为止。
+Every large model has a **"knowledge cutoff date"** - what it learned only goes up to that point in time.
 
-**主流模型的知识截止日期:**
+**Knowledge Cutoff Dates of Mainstream Models:**
 
-| 模型 | 知识截止日期 | 说明 |
-|------|------------|------|
-| GPT-4 | 2023 年 10 月 | 不知道之后的事 |
-| Claude 3.5 | 2024 年 4 月 | 不知道之后的事 |
-| Gemini | 实时联网 | 可以搜索最新信息 |
-| 讯飞星火 | 2024 年 6 月 | 国内模型更新较快 |
-| 文心一言 | 2024 年 8 月 | 国内模型更新较快 |
-| Kimi | 实时联网 | 可以搜索最新信息 |
+| Model | Knowledge Cutoff Date | Notes |
+|-------|----------------------|-------|
+| GPT-4 | October 2023 | Doesn't know anything after |
+| Claude 3.5 | April 2024 | Doesn't know anything after |
+| Gemini | Real-time web access | Can search for latest information |
+| iFlytek Spark | June 2024 | Domestic models update faster |
+| Wenxin Yiyan | August 2024 | Domestic models update faster |
+| Kimi | Real-time web access | Can search for latest information |
 
-**为什么有截止日期?**
+**Why Have a Cutoff Date?**
 
-因为训练一个大模型需要:
-- 数万块 GPU
-- 数百万美元成本
-- 数周到数月时间
+Because training a large model requires:
+- Tens of thousands of GPUs
+- Millions of dollars in cost
+- Weeks to months of time
 
-不可能每天都重新训练,所以知识会"过时"。
+Impossible to retrain every day, so knowledge becomes "outdated."
 
-**❌ 别这样做**:
-- 问 2026 年 5 月的新闻
-- 问上周发布的新政策
-- 问"现在"什么 AI 最强
+**Don't Do This:**
+- Ask about news from May 2026
+- Ask about new policies released last week
+- Ask "what AI is strongest right now"
 
-**✅ 应该这样做**:
+**Do This Instead:**
 
-**复制即用模板卡**:
+**Copy-and-Use Template Card:**
 
 ```
-【时效性三问】
-你准备问 AI 一个问题前，先自问：
-1. 这个答案会不会随时间变化？
-   否 → 直接问 AI。
-   是 → 下一问。
-2. 变化的速度是什么？
-   年级 → AI 凑合用，注意核查。
-   月/周级 → 必须用联网版或官网查。
-3. 这个答案错了代价大不大？
-   小 → 可以将就。
-   大（合同、法律、医疗、财务）→ 一律人工核查。
+[Timeliness Three Questions]
+Before asking AI a question, first ask yourself:
+1. Will this answer change over time?
+   No -> Ask AI directly.
+   Yes -> Next question.
+2. What's the rate of change?
+   Year-level -> AI is okay, but verify.
+   Month/week-level -> Must use web-connected version or check official sources.
+3. What's the cost if this answer is wrong?
+   Small -> Can make do.
+   Big (contracts, legal, medical, financial) -> Always verify manually.
 ```
 
-**实际影响:**
+**Practical Impact:**
 
-**场景 1:时事问题**
+**Scenario 1: Current Events**
 
-❌ **错误用法:**
-"2026 年 5 月 6 日发生了什么大事?"
-→ 如果模型截止日期是 2024 年,它会编一个答案或说"我不知道"
+**Wrong Usage:**
+"What major events happened on May 6, 2026?"
+-> If the model's cutoff is 2024, it will make up an answer or say "I don't know"
 
-✅ **正确用法:**
-用联网版模型(Gemini、Kimi、文心联网版),或用搜索引擎
+**Correct Usage:**
+Use a web-connected model (Gemini, Kimi, Wenxin web version), or use a search engine
 
-**场景 2:技术文档**
+**Scenario 2: Technical Documentation**
 
-❌ **错误用法:**
-"React 19 有哪些新特性?"(如果模型训练时 React 还是 18)
-→ AI 可能会编造,或给出 React 18 的信息
+**Wrong Usage:**
+"What are the new features in React 19?" (if the model was trained when React was still 18)
+-> AI might make things up, or give React 18 information
 
-✅ **正确用法:**
-- 用联网版模型
-- 或明确告诉 AI:"这是 React 19 的官方文档(粘贴文档),帮我总结新特性"
+**Correct Usage:**
+- Use a web-connected model
+- Or explicitly tell AI: "Here's React 19's official documentation (paste docs), help me summarize new features"
 
-**场景 3:企业内部信息**
+**Scenario 3: Company Internal Information**
 
-❌ **错误用法:**
-"我们公司去年的战略是什么?"
-→ AI 不可能知道你公司的内部信息
+**Wrong Usage:**
+"What was our company's strategy last year?"
+-> AI can't possibly know your company's internal information
 
-✅ **正确用法:**
-上传相关文档,让 AI 基于文档回答
+**Correct Usage:**
+Upload relevant documents, have AI answer based on documents
 
-**这一段的核心 Takeaway:**
-AI 的知识有截止日期,不知道之后的事。需要最新信息时,用联网版模型或主动提供资料。
+**Key Takeaway:**
+AI's knowledge has a cutoff date and doesn't know anything after. When you need the latest information, use a web-connected model or actively provide materials.
 
-**本节产出**
+**Section Output**
 
-✅ 你现在应该能回答:
-- 为什么 AI 有时很聪明有时很笨？(它在猜词,不在思考)
-- 为什么同样的问题今天和明天答案可能不一样？(模型有随机性 + 版本更新)
-- 为什么问"今天天气怎样"AI 答不出来？(没联网 + 训练截止日期)
-- 为什么长对话容易"跑偏"？(上下文窗口 + 记忆衰减)
+Now you should be able to answer:
+- Why is AI sometimes smart and sometimes dumb? (It's guessing words, not thinking)
+- Why might the same question have different answers today vs. tomorrow? (Model has randomness + version updates)
+- Why can't AI answer "what's the weather today"? (No web access + training cutoff date)
+- Why do long conversations easily "drift off"? (Context window + memory decay)
 
-**带走的工具**: 《Token / 上下文 / 截止日期 快速估算表》。
+**Takeaway Tool**: "Token / Context / Cutoff Date Quick Estimation Table."
 
 ---
 
-## Section 3:AI 的能力边界(25分钟)
+## Section 3: AI's Capability Boundaries (25 minutes)
 
-好,现在我们来系统梳理 AI 的能力边界。知道它能做什么、不能做什么,才能用对地方。
+Now let's systematically review AI's capability boundaries. Knowing what it can and cannot do helps you use it in the right places.
 
-第 2 节讲了"AI 怎么工作",这节讲"AI 能干什么、不能干什么"。这是你**每天做决策**时最需要的那张表。
+Section 2 covered "how AI works"; this section covers "what AI can and cannot do." This is the table you need most for **daily decision-making**.
 
-### 3.1 AI 的 5 大"主场" vs 5 大"翻车区"
+### 3.1 AI's 5 Major "Home Fields" vs. 5 Major "Fail Zones"
 
-**AI 能力边界矩阵图**：
+**AI Capability Boundary Matrix:**
 
 ```mermaid
 graph TB
-    subgraph 主场区域_放心使用
-    A1[文本生成<br/>80分] 
-    A2[改写润色<br/>85分]
-    A3[总结提炼<br/>85分]
-    A4[翻译转写<br/>80分]
-    A5[头脑风暴<br/>70分]
+    subgraph Home_Fields_Use_With_Confidence
+    A1[Text Generation<br/>80pts]
+    A2[Rewriting & Polishing<br/>85pts]
+    A3[Summarizing & Extracting<br/>85pts]
+    A4[Translation & Transcription<br/>80pts]
+    A5[Brainstorming<br/>70pts]
     end
-    
-    subgraph 翻车区域_必须核查
-    B1[实时信息<br/>❌过时编造]
-    B2[精确计算<br/>❌答案错漏]
-    B3[主观判断<br/>❌瞎蒙]
-    B4[保密内容<br/>❌泄露风险]
-    B5[专业决策<br/>❌责任事故]
+
+    subgraph Fail_Zones_Must_Verify
+    B1[Real-time Info<br/>Outdated/Fabricated]
+    B2[Precise Calculation<br/>Wrong/Missing Answers]
+    B3[Subjective Judgment<br/>Just Guessing]
+    B4[Confidential Content<br/>Leak Risk]
+    B5[Professional Decisions<br/>Liability Issues]
     end
-    
+
     style A1 fill:#ccffcc
     style A2 fill:#ccffcc
     style A3 fill:#ccffcc
@@ -803,295 +810,295 @@ graph TB
     style B5 fill:#ffcccc
 ```
 
-**✅ 主场（放心交给 AI）**:
+**Home Fields (Confidently Hand to AI):**
 
-| 能力 | 典型任务 | 质量预期 |
-|------|---------|---------|
-| 文本生成 | 写邮件、写通知、起草稿 | 80 分，稍改即用 |
-| 改写润色 | 让一段话更专业/更口语/更简短 | 85 分，可直接用 |
-| 总结提炼 | 把 1 万字压到 500 字 | 85 分，准确度高 |
-| 翻译转写 | 中英互译、正式/口语切换 | 80 分，需校对 |
-| 头脑风暴 | 给 20 个标题、10 个活动创意 | 70 分，量够用 |
+| Capability | Typical Tasks | Quality Expectation |
+|------------|---------------|---------------------|
+| Text Generation | Writing emails, notices, drafts | 80 points, usable with minor edits |
+| Rewriting & Polishing | Making text more professional/casual/concise | 85 points, can use directly |
+| Summarizing & Extracting | Compressing 10K characters to 500 | 85 points, high accuracy |
+| Translation & Transcription | Chinese-English, formal/casual switching | 80 points, needs proofreading |
+| Brainstorming | 20 titles, 10 event ideas | 70 points, sufficient quantity |
 
-**❌ 翻车区（别交给 AI，或必须核查）**:
+**Fail Zones (Don't Hand to AI, or Must Verify):**
 
-| 能力 | 典型翻车场景 | 后果 |
-|------|------------|------|
-| 实时信息 | 问今天股价、今天新闻、当月政策 | 过时或编造 |
-| 精确计算 | 复杂财务、多步骤数学、严谨统计 | 答案错漏 |
-| 主观判断 | "哪个方案更好"（没给评估标准时） | 瞎蒙 |
-| 保密内容处理 | 上传客户名单、财务原始数据 | 数据泄露风险 |
-| 特定领域专业决策 | 法律判决、医疗诊断、工程安全认证 | 责任事故 |
+| Capability | Typical Fail Scenarios | Consequence |
+|------------|------------------------|-------------|
+| Real-time Information | Today's stock prices, today's news, this month's policies | Outdated or fabricated |
+| Precise Calculation | Complex finance, multi-step math, rigorous statistics | Wrong/missing answers |
+| Subjective Judgment | "Which solution is better" (when no evaluation criteria given) | Just guessing |
+| Confidential Content | Uploading client lists, raw financial data | Data leak risk |
+| Specific Domain Professional Decisions | Legal judgments, medical diagnoses, engineering safety certifications | Liability incidents |
 
-### 3.2 幻觉（Hallucination）——最要警惕的翻车模式
+### 3.2 Hallucination - The Failure Mode to Be Most Alert About
 
-**什么是幻觉**: AI 生成**看起来很合理、措辞很专业、但根本不存在**的内容。
+**What is Hallucination**: AI generates content that **looks reasonable, sounds professional, but simply doesn't exist**.
 
-**真实案例**:
+**Real Cases:**
 
-- 2023 年，美国一位律师用 ChatGPT 写诉状，里面引用了 6 个判例，全是 AI 编的——法官一查，罚款 5000 美元。
-- 国内某产品经理用 AI 写竞品分析，里面"某报告数据显示 XX"——事后去查，那份报告压根不存在。
-- 某运营写公众号文章，AI 引用了"哈佛大学 2023 研究"——其实没这项研究。
+- In 2023, an American attorney used ChatGPT to write a legal brief citing 6 precedents - all fabricated by AI. The judge checked and fined $5,000.
+- A domestic product manager used AI to write competitor analysis citing "a report shows XX" - upon checking later, that report never existed.
+- An operations person wrote a public account article; AI cited "Harvard University 2023 research" - no such research existed.
 
-**为什么会幻觉**: 回到第 2 节的类比——AI 在"接龙"，它不在"查证"。"某某大学最近有个研究表明……"这个句式它见过上万次，于是顺手就接一个像样的出来。
+**Why Hallucination Occurs**: Return to Section 2's analogy - AI is "chaining words," not "verifying facts." It has seen the sentence pattern "A certain university recently had a study showing..." tens of thousands of times, so it naturally chains one that sounds plausible.
 
-**❌ 别这样做**:
-- 看到 AI 说得头头是道、引用具体、数字精确，就信
-- 把 AI 生成的内容直接对外发出去
-- 在需要权威性的场景（法律、医疗、学术）相信 AI 自带的"引用"
+**Don't Do This:**
+- Believe AI when it speaks confidently, cites specifically, and gives precise numbers
+- Directly publish AI-generated content externally
+- Trust AI's "citations" in scenarios requiring authority (legal, medical, academic)
 
-**✅ 应该这样做**:
+**Do This Instead:**
 
-**步骤化操作（防幻觉 4 步法）**:
+**Step-by-Step Operations (Anti-Hallucination 4-Step Method):**
 
-1. **第 1 步：分类文本**。AI 输出里哪些是"观点"（可信）、哪些是"事实性断言"（要查）。
-2. **第 2 步：高危项圈出来**。人名、公司名、书名、日期、数字、法条、引用——全部标红。
-3. **第 3 步：逐个核查**。去官网、去权威源、去 Google Scholar 对照。
-4. **第 4 步：不确定就删**。宁可文章少 100 字，别带错一个数字。
+1. **Step 1: Categorize Text**. In AI's output, which parts are "opinions" (trustworthy) vs. "factual assertions" (need verification).
+2. **Step 2: Circle High-Risk Items**. Names, company names, book titles, dates, numbers, laws, citations - mark all in red.
+3. **Step 3: Verify One by One**. Check official websites, authoritative sources, Google Scholar.
+4. **Step 4: Delete If Uncertain**. Better to have 100 fewer words than one wrong number.
 
-**复制即用模板卡**:
-
-```
-【AI 输出核查清单（6 问）】
-用 AI 产出任何对外文稿前，逐条过：
-□ 1. 里面有没有具体数字？→ 查来源
-□ 2. 里面有没有人名/公司名？→ 查是否真实存在
-□ 3. 里面有没有"研究表明"/"报告显示"？→ 找原文链接
-□ 4. 里面有没有法条/政策名？→ 去官方库核对
-□ 5. 里面有没有时效性内容？→ 看 AI 训练截止日期
-□ 6. 里面有没有让我"感觉很专业但自己也不太懂"的段落？→ 问专业同事
-全部勾选后才能发出去。
-```
-
-### 3.3 快速决策表：这个任务该不该交给 AI
+**Copy-and-Use Template Card:**
 
 ```
-你要做的任务 →
-├─ 需要"编造创意/文字/方案"吗？
-│   └─ 是 → 交给 AI，第一版靠它
-├─ 需要"精确数字/实时信息/权威引用"吗？
-│   └─ 是 → 不交给 AI，或只让它"列出思路"由你去查
-├─ 涉及"保密数据/用户隐私/公司机密"吗？
-│   └─ 是 → 要么脱敏后用，要么用私有部署 AI，绝不走公网
-├─ 涉及"最终法律/医疗/重大财务决策"吗？
-│   └─ 是 → AI 只做草稿，专业人士定稿
-└─ 其他 → 放心用
+[AI Output Verification Checklist (6 Questions)]
+Before publishing any AI-produced external document, go through each:
+[ ] 1. Are there specific numbers? -> Check sources
+[ ] 2. Are there names/company names? -> Check if they actually exist
+[ ] 3. Are there "studies show"/"reports indicate"? -> Find original links
+[ ] 4. Are there laws/policy names? -> Verify in official databases
+[ ] 5. Is there time-sensitive content? -> Check AI's training cutoff date
+[ ] 6. Are there paragraphs that "feel professional but I don't quite understand"? -> Ask professional colleagues
+Only publish after checking all boxes.
 ```
 
-**本节产出**
+### 3.3 Quick Decision Table: Should This Task Be Handed to AI
 
-✅ 你现在应该能:
-- 看到一个任务，3 秒内判断"AI 能做到什么程度、我还要补什么"
-- 理解"幻觉"不是 AI 故意骗你，是它的工作机制决定的
-- 养成"AI 出的具体数字/引用都要核"的条件反射
+```
+Your task ->
+├─ Need to "create/generate ideas/text/plans"?
+│   └─ Yes -> Hand to AI, rely on it for first draft
+├─ Need "precise numbers/real-time info/authoritative citations"?
+│   └─ Yes -> Don't hand to AI, or only let it "list ideas" while you verify
+├─ Involves "confidential data/user privacy/company secrets"?
+│   └─ Yes -> Either anonymize before using, or use privately deployed AI, never on public networks
+├─ Involves "final legal/medical/major financial decisions"?
+│   └─ Yes -> AI only does drafts, professionals finalize
+└─ Other -> Use confidently
+```
 
-**带走的工具**: 《AI 能力边界图》+《AI 输出核查 6 问清单》。
+**Section Output**
+
+Now you should be able to:
+- See a task and within 3 seconds judge "how far can AI go, what do I need to supplement"
+- Understand "hallucination" isn't AI intentionally deceiving you; it's determined by its working mechanism
+- Develop the conditioned reflex "always verify specific numbers/citations from AI output"
+
+**Takeaway Tools**: "AI Capability Boundary Map" + "AI Output Verification 6-Question Checklist."
 
 ---
 
-## Section 4:国内外主流 AI 产品全景图(20分钟)
+## Section 4: Overview of Mainstream Domestic and International AI Products (20 minutes)
 
-好,现在我们来看看市面上有哪些主流 AI 产品,以及如何选择适合自己的。
+Now let's look at what mainstream AI products exist in the market and how to choose what suits you.
 
-### 4.1 国际主流产品
+### 4.1 International Mainstream Products
 
 **ChatGPT (OpenAI)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 生态最成熟、插件最多、GPT-4 推理能力强 |
-| 劣势 | 国内访问需要特殊网络、付费版较贵($20/月) |
-| 适合场景 | 复杂推理、代码生成、英文内容创作 |
-| 上下文窗口 | 128K Token |
-| 知识截止 | 2023年10月 |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Most mature ecosystem, most plugins, strong GPT-4 reasoning |
+| Disadvantages | Requires special network access in China, expensive paid version ($20/month) |
+| Best For | Complex reasoning, code generation, English content creation |
+| Context Window | 128K Tokens |
+| Knowledge Cutoff | October 2023 |
 
 **Claude (Anthropic)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 长文档处理能力强、输出质量稳定、安全性好 |
-| 劣势 | 国内访问需要特殊网络、某些创意任务保守 |
-| 适合场景 | 长文档分析、专业写作、代码审查 |
-| 上下文窗口 | 200K Token |
-| 知识截止 | 2024年4月 |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Strong long document processing, stable output quality, good safety |
+| Disadvantages | Requires special network access in China, conservative on some creative tasks |
+| Best For | Long document analysis, professional writing, code review |
+| Context Window | 200K Tokens |
+| Knowledge Cutoff | April 2024 |
 
 **Gemini (Google)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 实时联网、多模态能力强、免费版额度大 |
-| 劣势 | 国内访问需要特殊网络、中文能力相对弱 |
-| 适合场景 | 需要最新信息、图文混合处理 |
-| 上下文窗口 | 1M Token |
-| 知识截止 | 实时联网 |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Real-time web access, strong multimodal capabilities, generous free tier |
+| Disadvantages | Requires special network access in China, relatively weaker Chinese |
+| Best For | Need for latest information, mixed image-text processing |
+| Context Window | 1M Tokens |
+| Knowledge Cutoff | Real-time web access |
 
-### 4.2 国内主流产品
+### 4.2 Domestic Mainstream Products
 
-**讯飞星火**
+**iFlytek Spark**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 中文能力强、语音识别准、行业版本多 |
-| 劣势 | 代码能力相对弱、创意发散不如国际产品 |
-| 适合场景 | 中文写作、会议纪要、教育场景 |
-| 上下文窗口 | 128K Token |
-| 价格 | 免费版 + 付费版(¥199/月) |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Strong Chinese capability, accurate voice recognition, many industry versions |
+| Disadvantages | Relatively weaker code capability, less creative ideation than international products |
+| Best For | Chinese writing, meeting minutes, education scenarios |
+| Context Window | 128K Tokens |
+| Price | Free + Paid (¥199/month) |
 
-**文心一言 (百度)**
+**Wenxin Yiyan (Baidu)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 中文理解好、联网搜索、百度生态集成 |
-| 劣势 | 输出有时过于"正式"、创意性一般 |
-| 适合场景 | 信息检索、中文内容生成、企业应用 |
-| 上下文窗口 | 128K Token |
-| 价格 | 免费版 + 付费版(¥59.9/月) |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Good Chinese understanding, web search, Baidu ecosystem integration |
+| Disadvantages | Output sometimes too "formal," average creativity |
+| Best For | Information retrieval, Chinese content generation, enterprise applications |
+| Context Window | 128K Tokens |
+| Price | Free + Paid (¥59.9/month) |
 
-**Kimi (月之暗面)**
+**Kimi (Moonshot AI)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 超长上下文(200K)、联网搜索、免费 |
-| 劣势 | 推理能力相对弱、有时输出冗长 |
-| 适合场景 | 长文档处理、论文阅读、信息整合 |
-| 上下文窗口 | 200K Token |
-| 价格 | 完全免费 |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Super long context (200K), web search, free |
+| Disadvantages | Relatively weaker reasoning, sometimes verbose output |
+| Best For | Long document processing, paper reading, information integration |
+| Context Window | 200K Tokens |
+| Price | Completely free |
 
-**通义千问 (阿里)**
+**Tongyi Qianwen (Alibaba)**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 阿里生态集成、多模态能力、企业版功能全 |
-| 劣势 | 个人版功能受限、输出质量波动 |
-| 适合场景 | 电商场景、企业应用、图文生成 |
-| 上下文窗口 | 128K Token |
-| 价格 | 免费版 + 企业版 |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Alibaba ecosystem integration, multimodal capabilities, full enterprise features |
+| Disadvantages | Personal version features limited, output quality fluctuates |
+| Best For | E-commerce scenarios, enterprise applications, image-text generation |
+| Context Window | 128K Tokens |
+| Price | Free + Enterprise |
 
 **DeepSeek**
 
-| 维度 | 详情 |
-|------|------|
-| 优势 | 代码能力强、推理能力好、价格便宜 |
-| 劣势 | 知名度低、生态不完善 |
-| 适合场景 | 代码生成、技术文档、逻辑推理 |
-| 上下文窗口 | 128K Token |
-| 价格 | API 按量付费(极低价) |
+| Dimension | Details |
+|-----------|---------|
+| Advantages | Strong code capability, good reasoning, cheap pricing |
+| Disadvantages | Low brand awareness, immature ecosystem |
+| Best For | Code generation, technical documentation, logical reasoning |
+| Context Window | 128K Tokens |
+| Price | Pay-per-use API (extremely low prices) |
 
-### 4.3 选型决策框架
+### 4.3 Selection Decision Framework
 
-**AI 产品选型决策树**:
+**AI Product Selection Decision Tree:**
 
 ```mermaid
 graph TD
-    A[开始选型] --> B{需要最新信息?}
-    B -->|是| C[Gemini/Kimi<br/>文心联网版]
-    B -->|否| D{处理长文档?}
-    
-    D -->|是<br/>50页+| E[Claude 200K<br/>Kimi 200K<br/>Gemini 1M]
-    D -->|否| F{主要用途?}
-    
-    F -->|写代码| G[ChatGPT GPT-4<br/>DeepSeek<br/>Claude]
-    F -->|中文创作| H{预算?}
-    F -->|数据分析| I[ChatGPT<br/>Code Interpreter]
-    
-    H -->|有预算| J[讯飞星火付费版<br/>ChatGPT Plus]
-    H -->|免费| K[Kimi<br/>文心一言<br/>通义千问]
-    
-    F -->|企业应用| L{部署方式?}
-    L -->|云端| M[讯飞星火企业版<br/>文心企业版]
-    L -->|私有部署| N[联系厂商<br/>定制方案]
-    
+    A[Start Selection] --> B{Need Latest Info?}
+    B -->|Yes| C[Gemini/Kimi<br/>Wenxin Web Version]
+    B -->|No| D{Processing Long Docs?}
+
+    D -->|Yes<br/>50+ pages| E[Claude 200K<br/>Kimi 200K<br/>Gemini 1M]
+    D -->|No| F{Main Use Case?}
+
+    F -->|Coding| G[ChatGPT GPT-4<br/>DeepSeek<br/>Claude]
+    F -->|Chinese Creation| H{Budget?}
+    F -->|Data Analysis| I[ChatGPT<br/>Code Interpreter]
+
+    H -->|Has Budget| J[iFlytek Spark Paid<br/>ChatGPT Plus]
+    H -->|Free| K[Kimi<br/>Wenxin Yiyan<br/>Tongyi Qianwen]
+
+    F -->|Enterprise Apps| L{Deployment Method?}
+    L -->|Cloud| M[iFlytek Spark Enterprise<br/>Wenxin Enterprise]
+    L -->|Private Deployment| N[Contact Vendor<br/>Custom Solution]
+
     style C fill:#e1f5ff
     style E fill:#fff4e1
     style G fill:#e1ffe1
     style K fill:#ccffcc
 ```
 
-**快速决策表**:
+**Quick Decision Table:**
 
 ```
-你的主要需求 →
-├─ 需要最新信息/实时搜索？
-│   └─ 是 → Gemini / Kimi / 文心一言(联网版)
-├─ 处理超长文档(50页+)？
-│   └─ 是 → Claude / Kimi / Gemini
-├─ 主要写代码？
-│   └─ 是 → ChatGPT(GPT-4) / DeepSeek / Claude
-├─ 主要中文内容创作？
-│   └─ 是 → 讯飞星火 / 文心一言 / ChatGPT
-├─ 预算有限/想免费用？
-│   └─ 是 → Kimi / 文心一言免费版 / 通义千问
-├─ 企业应用/需要私有部署？
-│   └─ 是 → 讯飞星火企业版 / 文心企业版 / 通义企业版
-└─ 追求最强能力/不差钱？
-    └─ 是 → ChatGPT Plus(GPT-4) / Claude Pro
+Your Main Need ->
+├─ Need latest info/real-time search?
+│   └─ Yes -> Gemini / Kimi / Wenxin Yiyan (web version)
+├─ Processing super long documents (50+ pages)?
+│   └─ Yes -> Claude / Kimi / Gemini
+├─ Mainly writing code?
+│   └─ Yes -> ChatGPT (GPT-4) / DeepSeek / Claude
+├─ Mainly Chinese content creation?
+│   └─ Yes -> iFlytek Spark / Wenxin Yiyan / ChatGPT
+├─ Limited budget/want free?
+│   └─ Yes -> Kimi / Wenxin Yiyan Free / Tongyi Qianwen
+├─ Enterprise apps/need private deployment?
+│   └─ Yes -> iFlytek Spark Enterprise / Wenxin Enterprise / Tongyi Enterprise
+└─ Pursuing strongest capability/money no object?
+    └─ Yes -> ChatGPT Plus (GPT-4) / Claude Pro
 ```
 
-**复制即用模板卡**:
+**Copy-and-Use Template Card:**
 
 ```
-【个人选型三步法】
-第 1 步：列出你最常做的 3 个任务
-  例如：写周报、分析竞品、写代码
+[Personal Selection 3-Step Method]
+Step 1: List your 3 most common tasks
+  Example: Write weekly reports, analyze competitors, write code
 
-第 2 步：对照上面的产品表，找出每个任务的最佳选择
-  例如：写周报 → 讯飞星火
-       分析竞品 → Kimi(长文档)
-       写代码 → ChatGPT
+Step 2: Compare with the product table above, find best choice for each task
+  Example: Weekly reports -> iFlytek Spark
+       Competitor analysis -> Kimi (long docs)
+       Coding -> ChatGPT
 
-第 3 步：选 1-2 个主力产品 + 1 个备用
-  主力：覆盖 80% 任务
-  备用：处理主力不擅长的场景
+Step 3: Choose 1-2 primary products + 1 backup
+  Primary: Covers 80% of tasks
+  Backup: Handles scenarios primary isn't good at
 ```
 
-**本节产出**
+**Section Output**
 
-✅ 你现在应该能:
-- 说出 3-5 个主流 AI 产品的特点
-- 根据自己的工作场景选出最适合的 1-2 个产品
-- 知道什么场景该换什么工具
+Now you should be able to:
+- Name characteristics of 3-5 mainstream AI products
+- Choose the 1-2 most suitable products for your work scenarios
+- Know which tool to switch to for which scenario
 
-**带走的工具**: 《AI 工具选型对照表》。
+**Takeaway Tool**: "AI Tool Selection Comparison Chart."
 
 ---
 
-## Section 5:第一次高质量对话实操(30分钟)
+## Section 5: First High-Quality Conversation Practice (30 minutes)
 
-好,前面讲了这么多理论,现在我们来实战——手把手带大家完成第一次高质量的 AI 对话。
+We've covered a lot of theory; now let's practice - I'll guide you step-by-step through your first high-quality AI conversation.
 
-### 5.1 对话前的准备清单
+### 5.1 Pre-Conversation Preparation Checklist
 
-在开始对话前,先问自己 5 个问题:
+Before starting a conversation, ask yourself 5 questions:
 
-**复制即用模板卡**:
+**Copy-and-Use Template Card:**
 
 ```
-【对话前 5 问】
-□ 1. 我要 AI 帮我做什么？（一句话说清任务）
-□ 2. 我的角色/背景是什么？（让 AI 知道你是谁）
-□ 3. 成功的标准是什么？（什么样的输出算合格）
-□ 4. 有什么约束条件？（字数、风格、格式、禁忌）
-□ 5. 我能提供什么背景资料？（文档、数据、案例）
+[Pre-Conversation 5 Questions]
+[ ] 1. What do I want AI to help me do? (State the task in one sentence)
+[ ] 2. What's my role/background? (Let AI know who you are)
+[ ] 3. What are the success criteria? (What kind of output counts as acceptable)
+[ ] 4. What are the constraints? (Word count, style, format, taboos)
+[ ] 5. What background materials can I provide? (Documents, data, examples)
 ```
 
-### 5.2 高质量提示词的 4 个要素
+### 5.2 Four Elements of a High-Quality Prompt
 
-一个好的提示词应该包含:
+A good prompt should include:
 
-**提示词四要素框架**:
+**Prompt Four Elements Framework:**
 
 ```mermaid
 graph LR
-    A[高质量提示词] --> B[角色定位<br/>Who]
-    A --> C[任务描述<br/>What]
-    A --> D[目标说明<br/>Why]
-    A --> E[约束条件<br/>How]
-    
-    B --> B1[我是谁<br/>AI扮演谁]
-    C --> C1[做什么<br/>越具体越好]
-    D --> D1[为什么做<br/>给上下文]
-    E --> E1[格式/长度<br/>风格/禁忌]
-    
+    A[High-Quality Prompt] --> B[Role Definition<br/>Who]
+    A --> C[Task Description<br/>What]
+    A --> D[Objective Explanation<br/>Why]
+    A --> E[Constraints<br/>How]
+
+    B --> B1[Who am I<br/>Who should AI play]
+    C --> C1[What to do<br/>More specific = better]
+    D --> D1[Why doing it<br/>Provide context]
+    E --> E1[Format/Length<br/>Style/Taboos]
+
     style A fill:#e1f5ff
     style B fill:#fff4e1
     style C fill:#e1ffe1
@@ -1099,340 +1106,339 @@ graph LR
     style E fill:#f5e1ff
 ```
 
-**1. 角色定位 (Who)**
-告诉 AI 你是谁,或者让 AI 扮演什么角色。
+**1. Role Definition (Who)**
+Tell AI who you are, or what role AI should play.
 
-❌ 烂提示词: "写一份产品需求文档"
-✅ 好提示词: "我是一家 B2B SaaS 公司的产品经理,负责 CRM 系统..."
+Bad Prompt: "Write a product requirement document"
+Good Prompt: "I'm a product manager at a B2B SaaS company, responsible for the CRM system..."
 
-**2. 任务描述 (What)**
-清晰描述要做什么,越具体越好。
+**2. Task Description (What)**
+Clearly describe what to do - the more specific, the better.
 
-❌ 烂提示词: "帮我分析竞品"
-✅ 好提示词: "帮我分析钉钉和企业微信在团队协作功能上的差异,重点对比即时通讯、文档协作、审批流程三个模块"
+Bad Prompt: "Help me analyze competitors"
+Good Prompt: "Help me analyze the differences between DingTalk and Enterprise WeChat in team collaboration features, focusing on instant messaging, document collaboration, and approval workflow modules"
 
-**3. 目标说明 (Why)**
-说明为什么要做这件事,给 AI 更多上下文。
+**3. Objective Explanation (Why)**
+Explain why you're doing this, giving AI more context.
 
-❌ 烂提示词: "写一封邮件"
-✅ 好提示词: "写一封给客户的道歉信,因为我们的服务器故障导致他们业务中断 2 小时,需要安抚情绪并说明补偿方案"
+Bad Prompt: "Write an email"
+Good Prompt: "Write an apology email to a client because our server failure caused their business to be interrupted for 2 hours. Need to soothe emotions and explain the compensation plan"
 
-**4. 约束条件 (How)**
-明确格式、长度、风格、禁忌等要求。
+**4. Constraints (How)**
+Specify format, length, style, taboos and other requirements.
 
-❌ 烂提示词: "总结这篇文章"
-✅ 好提示词: "用 3 个要点总结这篇文章,每个要点不超过 50 字,用口语化表达,避免专业术语"
+Bad Prompt: "Summarize this article"
+Good Prompt: "Summarize this article in 3 points, each no more than 50 words, in conversational style, avoiding technical jargon"
 
-### 5.3 实战案例:写一份周报
+### 5.3 Practical Case: Writing a Weekly Report
 
-**场景**: 你是一名运营,需要写本周工作周报。
+**Scenario**: You're an operations specialist and need to write this week's work report.
 
-**❌ 烂提示词版本**:
-
-```
-用户: 帮我写一份周报。
-
-AI: [生成一份通用周报模板,包含"本周工作"、"下周计划"等空洞内容]
-
-用户: 这也太敷衍了...
-```
-
-**✅ 好提示词版本**:
-
-**第 1 轮: 给足上下文**
+**Bad Prompt Version:**
 
 ```
-用户: 我是一名用户运营,负责社区活跃度提升。需要写一份本周工作周报,汇报给运营总监。
+User: Help me write a weekly report.
 
-本周主要工作:
-1. 策划并执行了"新人打卡挑战"活动,参与人数 320 人,完成率 68%
-2. 优化了社区积分规则,新增"连续签到奖励",日活提升 15%
-3. 处理了 45 个用户反馈,其中 8 个是关于积分兑换的问题
+AI: [Generates a generic weekly report template with empty content like "This Week's Work," "Next Week's Plan"]
 
-请帮我写一份周报,要求:
-- 突出数据成果
-- 说明遇到的问题和解决方案
-- 给出下周计划
-- 字数 500-800 字
-- 语气专业但不要太正式
+User: This is too perfunctory...
 ```
 
-**第 2 轮: 让 AI 提问**
+**Good Prompt Version:**
+
+**Round 1: Give Enough Context**
 
 ```
-AI: 我需要了解几个信息来写得更好:
-1. "新人打卡挑战"活动的目标完成率是多少?68% 是否达到预期?
-2. 日活提升 15% 是相比上周还是上月?
-3. 积分兑换的 8 个问题是否已解决?如何解决的?
-4. 下周有什么重点工作计划?
+User: I'm a user operations specialist responsible for community engagement. I need to write a weekly work report for the Operations Director.
 
-用户: 
-1. 目标是 70%,68% 略低于预期,主要是第 3-5 天流失较多
-2. 相比上周提升 15%
-3. 已解决,主要是用户不清楚兑换流程,我们优化了引导页
-4. 下周计划做一个"老带新"活动,目标拉新 200 人
+This week's main work:
+1. Planned and executed "Newcomer Check-in Challenge" event with 320 participants and 68% completion rate
+2. Optimized community point rules, added "consecutive check-in rewards," daily active users increased 15%
+3. Handled 45 user feedback items, 8 of which were about point redemption issues
+
+Please help me write a weekly report with these requirements:
+- Highlight data achievements
+- Explain problems encountered and solutions
+- Provide next week's plan
+- 500-800 words
+- Professional but not too formal tone
 ```
 
-**第 3 轮: 评估输出**
+**Round 2: Let AI Ask Questions**
 
 ```
-AI: [生成 800 字周报,包含数据、问题分析、解决方案、下周计划]
+AI: I need to understand a few things to write better:
+1. What was the target completion rate for the "Newcomer Check-in Challenge"? Is 68% meeting expectations?
+2. Is the 15% daily active increase compared to last week or last month?
+3. Have the 8 point redemption issues been resolved? How?
+4. What are the key work plans for next week?
 
-用户: 很好,但"遇到的问题"部分能不能更具体一些?现在写得太简略了。
-
-AI: [调整后的版本,在"遇到的问题"部分增加了具体数据和分析]
-
-用户: 完美,就用这个!
+User:
+1. Target was 70%, 68% slightly below expectation, mainly due to high drop-off on days 3-5
+2. 15% increase compared to last week
+3. Resolved, mainly users unclear about redemption process, we optimized the guidance page
+4. Next week planning a "referral" event, targeting 200 new users
 ```
 
-**对比总结**:
-
-| 维度 | 烂提示词 | 好提示词 |
-|------|---------|---------|
-| 上下文 | 无 | 角色、背景、具体工作 |
-| 数据 | 无 | 具体数字、对比基准 |
-| 要求 | 无 | 字数、风格、重点 |
-| 对话轮次 | 1 轮放弃 | 3 轮迭代 |
-| 输出质量 | 通用模板 | 可直接使用 |
-
-### 5.4 常见场景的提示词模板
-
-**场景 1: 写邮件**
+**Round 3: Evaluate Output**
 
 ```
-【模板】
-我是 [角色],需要给 [收件人] 写一封 [类型] 邮件。
+AI: [Generates 800-word weekly report including data, problem analysis, solutions, next week's plan]
 
-背景:
-- [具体情况说明]
-- [关键信息]
+User: Good, but can the "problems encountered" section be more specific? It's written too briefly now.
 
-目的:
-- [想达到什么效果]
+AI: [Adjusted version with more specific data and analysis in the "problems encountered" section]
 
-要求:
-- 语气: [正式/友好/诚恳]
-- 长度: [字数范围]
-- 必须包含: [关键信息点]
-- 避免: [禁忌内容]
+User: Perfect, let's use this!
 ```
 
-**场景 2: 分析数据**
+**Comparison Summary:**
+
+| Dimension | Bad Prompt | Good Prompt |
+|-----------|------------|-------------|
+| Context | None | Role, background, specific work |
+| Data | None | Specific numbers, comparison baselines |
+| Requirements | None | Word count, style, focus areas |
+| Dialogue Rounds | 1 round then gave up | 3 rounds of iteration |
+| Output Quality | Generic template | Ready to use directly |
+
+### 5.4 Prompt Templates for Common Scenarios
+
+**Scenario 1: Writing Emails**
 
 ```
-【模板】
-我有一份 [数据类型] 数据,包含 [数据维度]。
+[Template]
+I am [role], need to write a [type] email to [recipient].
 
-数据概况:
-- [关键数据点]
-- [时间范围]
+Background:
+- [Specific situation explanation]
+- [Key information]
 
-请帮我:
-1. 找出 [分析维度1] 的趋势
-2. 对比 [维度A] 和 [维度B] 的差异
-3. 给出 [具体问题] 的可能原因
-4. 提供 [改进方向] 的建议
+Purpose:
+- [What effect you want to achieve]
 
-输出格式:
-- 用表格呈现对比数据
-- 每个发现配一句解读
-- 建议要具体可执行
+Requirements:
+- Tone: [formal/friendly/sincere]
+- Length: [word range]
+- Must include: [key information points]
+- Avoid: [taboo content]
 ```
 
-**场景 3: 头脑风暴**
+**Scenario 2: Analyzing Data**
 
 ```
-【模板】
-我需要为 [项目/活动] 做创意策划。
+[Template]
+I have [data type] data containing [data dimensions].
 
-背景:
-- 目标用户: [用户画像]
-- 目标: [想达到什么效果]
-- 预算: [预算范围]
-- 时间: [时间限制]
+Data overview:
+- [Key data points]
+- [Time range]
 
-请给我:
-1. 10 个创意方向,每个用一句话描述
-2. 从中选出 3 个最可行的,详细展开
-3. 每个方案说明: 亮点、成本、风险、预期效果
+Please help me:
+1. Find trends in [analysis dimension 1]
+2. Compare differences between [dimension A] and [dimension B]
+3. Give possible reasons for [specific question]
+4. Provide suggestions for [improvement direction]
 
-要求:
-- 创意要新颖但可落地
-- 避免 [已做过的方案]
+Output format:
+- Present comparison data in tables
+- Each finding with one sentence of interpretation
+- Suggestions should be specific and actionable
 ```
 
-**本节产出**
+**Scenario 3: Brainstorming**
 
-✅ 你现在应该能:
-- 在开始对话前,用"对话前 5 问"做准备
-- 写出包含"角色、任务、目标、约束"4 要素的提示词
-- 完成一次 3-4 轮的高质量对话迭代
+```
+[Template]
+I need to do creative planning for [project/event].
 
-**带走的工具**: 《第一次对话记录模板》+《3 个场景的提示词模板》。
+Background:
+- Target users: [user profile]
+- Goal: [what effect you want to achieve]
+- Budget: [budget range]
+- Timeline: [time constraints]
+
+Please give me:
+1. 10 creative directions, each in one sentence
+2. Select 3 most feasible ones and expand in detail
+3. For each plan explain: highlights, cost, risks, expected results
+
+Requirements:
+- Ideas should be novel but implementable
+- Avoid [already done approaches]
+```
+
+**Section Output**
+
+Now you should be able to:
+- Before starting a conversation, prepare using "Pre-Conversation 5 Questions"
+- Write prompts containing all 4 elements: "Role, Task, Objective, Constraints"
+- Complete a high-quality 3-4 round dialogue iteration
+
+**Takeaway Tools**: "First Conversation Record Template" + "Prompt Templates for 3 Scenarios."
 
 ---
 
-## 🎯 Closing(20分钟)
+## Closing (20 minutes)
 
-### 总结
+### Summary
 
-好,我们今天用 2 小时完成了 AI 认知的重构。让我们快速回顾一下核心内容:
+We've completed the AI cognitive restructuring in 2 hours. Let's quickly review the core content:
 
-**Section 1: 三个常见误解**
-- AI 不是万能的,有明确的能力边界
-- AI 不是搜索引擎,是语言预测器
-- AI 不会一次给完美答案,需要对话迭代
+**Section 1: Three Common Misconceptions**
+- AI is not omnipotent; it has clear capability boundaries
+- AI is not a search engine; it's a language predictor
+- AI won't give perfect answers in one go; it needs iterative dialogue
 
-**Section 2: 大模型的本质**
-- AI 是"词语接龙选手",不是在思考
-- Token 是 AI 的"货币单位",决定成本和限制
-- 上下文窗口是 AI 的"短期记忆"
-- 训练数据让 AI 有"知识截止日期"
+**Section 2: Essence of Large Models**
+- AI is a "word chain player," not thinking
+- Token is AI's "currency unit," determining costs and limitations
+- Context window is AI's "short-term memory"
+- Training data gives AI a "knowledge cutoff date"
 
-**Section 3: AI 的能力边界**
-- 5 大主场: 文本生成、改写、总结、翻译、头脑风暴
-- 5 大翻车区: 实时信息、精确计算、主观判断、保密内容、专业决策
-- 幻觉是最要警惕的失败模式
+**Section 3: AI's Capability Boundaries**
+- 5 Home Fields: Text generation, rewriting, summarizing, translation, brainstorming
+- 5 Fail Zones: Real-time information, precise calculation, subjective judgment, confidential content, professional decisions
+- Hallucination is the failure mode to be most alert about
 
-**Section 4: 产品选型**
-- 国际主流: ChatGPT、Claude、Gemini
-- 国内主流: 讯飞星火、文心一言、Kimi、通义千问、DeepSeek
-- 根据场景选择 1-2 个主力 + 1 个备用
+**Section 4: Product Selection**
+- International mainstream: ChatGPT, Claude, Gemini
+- Domestic mainstream: iFlytek Spark, Wenxin Yiyan, Kimi, Tongyi Qianwen, DeepSeek
+- Choose 1-2 primary + 1 backup based on scenarios
 
-**Section 5: 第一次对话**
-- 对话前 5 问: 任务、角色、标准、约束、资料
-- 提示词 4 要素: 角色、任务、目标、约束
-- 迭代 4 式: 更具体、加约束、换视角、要对比
+**Section 5: First Conversation**
+- Pre-conversation 5 questions: Task, role, criteria, constraints, materials
+- Prompt 4 elements: Role, task, objective, constraints
+- Iteration 4 moves: More specific, add constraints, change perspective, request comparisons
 
-### 关键收获
+### Key Takeaways
 
-如果今天的课程你只记住三件事,我希望是这三件:
+If you only remember three things from today's lesson, I hope they are:
 
-1. **AI 是协作者,不是工具**: 不要期待一次性完美输出,要通过对话迭代逐步优化。第一版不满意是正常的,关键是学会追问。
+1. **AI is a Collaborator, Not a Tool**: Don't expect one-time perfect output; iteratively optimize through dialogue. Being unsatisfied with the first version is normal; the key is learning to follow up.
 
-2. **理解机制才能用好 AI**: Token、上下文窗口、训练数据这些概念不是为了炫技,而是帮你理解 AI 为什么有时聪明有时笨,从而知道如何规避问题。
+2. **Understanding Mechanisms Helps Use AI Better**: Concepts like Token, context window, and training data aren't for showing off - they help you understand why AI is sometimes smart and sometimes dumb, so you know how to avoid problems.
 
-3. **核查是必备习惯**: AI 输出的具体数字、人名、引用、日期都要核查。幻觉不是 AI 故意骗你,是它的工作机制决定的。养成"AI 出的事实性内容都要查"的条件反射。
+3. **Verification is an Essential Habit**: Always verify specific numbers, names, citations, and dates from AI output. Hallucination isn't AI intentionally deceiving you; it's determined by its working mechanism. Develop the conditioned reflex "always verify factual content from AI."
 
-### 课后实践建议
+### Post-Class Practice Suggestions
 
-我给大家留几个课后练习:
+Here are a few post-class exercises for you:
 
-**练习 1(入门级): 完成一次 3 轮对话**
-- 选择一个真实工作任务(写邮件、做总结、分析数据等)
-- 用"对话前 5 问"做准备
-- 完成至少 3 轮对话迭代
-- 记录: 第 1 版哪里不满意、如何追问、最终版本如何
+**Exercise 1 (Beginner): Complete a 3-Round Conversation**
+- Choose a real work task (write email, make summary, analyze data, etc.)
+- Prepare using "Pre-Conversation 5 Questions"
+- Complete at least 3 rounds of dialogue iteration
+- Record: What was unsatisfactory about version 1, how you followed up, how the final version turned out
 
-**练习 2(进阶级): 对比 2 个 AI 产品**
-- 选择 2 个 AI 产品(如 ChatGPT 和讯飞星火)
-- 用同一个任务测试
-- 对比: 输出质量、响应速度、中文能力、创意性
-- 得出结论: 哪个更适合你的工作场景
+**Exercise 2 (Intermediate): Compare 2 AI Products**
+- Choose 2 AI products (e.g., ChatGPT and iFlytek Spark)
+- Test with the same task
+- Compare: Output quality, response speed, Chinese capability, creativity
+- Conclude: Which suits your work scenarios better
 
-**练习 3(高级): 建立个人提示词库**
-- 整理你最常做的 5 个任务
-- 为每个任务写一个提示词模板
-- 包含: 角色、任务、目标、约束 4 要素
-- 实际使用并不断优化
-
----
-
-## 📚 下节课预告
-
-> **第 1 课: 提示词工程 - 从入门到精通**
-
-- 提示词的 7 大核心技巧
-- Few-shot、Chain-of-Thought 等高级方法
-- 针对不同场景的提示词模板库
-- 如何调试和优化提示词
-- 实战: 构建你的个人提示词库
+**Exercise 3 (Advanced): Build Personal Prompt Library**
+- Organize your 5 most common tasks
+- Write a prompt template for each task
+- Include: Role, task, objective, constraints - all 4 elements
+- Use in practice and continuously optimize
 
 ---
 
-## 📋 知识点速查表
+## Next Lesson Preview
 
-| 概念 | 定义 | 关键点 |
-|------|------|--------|
-| Token | AI 处理文本的最小单位 | 决定成本和限制,中文比英文"贵" |
-| 上下文窗口 | AI 一次对话能记住的最大信息量 | 超出会遗忘,长文档要注意 |
-| 知识截止日期 | AI 训练数据的时间上限 | 不知道之后的事,需要最新信息用联网版 |
-| 幻觉 | AI 生成看似合理但不存在的内容 | 具体数字/引用/人名都要核查 |
-| 提示词 4 要素 | 角色、任务、目标、约束 | 缺一不可,越具体越好 |
-| 迭代 4 式 | 更具体、加约束、换视角、要对比 | 第一版不满意时的追问方法 |
+> **Lesson 1: Prompt Engineering - From Beginner to Master**
 
----
-
-## 🎯 行动建议
-
-- [ ] 今天就选定 1-2 个主力 AI 产品,注册并熟悉界面
-- [ ] 完成"练习 1",用 AI 完成一个真实工作任务
-- [ ] 打印《AI 工具选型对照表》和《3 误解排查清单》,贴在工位
-- [ ] 建立一个文档,开始积累你的提示词模板
-- [ ] 加入课程社群,分享你的第一次对话记录
+- 7 core techniques for prompts
+- Advanced methods like Few-shot, Chain-of-Thought
+- Prompt template library for different scenarios
+- How to debug and optimize prompts
+- Practice: Build your personal prompt library
 
 ---
 
-## 💬 Q&A
+## Quick Reference Table
 
-好,现在进入 Q&A 环节。大家有什么问题都可以提出来。
-
-**Q1: 用 AI 会不会泄露公司机密?**
-
-A: 这是个很重要的问题。公网 AI(如 ChatGPT、文心一言免费版)的数据可能被用于训练,所以:
-- 不要上传客户名单、财务数据、商业机密
-- 需要处理敏感信息时,用企业版(有数据隔离承诺)或私有部署
-- 或者先脱敏(把真实姓名、公司名替换成代号)再使用
-
-**Q2: AI 生成的内容有版权吗?**
-
-A: 目前法律还在完善中,但基本共识是:
-- AI 生成的内容本身没有版权(因为不是人类创作)
-- 但你对 AI 输出的修改和编辑有版权
-- 商业使用前最好咨询法务,尤其是图片、代码等
-
-**Q3: 免费版和付费版差别大吗?**
-
-A: 主要差别:
-- 模型版本: 付费版通常用最新最强的模型(如 GPT-4)
-- 响应速度: 免费版高峰期会排队
-- 功能限制: 免费版可能没有联网、插件、长上下文等功能
-- 使用次数: 付费版通常无限制或限制更宽松
-
-建议: 先用免费版熟悉,确定有价值后再付费。
-
-**Q4: 如何判断 AI 的回答是否可信?**
-
-A: 用"可信度分级法":
-- **高可信**: 观点、创意、改写、总结(AI 擅长的)
-- **中可信**: 常识性知识、通用技术问题(要抽查)
-- **低可信**: 具体数字、人名、引用、最新信息(必须核查)
-- **不可信**: 法律判决、医疗诊断、财务决策(只能做参考)
-
-**Q5: 学会用 AI 后,我的工作会被替代吗?**
-
-A: 短期内不会,但会分化:
-- **会被替代**: 纯执行、不需要判断的重复性工作
-- **不会被替代**: 需要创造、决策、人际互动的工作
-- **关键**: 不是"AI 替代人",而是"会用 AI 的人替代不会用的人"
-
-所以今天学的这些,就是在建立你的竞争力。
+| Concept | Definition | Key Points |
+|---------|-----------|------------|
+| Token | Smallest unit AI uses to process text | Determines costs and limitations; Chinese is more "expensive" than English |
+| Context Window | Maximum information AI can remember in one conversation | Exceeding causes forgetting; watch out for long documents |
+| Knowledge Cutoff Date | Time upper limit of AI's training data | Doesn't know anything after; use web-connected version for latest info |
+| Hallucination | AI generates content that seems reasonable but doesn't exist | Always verify specific numbers/citations/names |
+| Prompt 4 Elements | Role, task, objective, constraints | All essential; more specific is better |
+| Iteration 4 Moves | More specific, add constraints, change perspective, request comparisons | Follow-up methods when first version isn't satisfactory |
 
 ---
 
-**课程时间分配:**
-| 部分 | 时长 |
-|------|------|
+## Action Items
+
+- [ ] Select 1-2 primary AI products today, register and familiarize yourself with the interface
+- [ ] Complete "Exercise 1," use AI to finish a real work task
+- [ ] Print "AI Tool Selection Comparison Chart" and "3 Misconceptions Troubleshooting Checklist," post at your desk
+- [ ] Create a document and start accumulating your prompt templates
+- [ ] Join the course community, share your first conversation record
+
+---
+
+## Q&A
+
+Now let's move to the Q&A session. Feel free to ask any questions.
+
+**Q1: Will using AI leak company secrets?**
+
+A: This is an important question. Public AI (like ChatGPT, Wenxin Yiyan free version) data may be used for training, so:
+- Don't upload client lists, financial data, trade secrets
+- When handling sensitive information, use enterprise versions (with data isolation promises) or private deployment
+- Or anonymize first (replace real names, company names with codes) before using
+
+**Q2: Does AI-generated content have copyright?**
+
+A: Laws are still developing, but the basic consensus is:
+- AI-generated content itself has no copyright (because it's not human creation)
+- But your modifications and edits to AI output have copyright
+- Before commercial use, best to consult legal, especially for images, code, etc.
+
+**Q3: Is there a big difference between free and paid versions?**
+
+A: Main differences:
+- Model version: Paid versions usually use the newest, strongest models (like GPT-4)
+- Response speed: Free versions may queue during peak times
+- Feature limitations: Free versions may lack web access, plugins, long context, etc.
+- Usage limits: Paid versions usually unlimited or more generous limits
+
+Recommendation: Start with free versions to familiarize, then pay once you're certain of value.
+
+**Q4: How to judge if AI's answer is trustworthy?**
+
+A: Use the "trustworthiness grading method":
+- **High Trust**: Opinions, ideas, rewrites, summaries (what AI excels at)
+- **Medium Trust**: Common knowledge, general technical questions (spot-check)
+- **Low Trust**: Specific numbers, names, citations, latest information (must verify)
+- **Untrustworthy**: Legal judgments, medical diagnoses, financial decisions (reference only)
+
+**Q5: After learning to use AI, will my job be replaced?**
+
+A: Not in the short term, but there will be differentiation:
+- **Will be replaced**: Pure execution, repetitive work requiring no judgment
+- **Won't be replaced**: Work requiring creativity, decisions, human interaction
+- **Key**: It's not "AI replaces humans," but "people who can use AI replace people who can't"
+
+So what you learned today is building your competitiveness.
+
+---
+
+**Course Time Allocation:**
+| Section | Duration |
+|---------|----------|
 | Opening Hook | 10 min |
-| Section 1: 三个常见误解 | 20 min |
-| Section 2: 大模型到底是什么 | 25 min |
-| Section 3: AI 的能力边界 | 25 min |
-| Section 4: 产品全景图 | 20 min |
-| Section 5: 第一次对话实操 | 30 min |
+| Section 1: Three Common Misconceptions | 20 min |
+| Section 2: What Is a Large Model Really | 25 min |
+| Section 3: AI's Capability Boundaries | 25 min |
+| Section 4: Product Overview | 20 min |
+| Section 5: First Conversation Practice | 30 min |
 | Closing + Q&A | 20 min |
-| **总计** | **2.5 小时** |
+| **Total** | **2.5 hours** |
 
 ---
 
-**感谢大家的参与!下节课见!**
-
+**Thank you all for participating! See you in the next lesson!**

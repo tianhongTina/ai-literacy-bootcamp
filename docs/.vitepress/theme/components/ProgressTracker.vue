@@ -1,9 +1,9 @@
 <template>
   <div class="progress-tracker">
     <div class="progress-header">
-      <h3>学习进度</h3>
+      <h3>Learning Progress</h3>
       <div class="progress-stats">
-        <span class="stat">{{ completedCount }}/{{ totalCount }} 已完成</span>
+        <span class="stat">{{ completedCount }}/{{ totalCount }} Completed</span>
         <span class="stat-percentage">{{ progressPercentage }}%</span>
       </div>
     </div>
@@ -36,14 +36,14 @@
 import { ref, computed, onMounted } from 'vue'
 
 const lessons = ref([
-  { id: 0, name: '第 0 课：AI 认知重构', duration: '2小时', completed: false },
-  { id: 1, name: '第 1 课：提示词工程', duration: '2小时', completed: false },
-  { id: 2, name: '第 2 课：AI 写作助手', duration: '2小时', completed: false },
-  { id: 3, name: '第 3 课：AI 数据分析', duration: '2小时', completed: false },
-  { id: 4, name: '第 4 课：AI 产品设计', duration: '2小时', completed: false },
-  { id: 5, name: '第 5 课：AI 工作流自动化', duration: '2小时', completed: false },
-  { id: 6, name: '第 6 课：AI 工具生态', duration: '2小时', completed: false },
-  { id: 7, name: '第 7 课：AI 协作与安全', duration: '2小时', completed: false }
+  { id: 0, name: 'Lesson 0: AI Cognitive Restructuring', duration: '2 hours', completed: false },
+  { id: 1, name: 'Lesson 1: Prompt Engineering', duration: '2 hours', completed: false },
+  { id: 2, name: 'Lesson 2: AI Writing Assistant', duration: '2 hours', completed: false },
+  { id: 3, name: 'Lesson 3: AI Data Analysis', duration: '2 hours', completed: false },
+  { id: 4, name: 'Lesson 4: AI Product Design', duration: '2 hours', completed: false },
+  { id: 5, name: 'Lesson 5: AI Workflow Automation', duration: '2 hours', completed: false },
+  { id: 6, name: 'Lesson 6: AI Tool Ecosystem', duration: '2 hours', completed: false },
+  { id: 7, name: 'Lesson 7: AI Collaboration & Security', duration: '2 hours', completed: false }
 ])
 
 const totalCount = computed(() => lessons.value.length)
