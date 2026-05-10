@@ -3,6 +3,6 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ailiteracy.ai/sitemap.xml
+Sitemap: https://ailiteracy.website/sitemap.xml
 
 # Disallow admin or private paths (none for this public site)

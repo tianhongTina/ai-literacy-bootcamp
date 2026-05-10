@@ -5,7 +5,10 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.namecheap.com)",
+      "WebFetch(domain:porkbun.com)",
+      "WebFetch(domain:www.godaddy.com)"
     ]
   }
 }

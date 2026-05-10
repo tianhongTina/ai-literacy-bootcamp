@@ -31,7 +31,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'AI Literacy Bootcamp' }],
     ['meta', { property: 'og:description', content: 'AI capability training for non-developers - Learn prompt engineering, AI tools, and workflow automation' }],
     ['meta', { property: 'og:image', content: '/og-image.png' }],
-    ['meta', { property: 'og:url', content: 'https://ailiteracy.ai' }],
+    ['meta', { property: 'og:url', content: 'https://ailiteracy.website' }],
     ['meta', { property: 'og:site_name', content: 'AI Literacy Bootcamp' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
 
@@ -52,7 +52,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
 
     // Canonical URL
-    ['link', { rel: 'canonical', href: 'https://ailiteracy.ai/' }]
+    ['link', { rel: 'canonical', href: 'https://ailiteracy.website/' }]
   ],
 
   themeConfig: {
@@ -127,7 +127,7 @@ export default defineConfig({
 
   // Sitemap generation
   sitemap: {
-    hostname: 'https://ailiteracy.ai',
+    hostname: 'https://ailiteracy.website',
     lastmodDateOnly: false
   }
 })
