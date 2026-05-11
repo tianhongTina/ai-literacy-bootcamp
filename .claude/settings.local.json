@@ -8,7 +8,8 @@
       "WebSearch",
       "WebFetch(domain:www.namecheap.com)",
       "WebFetch(domain:porkbun.com)",
-      "WebFetch(domain:www.godaddy.com)"
+      "WebFetch(domain:www.godaddy.com)",
+      "WebFetch(domain:www.ailiteracy.website)"
     ]
   }
 }
